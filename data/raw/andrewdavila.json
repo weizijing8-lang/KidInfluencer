@@ -1,0 +1,60 @@
+{
+  "short_name": "andrewdavila",
+  "handle": "@AndrewDavila",
+  "category": "family",
+  "channel_id": "UC-ZVL9Amkpm20BWcNCzf5tg",
+  "channel_title": "Andrew Davila",
+  "uploads_playlist": "UU-ZVL9Amkpm20BWcNCzf5tg",
+  "total_videos": 3,
+  "collected_at": "2026-04-28T18:25:36.051419",
+  "videos": [
+    {
+      "id": "g7mzGOfdVLQ",
+      "title": "Ely playing just dance 2",
+      "description": "Ely playing just dance 2",
+      "publishedAt": "2011-04-25T01:30:37Z",
+      "channelId": "UC-ZVL9Amkpm20BWcNCzf5tg",
+      "channelTitle": "Andrew Davila",
+      "tags": [
+        "Ely"
+      ],
+      "categoryId": "22",
+      "viewCount": 95,
+      "likeCount": 2,
+      "commentCount": 0,
+      "favoriteCount": 0
+    },
+    {
+      "id": "O6VON2LNNik",
+      "title": "Bang",
+      "description": "This video was uploaded from an Android phone.",
+      "publishedAt": "2010-09-05T21:57:46Z",
+      "channelId": "UC-ZVL9Amkpm20BWcNCzf5tg",
+      "channelTitle": "Andrew Davila",
+      "tags": [
+        "mobile"
+      ],
+      "categoryId": "24",
+      "viewCount": 66,
+      "likeCount": 2,
+      "commentCount": 0,
+      "favoriteCount": 0
+    },
+    {
+      "id": "OPZrTetean8",
+      "title": "Irma beating pi\u00f1ata flashing back on her kids",
+      "description": "This video was uploaded from an Android phone.",
+      "publishedAt": "2010-07-21T01:11:56Z",
+      "channelId": "UC-ZVL9Amkpm20BWcNCzf5tg",
+      "channelTitle": "Andrew Davila",
+      "tags": [
+        "mobile"
+      ],
+      "categoryId": "24",
+      "viewCount": 93,
+      "likeCount": 0,
+      "commentCount": 0,
+      "favoriteCount": 0
+    }
+  ]
+}

@@ -6,12 +6,31 @@
 
 This project provides the first quantitative, causal evidence that algorithmic engagement rewards act as a "ratchet mechanism," driving family vlog channels toward increasingly exploitative content involving children — an effect absent in adult-only creator channels.
 
-## Key Finding (Pilot Study)
+## Full Dataset (April 2026)
+
+Collected via YouTube Data API v3:
+
+| Group | Channels | Videos | Description |
+|-------|----------|--------|-------------|
+| Family (Treatment) | 25 | 41,159 | Family vlog channels featuring children |
+| Adult (Control) | 41 | 57,457 | Adult-only vloggers (no children) |
+| **Total** | **66** | **98,616** | Full metadata including view/like/comment counts |
+
+### Top Channels by Views
+| Channel | Type | Videos | Total Views |
+|---------|------|--------|-------------|
+| Cocomelon | Family | 1,983 | 220B |
+| Vlad and Niki | Family | 1,014 | 120B |
+| MrBeast | Adult (control) | 970 | 119B |
+| Ryan's World | Family | 3,685 | 63B |
+| PewDiePie | Adult (control) | 4,617 | 29B |
+
+## Pilot Study Results
 
 Our pilot study on 6 YouTube channels (4 family vlogs + 2 adult-only controls) demonstrates that an embedding-based **Exploitation Drift Score** can effectively distinguish content types:
 
 | Channel | Type | Mean Drift Score |
-|---------|------|-----------------|
+|---------|------|------------------|
 | The ACE Family | Family (controversial) | **0.114** |
 | Casey Neistat | Control (adult vlog) | 0.061 |
 | Bratayley | Family | 0.016 |
@@ -37,12 +56,16 @@ Our pilot study on 6 YouTube channels (4 family vlogs + 2 adult-only controls) d
 │   ├── kidfluencer_data_plan.md         # Data collection strategy
 │   └── kidfluencer_data_feasibility.md  # API feasibility assessment
 ├── scripts/                       # Data collection and analysis scripts
-│   ├── collect_all.py                   # YouTube data collection (yt-dlp)
-│   ├── collect_youtube_data.py          # Alternative collection script
+│   ├── channel_list.py                  # Full channel list (96 channels)
+│   ├── collect_youtube_api.py           # YouTube Data API v3 collection
+│   ├── collect_all.py                   # Legacy yt-dlp collection (pilot)
 │   ├── analyze_drift.py                 # Embedding + drift score computation
-│   ├── visualize.py                     # Visualization of results
-│   ├── test_youtube_api.py              # API testing scripts
-│   └── test_youtube_api2.py
+│   ├── validate_data.py                 # Data validation & summary stats
+│   └── visualize.py                     # Visualization of results
+├── data/                          # Full study data (98,616 videos)
+│   ├── raw/                             # Per-channel JSON (66 channels)
+│   ├── all_videos.csv                   # Unified dataset
+│   └── channel_statistics.csv           # Per-channel summary
 ├── pilot/                         # Pilot study data and results
 │   ├── data/                            # Raw JSON data from YouTube
 │   ├── results/                         # Drift scores (CSV) and summary
@@ -58,7 +81,7 @@ Our pilot study on 6 YouTube channels (4 family vlogs + 2 adult-only controls) d
 ## Requirements
 
 ```
-pip install yt-dlp sentence-transformers pandas numpy matplotlib seaborn
+pip install sentence-transformers pandas numpy matplotlib seaborn requests
 ```
 
 ## License
