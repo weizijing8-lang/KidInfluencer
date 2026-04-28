@@ -1,0 +1,121 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+======================================================================
+EXPLOITATION ANALYSIS V2: WITHIN-FAMILY DIRECTION
+======================================================================
+
+[1] Loading model...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2199.20it/s]
+
+[2] Building V2 exploitation direction (legally-grounded anchors)...
+  Exploitation anchors: 35 titles
+  Healthy anchors: 35 titles
+
+  Direction vector validation:
+    [exploit ] +0.4607  Making my daughter cry for a prank
+    [exploit ] +0.3032  Kids punishment no dinner tonight
+    [healthy ] -0.2893  Family baking cookies together
+    [healthy ] -0.0127  Teaching kids to ride bikes
+    [neutral ] +0.1253  iPhone 15 review after one month
+    [neutral ] -0.0393  How to make pasta from scratch
+
+[3] Loading video data...
+  98,616 videos from 66 channels
+
+[4] Computing V2 exploitation scores...
+  Loading cached embeddings from V1...
+
+[5] Channel-level V2 exploitation scores...
+
+  Top 10 MOST exploitative (V2):
+    andrewdavila              (family): exploit_v2=0.1453, n=3
+    daviddobrik               (adult ): exploit_v2=0.1310, n=564
+    piperrockelle             (family): exploit_v2=0.1267, n=816
+    jordanmatter              (family): exploit_v2=0.1194, n=571
+    prestonplayz              (adult ): exploit_v2=0.1084, n=1179
+    rebeccazamolo             (family): exploit_v2=0.1019, n=1171
+    unspeakable               (adult ): exploit_v2=0.0987, n=1115
+    acefamily                 (family): exploit_v2=0.0925, n=713
+    jakepaul                  (adult ): exploit_v2=0.0919, n=1605
+    kkandbabyj                (family): exploit_v2=0.0918, n=2345
+
+  Bottom 10 LEAST exploitative (V2):
+    jeffnippard               (adult ): exploit_v2=0.0134, n=617
+    twosetviolin              (adult ): exploit_v2=0.0113, n=1692
+    drewbinsky                (adult ): exploit_v2=0.0066, n=1255
+    natacha_oceane            (adult ): exploit_v2=0.0034, n=230
+    sonnysidevlog             (adult ): exploit_v2=0.0033, n=898
+    besteverfoods             (adult ): exploit_v2=0.0033, n=898
+    wendover                  (adult ): exploit_v2=-0.0001, n=277
+    3blue1brown               (adult ): exploit_v2=-0.0017, n=234
+    kara_and_nate             (adult ): exploit_v2=-0.0487, n=1046
+    markwiens                 (adult ): exploit_v2=-0.0676, n=1597
+
+  Family vs Adult on V2: t=19.31, p=<0.001
+  Family mean: 0.0613, Adult mean: 0.0500
+
+  Within-family comparison (known cases):
+    acefamily                 [PROBLEMATIC]: exploit_v2=0.0925 (n=713)
+    piperrockelle             [PROBLEMATIC]: exploit_v2=0.1267 (n=816)
+    jordanmatter              [PROBLEMATIC]: exploit_v2=0.1194 (n=571)
+    labrantfam                [PROBLEMATIC]: exploit_v2=0.0857 (n=3)
+    cocomelon                 [HEALTHY    ]: exploit_v2=0.0903 (n=1983)
+    ryansworld                [HEALTHY    ]: exploit_v2=0.0548 (n=3685)
+    familyfunpack             [HEALTHY    ]: exploit_v2=0.0192 (n=3447)
+    bratayley                 [HEALTHY    ]: exploit_v2=0.0332 (n=2614)
+
+[6] Identifying viral hits...
+  Viral hits: 2,677 (2.7%)
+
+[7] Running DiD V2...
+
+  DiD V2 observations: 2,656
+    Family: 904
+    Adult:  1,752
+
+  --- Simple DiD ---
+  Family drift change: 0.000447 (±0.036716)
+  Adult drift change:  0.000304 (±0.029992)
+  DiD estimate: 0.000143
+
+  --- OLS Regression ---
+                        Coef.  Std.Err.         z     P>|z|    [0.025    0.975]
+const                0.009436  0.007227  1.305553  0.191704 -0.004730  0.023601
+is_family            0.000323  0.001487  0.217072  0.828152 -0.002592  0.003238
+log_viral_views     -0.000575  0.000433 -1.327317  0.184404 -0.001423  0.000274
+viral_exploit_score  0.007247  0.007633  0.949433  0.342401 -0.007714  0.022209
+
+  Key: β(is_family) = 0.000323, p = 0.8282, 95% CI [-0.002592, 0.003238]
+
+  --- Channel Fixed Effects Model ---
+Traceback (most recent call last):
+  File "/home/ubuntu/KidInfluencer/scripts/exploitation_v2.py", line 429, in <module>
+    main()
+  File "/home/ubuntu/KidInfluencer/scripts/exploitation_v2.py", line 414, in main
+    did_df, did_model = run_did_v2(df)
+                        ^^^^^^^^^^^^^^
+  File "/home/ubuntu/KidInfluencer/scripts/exploitation_v2.py", line 327, in run_did_v2
+    model_fe = sm.OLS(y_fe, X_fe).fit(cov_type='HC1')
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/regression/linear_model.py", line 921, in __init__
+    super().__init__(endog, exog, missing=missing,
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/regression/linear_model.py", line 746, in __init__
+    super().__init__(endog, exog, missing=missing,
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/regression/linear_model.py", line 200, in __init__
+    super().__init__(endog, exog, **kwargs)
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/base/model.py", line 270, in __init__
+    super().__init__(endog, exog, **kwargs)
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/base/model.py", line 95, in __init__
+    self.data = self._handle_data(endog, exog, missing, hasconst,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/base/model.py", line 135, in _handle_data
+    data = handle_data(endog, exog, missing, hasconst, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/base/data.py", line 694, in handle_data
+    return klass(endog, exog=exog, missing=missing, hasconst=hasconst, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/base/data.py", line 86, in __init__
+    self.endog, self.exog = self._convert_endog_exog(endog, exog)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/statsmodels/base/data.py", line 523, in _convert_endog_exog
+    raise ValueError(
+ValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).

@@ -1,0 +1,25 @@
+                   Results: Ordinary least squares
+=====================================================================
+Model:              OLS              Adj. R-squared:     0.012       
+Dependent Variable: exploit_score_v2 AIC:                -193275.4695
+Date:               2026-04-28 15:47 BIC:                -193227.9748
+No. Observations:   98610            Log-Likelihood:     96643.      
+Df Model:           4                F-statistic:        4.111       
+Df Residuals:       98605            Prob (F-statistic): 0.00506     
+R-squared:          0.012            Scale:              0.0082468   
+---------------------------------------------------------------------
+                        Coef.  Std.Err.    z    P>|z|   [0.025 0.975]
+---------------------------------------------------------------------
+const                   0.0061   0.0144  0.4242 0.6714 -0.0221 0.0343
+is_family               0.0197   0.0113  1.7428 0.0814 -0.0025 0.0418
+viral_rate              0.2002   0.1906  1.0504 0.2935 -0.1733 0.5737
+viral_rate_x_family    -0.3424   0.2879 -1.1891 0.2344 -0.9068 0.2220
+log_video_idx           0.0059   0.0021  2.7972 0.0052  0.0018 0.0100
+---------------------------------------------------------------------
+Omnibus:              313.164        Durbin-Watson:           1.584  
+Prob(Omnibus):        0.000          Jarque-Bera (JB):        407.150
+Skew:                 0.035          Prob(JB):                0.000  
+Kurtosis:             3.307          Condition No.:           695    
+=====================================================================
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)

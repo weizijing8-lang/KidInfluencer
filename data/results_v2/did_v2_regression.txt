@@ -1,0 +1,72 @@
+=== Main DiD Model ===
+                  Results: Ordinary least squares
+====================================================================
+Model:              OLS              Adj. R-squared:     -0.000     
+Dependent Variable: drift_change     AIC:                -10671.0813
+Date:               2026-04-28 15:45 BIC:                -10647.5430
+No. Observations:   2656             Log-Likelihood:     5339.5     
+Df Model:           3                F-statistic:        0.8418     
+Df Residuals:       2652             Prob (F-statistic): 0.471      
+R-squared:          0.001            Scale:              0.0010520  
+--------------------------------------------------------------------
+                       Coef.  Std.Err.    z    P>|z|   [0.025 0.975]
+--------------------------------------------------------------------
+const                  0.0094   0.0072  1.3056 0.1917 -0.0047 0.0236
+is_family              0.0003   0.0015  0.2171 0.8282 -0.0026 0.0032
+log_viral_views       -0.0006   0.0004 -1.3273 0.1844 -0.0014 0.0003
+viral_exploit_score    0.0072   0.0076  0.9494 0.3424 -0.0077 0.0222
+--------------------------------------------------------------------
+Omnibus:               14.132        Durbin-Watson:           1.594 
+Prob(Omnibus):         0.001         Jarque-Bera (JB):        19.402
+Skew:                  0.017         Prob(JB):                0.000 
+Kurtosis:              3.417         Condition No.:           201   
+====================================================================
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+=== Family Channel Fixed Effects ===
+                  Results: Ordinary least squares
+===================================================================
+Model:              OLS              Adj. R-squared:     0.004     
+Dependent Variable: drift_change     AIC:                -3387.8255
+Date:               2026-04-28 15:45 BIC:                -3267.6548
+No. Observations:   904              Log-Likelihood:     1718.9    
+Df Model:           24               F-statistic:        1.170     
+Df Residuals:       879              Prob (F-statistic): 0.260     
+R-squared:          0.030            Scale:              0.0013432 
+-------------------------------------------------------------------
+                      Coef.  Std.Err.    z    P>|z|   [0.025 0.975]
+-------------------------------------------------------------------
+const                 0.0132   0.0458  0.2872 0.7739 -0.0766 0.1030
+log_viral_views      -0.0014   0.0027 -0.5234 0.6007 -0.0066 0.0038
+viral_exploit_score   0.0157   0.0151  1.0450 0.2960 -0.0138 0.0453
+ch_bonniehoellein     0.0084   0.0110  0.7636 0.4451 -0.0131 0.0298
+ch_bratayley          0.0157   0.0092  1.7128 0.0868 -0.0023 0.0337
+ch_brentrivera        0.0103   0.0103  1.0020 0.3163 -0.0098 0.0304
+ch_cocomelon          0.0141   0.0142  0.9929 0.3208 -0.0137 0.0419
+ch_dailybumps         0.0111   0.0097  1.1356 0.2561 -0.0080 0.0302
+ch_ehbee              0.0096   0.0109  0.8770 0.3805 -0.0119 0.0311
+ch_everleighrose      0.0442   0.0186  2.3731 0.0176  0.0077 0.0808
+ch_familyfizz         0.0017   0.0162  0.1065 0.9151 -0.0301 0.0336
+ch_familyfunpack      0.0081   0.0101  0.8050 0.4208 -0.0117 0.0279
+ch_itsyeboi          -0.0076   0.0106 -0.7121 0.4764 -0.0283 0.0132
+ch_jordanmatter       0.0022   0.0138  0.1599 0.8730 -0.0248 0.0292
+ch_kkandbabyj        -0.0019   0.0186 -0.1026 0.9183 -0.0383 0.0345
+ch_piersonwodzynski   0.0099   0.0107  0.9263 0.3543 -0.0110 0.0308
+ch_piperrockelle      0.0033   0.0118  0.2797 0.7797 -0.0199 0.0265
+ch_rebeccazamolo      0.0061   0.0120  0.5106 0.6096 -0.0174 0.0297
+ch_ryansworld         0.0172   0.0116  1.4810 0.1386 -0.0056 0.0400
+ch_tannerites         0.0131   0.0101  1.2982 0.1942 -0.0067 0.0328
+ch_theleray           0.0061   0.0118  0.5141 0.6072 -0.0171 0.0292
+ch_thesacconejolys    0.0188   0.0119  1.5738 0.1155 -0.0046 0.0422
+ch_thesuperherobuddy  0.0080   0.0087  0.9231 0.3559 -0.0090 0.0250
+ch_theweisslife       0.0017   0.0122  0.1369 0.8911 -0.0222 0.0255
+ch_vladandniki        0.0114   0.0125  0.9091 0.3633 -0.0131 0.0359
+-------------------------------------------------------------------
+Omnibus:                7.387        Durbin-Watson:           1.668
+Prob(Omnibus):          0.025        Jarque-Bera (JB):        8.192
+Skew:                   0.144        Prob(JB):                0.017
+Kurtosis:               3.366        Condition No.:           675  
+===================================================================
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
