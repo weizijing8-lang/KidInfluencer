@@ -1,0 +1,16 @@
+source,target,weight,same_mcn,source_mcn,target_mcn
+andrewdavila,brentrivera,133,False,Self-managed,Amp Studios
+brentrivera,piersonwodzynski,66,True,Amp Studios,Amp Studios
+jordanmatter,rebeccazamolo,34,False,Underscore,Underscore/CAA
+bratayley,rebeccazamolo,22,False,Maker/Disney,Underscore/CAA
+brentrivera,jordanmatter,18,False,Amp Studios,Underscore
+jordanmatter,piperrockelle,14,False,Underscore,Independent
+andrewdavila,piersonwodzynski,7,False,Self-managed,Amp Studios
+8passengers,bonniehoellein,5,False,Self-managed,Self-managed
+bonniehoellein,dailybumps,4,False,Self-managed,Maker/Disney
+jordanmatter,piersonwodzynski,4,False,Underscore,Amp Studios
+andrewdavila,jordanmatter,3,False,Self-managed,Underscore
+bratayley,dailybumps,2,True,Maker/Disney,Maker/Disney
+jordanmatter,norrisnuts,2,False,Underscore,Self-managed
+tannerites,theohana,2,False,Self-managed,Self-managed
+bratayley,thesuperherobuddy,2,False,Maker/Disney,Self-managed
