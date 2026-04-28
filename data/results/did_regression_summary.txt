@@ -1,0 +1,23 @@
+                  Results: Ordinary least squares
+===================================================================
+Model:              OLS              Adj. R-squared:     0.001     
+Dependent Variable: drift_change     AIC:                -9482.5808
+Date:               2026-04-28 14:43 BIC:                -9464.9192
+No. Observations:   2663             Log-Likelihood:     4744.3    
+Df Model:           2                F-statistic:        1.485     
+Df Residuals:       2660             Prob (F-statistic): 0.227     
+R-squared:          0.001            Scale:              0.0016618 
+--------------------------------------------------------------------
+                  Coef.   Std.Err.     z     P>|z|    [0.025  0.975]
+--------------------------------------------------------------------
+const             0.0055    0.0095   0.5767  0.5641  -0.0131  0.0240
+is_family         0.0033    0.0019   1.7236  0.0848  -0.0004  0.0070
+log_viral_views  -0.0003    0.0006  -0.5927  0.5534  -0.0015  0.0008
+-------------------------------------------------------------------
+Omnibus:              24.456        Durbin-Watson:           1.709 
+Prob(Omnibus):        0.000         Jarque-Bera (JB):        37.918
+Skew:                 -0.041        Prob(JB):                0.000 
+Kurtosis:             3.579         Condition No.:           199   
+===================================================================
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)

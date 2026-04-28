@@ -1,0 +1,106 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+======================================================================
+KIDFLUENCER EXPLOITATION STUDY - FULL ANALYSIS PIPELINE
+======================================================================
+
+[STEP 1] Loading data...
+Loading all video data...
+  Loaded 98,616 videos from 66 channels
+
+[STEP 2] Computing embeddings...
+  Loading sentence-transformers model (all-MiniLM-L6-v2)...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  22%|██▏       | 23/103 [00:00<00:00, 226.33it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 582.26it/s]
+  Computing embeddings for 98,616 titles (batch_size=512)...
+Batches:   0%|          | 0/193 [00:00<?, ?it/s]Batches:   1%|          | 1/193 [00:05<18:37,  5.82s/it]Batches:   1%|          | 2/193 [00:08<12:42,  3.99s/it]Batches:   2%|▏         | 3/193 [00:10<09:18,  2.94s/it]Batches:   2%|▏         | 4/193 [00:12<08:56,  2.84s/it]Batches:   3%|▎         | 5/193 [00:15<09:10,  2.93s/it]Batches:   3%|▎         | 6/193 [00:17<07:46,  2.50s/it]Batches:   4%|▎         | 7/193 [00:19<06:58,  2.25s/it]Batches:   4%|▍         | 8/193 [00:21<06:21,  2.06s/it]Batches:   5%|▍         | 9/193 [00:22<05:44,  1.87s/it]Batches:   5%|▌         | 10/193 [00:24<05:27,  1.79s/it]Batches:   6%|▌         | 11/193 [00:25<04:55,  1.62s/it]Batches:   6%|▌         | 12/193 [00:27<05:14,  1.74s/it]Batches:   7%|▋         | 13/193 [00:28<04:54,  1.64s/it]Batches:   7%|▋         | 14/193 [00:30<04:32,  1.52s/it]Batches:   8%|▊         | 15/193 [00:31<04:47,  1.62s/it]Batches:   8%|▊         | 16/193 [00:33<04:54,  1.66s/it]Batches:   9%|▉         | 17/193 [00:34<04:37,  1.58s/it]Batches:   9%|▉         | 18/193 [00:36<04:20,  1.49s/it]Batches:  10%|▉         | 19/193 [00:37<04:24,  1.52s/it]Batches:  10%|█         | 20/193 [00:38<03:58,  1.38s/it]Batches:  11%|█         | 21/193 [00:40<03:51,  1.35s/it]Batches:  11%|█▏        | 22/193 [00:41<03:48,  1.34s/it]Batches:  12%|█▏        | 23/193 [00:42<03:53,  1.37s/it]Batches:  12%|█▏        | 24/193 [00:45<04:34,  1.63s/it]Batches:  13%|█▎        | 25/193 [00:46<04:12,  1.50s/it]Batches:  13%|█▎        | 26/193 [00:47<03:54,  1.40s/it]Batches:  14%|█▍        | 27/193 [00:48<03:40,  1.33s/it]Batches:  15%|█▍        | 28/193 [00:49<03:32,  1.29s/it]Batches:  15%|█▌        | 29/193 [00:50<03:19,  1.22s/it]Batches:  16%|█▌        | 30/193 [00:52<03:46,  1.39s/it]Batches:  16%|█▌        | 31/193 [00:54<04:00,  1.48s/it]Batches:  17%|█▋        | 32/193 [00:55<03:41,  1.38s/it]Batches:  17%|█▋        | 33/193 [00:56<03:40,  1.38s/it]Batches:  18%|█▊        | 34/193 [00:58<03:36,  1.36s/it]Batches:  18%|█▊        | 35/193 [00:59<03:38,  1.38s/it]Batches:  19%|█▊        | 36/193 [01:00<03:18,  1.26s/it]Batches:  19%|█▉        | 37/193 [01:01<03:01,  1.17s/it]Batches:  20%|█▉        | 38/193 [01:02<03:08,  1.22s/it]Batches:  20%|██        | 39/193 [01:04<03:00,  1.17s/it]Batches:  21%|██        | 40/193 [01:04<02:44,  1.08s/it]Batches:  21%|██        | 41/193 [01:06<02:47,  1.10s/it]Batches:  22%|██▏       | 42/193 [01:07<02:41,  1.07s/it]Batches:  22%|██▏       | 43/193 [01:08<02:40,  1.07s/it]Batches:  23%|██▎       | 44/193 [01:09<02:37,  1.05s/it]Batches:  23%|██▎       | 45/193 [01:10<02:43,  1.10s/it]Batches:  24%|██▍       | 46/193 [01:11<02:30,  1.03s/it]Batches:  24%|██▍       | 47/193 [01:12<02:37,  1.08s/it]Batches:  25%|██▍       | 48/193 [01:13<02:45,  1.14s/it]Batches:  25%|██▌       | 49/193 [01:14<02:32,  1.06s/it]Batches:  26%|██▌       | 50/193 [01:15<02:30,  1.05s/it]Batches:  26%|██▋       | 51/193 [01:16<02:25,  1.02s/it]Batches:  27%|██▋       | 52/193 [01:17<02:20,  1.00it/s]Batches:  27%|██▋       | 53/193 [01:18<02:19,  1.00it/s]Batches:  28%|██▊       | 54/193 [01:19<02:22,  1.03s/it]Batches:  28%|██▊       | 55/193 [01:20<02:35,  1.12s/it]Batches:  29%|██▉       | 56/193 [01:22<02:42,  1.18s/it]Batches:  30%|██▉       | 57/193 [01:23<02:46,  1.22s/it]Batches:  30%|███       | 58/193 [01:24<02:37,  1.16s/it]Batches:  31%|███       | 59/193 [01:26<02:59,  1.34s/it]Batches:  31%|███       | 60/193 [01:27<02:46,  1.26s/it]Batches:  32%|███▏      | 61/193 [01:28<02:34,  1.17s/it]Batches:  32%|███▏      | 62/193 [01:29<02:30,  1.15s/it]Batches:  33%|███▎      | 63/193 [01:30<02:32,  1.17s/it]Batches:  33%|███▎      | 64/193 [01:31<02:25,  1.13s/it]Batches:  34%|███▎      | 65/193 [01:32<02:19,  1.09s/it]Batches:  34%|███▍      | 66/193 [01:33<02:20,  1.11s/it]Batches:  35%|███▍      | 67/193 [01:34<02:17,  1.09s/it]Batches:  35%|███▌      | 68/193 [01:35<02:10,  1.04s/it]Batches:  36%|███▌      | 69/193 [01:37<02:13,  1.08s/it]Batches:  36%|███▋      | 70/193 [01:38<02:11,  1.07s/it]Batches:  37%|███▋      | 71/193 [01:39<02:10,  1.07s/it]Batches:  37%|███▋      | 72/193 [01:40<02:04,  1.03s/it]Batches:  38%|███▊      | 73/193 [01:41<02:00,  1.00s/it]Batches:  38%|███▊      | 74/193 [01:41<01:49,  1.08it/s]Batches:  39%|███▉      | 75/193 [01:42<01:46,  1.11it/s]Batches:  39%|███▉      | 76/193 [01:43<01:45,  1.11it/s]Batches:  40%|███▉      | 77/193 [01:45<02:06,  1.09s/it]Batches:  40%|████      | 78/193 [01:46<02:02,  1.07s/it]Batches:  41%|████      | 79/193 [01:46<01:54,  1.01s/it]Batches:  41%|████▏     | 80/193 [01:47<01:52,  1.00it/s]Batches:  42%|████▏     | 81/193 [01:48<01:46,  1.05it/s]Batches:  42%|████▏     | 82/193 [01:49<01:41,  1.09it/s]Batches:  43%|████▎     | 83/193 [01:50<01:45,  1.04it/s]Batches:  44%|████▎     | 84/193 [01:51<01:45,  1.03it/s]Batches:  44%|████▍     | 85/193 [01:52<01:41,  1.06it/s]Batches:  45%|████▍     | 86/193 [01:53<01:45,  1.02it/s]Batches:  45%|████▌     | 87/193 [01:54<01:48,  1.02s/it]Batches:  46%|████▌     | 88/193 [01:55<01:39,  1.06it/s]Batches:  46%|████▌     | 89/193 [01:56<01:35,  1.09it/s]Batches:  47%|████▋     | 90/193 [01:57<01:32,  1.11it/s]Batches:  47%|████▋     | 91/193 [01:58<01:30,  1.13it/s]Batches:  48%|████▊     | 92/193 [01:58<01:28,  1.14it/s]Batches:  48%|████▊     | 93/193 [01:59<01:34,  1.06it/s]Batches:  49%|████▊     | 94/193 [02:00<01:29,  1.11it/s]Batches:  49%|████▉     | 95/193 [02:01<01:25,  1.15it/s]Batches:  50%|████▉     | 96/193 [02:02<01:36,  1.01it/s]Batches:  50%|█████     | 97/193 [02:03<01:33,  1.03it/s]Batches:  51%|█████     | 98/193 [02:04<01:29,  1.07it/s]Batches:  51%|█████▏    | 99/193 [02:05<01:23,  1.13it/s]Batches:  52%|█████▏    | 100/193 [02:06<01:27,  1.06it/s]Batches:  52%|█████▏    | 101/193 [02:07<01:21,  1.12it/s]Batches:  53%|█████▎    | 102/193 [02:08<01:17,  1.17it/s]Batches:  53%|█████▎    | 103/193 [02:08<01:18,  1.15it/s]Batches:  54%|█████▍    | 104/193 [02:09<01:17,  1.15it/s]Batches:  54%|█████▍    | 105/193 [02:10<01:14,  1.18it/s]Batches:  55%|█████▍    | 106/193 [02:11<01:16,  1.14it/s]Batches:  55%|█████▌    | 107/193 [02:12<01:17,  1.11it/s]Batches:  56%|█████▌    | 108/193 [02:13<01:14,  1.13it/s]Batches:  56%|█████▋    | 109/193 [02:14<01:14,  1.12it/s]Batches:  57%|█████▋    | 110/193 [02:15<01:10,  1.17it/s]Batches:  58%|█████▊    | 111/193 [02:15<01:04,  1.26it/s]Batches:  58%|█████▊    | 112/193 [02:16<01:03,  1.28it/s]Batches:  59%|█████▊    | 113/193 [02:17<01:07,  1.19it/s]Batches:  59%|█████▉    | 114/193 [02:18<01:06,  1.18it/s]Batches:  60%|█████▉    | 115/193 [02:19<01:05,  1.18it/s]Batches:  60%|██████    | 116/193 [02:19<01:02,  1.23it/s]Batches:  61%|██████    | 117/193 [02:20<00:59,  1.27it/s]Batches:  61%|██████    | 118/193 [02:21<00:58,  1.27it/s]Batches:  62%|██████▏   | 119/193 [02:22<01:00,  1.23it/s]Batches:  62%|██████▏   | 120/193 [02:23<00:59,  1.23it/s]Batches:  63%|██████▎   | 121/193 [02:24<01:08,  1.05it/s]Batches:  63%|██████▎   | 122/193 [02:25<01:03,  1.12it/s]Batches:  64%|██████▎   | 123/193 [02:25<00:58,  1.20it/s]Batches:  64%|██████▍   | 124/193 [02:26<00:55,  1.24it/s]Batches:  65%|██████▍   | 125/193 [02:27<00:53,  1.28it/s]Batches:  65%|██████▌   | 126/193 [02:27<00:51,  1.31it/s]Batches:  66%|██████▌   | 127/193 [02:28<00:51,  1.29it/s]Batches:  66%|██████▋   | 128/193 [02:29<00:49,  1.33it/s]Batches:  67%|██████▋   | 129/193 [02:30<00:47,  1.33it/s]Batches:  67%|██████▋   | 130/193 [02:31<00:51,  1.22it/s]Batches:  68%|██████▊   | 131/193 [02:32<00:51,  1.21it/s]Batches:  68%|██████▊   | 132/193 [02:32<00:47,  1.28it/s]Batches:  69%|██████▉   | 133/193 [02:33<00:45,  1.31it/s]Batches:  69%|██████▉   | 134/193 [02:34<00:45,  1.30it/s]Batches:  70%|██████▉   | 135/193 [02:34<00:43,  1.34it/s]Batches:  70%|███████   | 136/193 [02:35<00:43,  1.32it/s]Batches:  71%|███████   | 137/193 [02:36<00:42,  1.33it/s]Batches:  72%|███████▏  | 138/193 [02:37<00:42,  1.30it/s]Batches:  72%|███████▏  | 139/193 [02:37<00:39,  1.36it/s]Batches:  73%|███████▎  | 140/193 [02:38<00:38,  1.39it/s]Batches:  73%|███████▎  | 141/193 [02:39<00:35,  1.46it/s]Batches:  74%|███████▎  | 142/193 [02:39<00:35,  1.43it/s]Batches:  74%|███████▍  | 143/193 [02:40<00:35,  1.42it/s]Batches:  75%|███████▍  | 144/193 [02:41<00:33,  1.46it/s]Batches:  75%|███████▌  | 145/193 [02:42<00:36,  1.33it/s]Batches:  76%|███████▌  | 146/193 [02:42<00:32,  1.43it/s]Batches:  76%|███████▌  | 147/193 [02:43<00:30,  1.52it/s]Batches:  77%|███████▋  | 148/193 [02:43<00:28,  1.56it/s]Batches:  77%|███████▋  | 149/193 [02:44<00:28,  1.55it/s]Batches:  78%|███████▊  | 150/193 [02:45<00:27,  1.56it/s]Batches:  78%|███████▊  | 151/193 [02:45<00:26,  1.57it/s]Batches:  79%|███████▉  | 152/193 [02:46<00:25,  1.60it/s]Batches:  79%|███████▉  | 153/193 [02:47<00:25,  1.59it/s]Batches:  80%|███████▉  | 154/193 [02:47<00:26,  1.49it/s]Batches:  80%|████████  | 155/193 [02:48<00:25,  1.48it/s]Batches:  81%|████████  | 156/193 [02:49<00:24,  1.54it/s]Batches:  81%|████████▏ | 157/193 [02:49<00:22,  1.60it/s]Batches:  82%|████████▏ | 158/193 [02:50<00:21,  1.65it/s]Batches:  82%|████████▏ | 159/193 [02:50<00:20,  1.65it/s]Batches:  83%|████████▎ | 160/193 [02:51<00:19,  1.67it/s]Batches:  83%|████████▎ | 161/193 [02:52<00:19,  1.66it/s]Batches:  84%|████████▍ | 162/193 [02:52<00:18,  1.67it/s]Batches:  84%|████████▍ | 163/193 [02:53<00:18,  1.60it/s]Batches:  85%|████████▍ | 164/193 [02:54<00:18,  1.55it/s]Batches:  85%|████████▌ | 165/193 [02:54<00:17,  1.61it/s]Batches:  86%|████████▌ | 166/193 [02:55<00:16,  1.63it/s]Batches:  87%|████████▋ | 167/193 [02:55<00:15,  1.68it/s]Batches:  87%|████████▋ | 168/193 [02:56<00:14,  1.72it/s]Batches:  88%|████████▊ | 169/193 [02:56<00:13,  1.73it/s]Batches:  88%|████████▊ | 170/193 [02:57<00:13,  1.76it/s]Batches:  89%|████████▊ | 171/193 [02:57<00:12,  1.79it/s]Batches:  89%|████████▉ | 172/193 [02:58<00:11,  1.85it/s]Batches:  90%|████████▉ | 173/193 [02:58<00:10,  1.89it/s]Batches:  90%|█████████ | 174/193 [02:59<00:10,  1.89it/s]Batches:  91%|█████████ | 175/193 [02:59<00:09,  1.92it/s]Batches:  91%|█████████ | 176/193 [03:00<00:08,  1.90it/s]Batches:  92%|█████████▏| 177/193 [03:01<00:08,  1.85it/s]Batches:  92%|█████████▏| 178/193 [03:01<00:07,  1.88it/s]Batches:  93%|█████████▎| 179/193 [03:02<00:07,  1.90it/s]Batches:  93%|█████████▎| 180/193 [03:02<00:06,  1.92it/s]Batches:  94%|█████████▍| 181/193 [03:03<00:06,  1.93it/s]Batches:  94%|█████████▍| 182/193 [03:03<00:05,  2.00it/s]Batches:  95%|█████████▍| 183/193 [03:04<00:05,  1.94it/s]Batches:  95%|█████████▌| 184/193 [03:04<00:04,  1.94it/s]Batches:  96%|█████████▌| 185/193 [03:05<00:04,  1.97it/s]Batches:  96%|█████████▋| 186/193 [03:05<00:03,  1.98it/s]Batches:  97%|█████████▋| 187/193 [03:06<00:02,  2.09it/s]Batches:  97%|█████████▋| 188/193 [03:06<00:02,  2.12it/s]Batches:  98%|█████████▊| 189/193 [03:06<00:01,  2.23it/s]Batches:  98%|█████████▊| 190/193 [03:07<00:01,  2.31it/s]Batches:  99%|█████████▉| 191/193 [03:07<00:00,  2.25it/s]Batches:  99%|█████████▉| 192/193 [03:08<00:00,  2.33it/s]Batches: 100%|██████████| 193/193 [03:08<00:00,  2.71it/s]Batches: 100%|██████████| 193/193 [03:08<00:00,  1.02it/s]
+  Embeddings saved to /home/ubuntu/KidInfluencer/data/results/title_embeddings.npy (shape: (98616, 384))
+
+[STEP 3] Building exploitation direction vector...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2329.75it/s]
+  Computing anchor embeddings...
+  Direction vector computed (dim=384)
+  Exploitation centroid norm: 0.6048
+  Healthy centroid norm: 0.3563
+
+[STEP 4] Computing drift scores...
+  Computing drift scores (cosine projection onto direction vector)...
+  Drift scores: mean=0.0638, std=0.1110
+  Range: [-0.2762, 0.6066]
+
+[STEP 5] Identifying viral hits...
+  Identifying viral hits (view_count > μ + 2σ per channel)...
+  Viral hits: 2,677 / 98,616 (2.7%)
+    Family: 912 / 41,159 (2.2%)
+    Adult:  1,765 / 57,457 (3.1%)
+
+[STEP 6] Computing channel-level statistics...
+
+  --- Channel-Level Drift Scores ---
+  Top 10 highest drift (most exploitation-like):
+    cocomelon            (family): drift=0.2196, 1983 videos
+    andrewdavila         (family): drift=0.1892, 3 videos
+    familyfizz           (family): drift=0.1709, 1457 videos
+    jordanmatter         (family): drift=0.1580, 571 videos
+    vladandniki          (family): drift=0.1526, 1014 videos
+    acefamily            (family): drift=0.1468, 713 videos
+    daviddobrik          (adult ): drift=0.1464, 564 videos
+    kkandbabyj           (family): drift=0.1464, 2345 videos
+    ryansworld           (family): drift=0.1459, 3685 videos
+    thesuperherobuddy    (family): drift=0.1421, 4121 videos
+
+  Bottom 10 lowest drift (least exploitation-like):
+    besteverfoods        (adult ): drift=-0.0111, 898 videos
+    mkbhd                (adult ): drift=-0.0198, 1813 videos
+    linustechtips        (adult ): drift=-0.0227, 7168 videos
+    wendover             (adult ): drift=-0.0269, 277 videos
+    aliabdaal            (adult ): drift=-0.0289, 1375 videos
+    3blue1brown          (adult ): drift=-0.0347, 234 videos
+    jeffnippard          (adult ): drift=-0.0430, 617 videos
+    kara_and_nate        (adult ): drift=-0.0494, 1046 videos
+    natacha_oceane       (adult ): drift=-0.0687, 230 videos
+    markwiens            (adult ): drift=-0.0866, 1597 videos
+
+  Group means: Family=0.1199, Adult=0.0152
+
+[STEP 7] Temporal drift analysis...
+
+  Quarterly drift trends saved to quarterly_drift_trends.csv
+
+[STEP 8] Difference-in-Differences causal inference...
+
+  Running Difference-in-Differences (DiD) analysis...
+  DiD observations: 2,663
+    Family: 907
+    Adult:  1,756
+
+  --- DiD Results (Simple) ---
+  Family mean drift change after viral hit: 0.002937 (±0.048035)
+  Adult mean drift change after viral hit:  -0.000145 (±0.036440)
+  DiD estimate (Family - Adult): 0.003082
+
+  --- DiD Results (OLS Regression) ---
+                    Coef.  Std.Err.         z     P>|z|    [0.025    0.975]
+const            0.005458  0.009465  0.576692  0.564147 -0.013092  0.024009
+is_family        0.003272  0.001898  1.723597  0.084781 -0.000449  0.006993
+log_viral_views -0.000337  0.000569 -0.592705  0.553378 -0.001452  0.000778
+
+  Key result:
+  β(is_family) = 0.003272
+  p-value = 0.0848
+  95% CI: [-0.000449, 0.006993]
+  Not statistically significant at p < 0.05
+
+[SAVING] Full dataset with drift scores...
+  Saved to /home/ubuntu/KidInfluencer/data/results/full_analysis_results.csv
+
+======================================================================
+ANALYSIS COMPLETE
+======================================================================
+
+Results saved to: /home/ubuntu/KidInfluencer/data/results/
+  - title_embeddings.npy ((98616, 384))
+  - direction_vector.npy
+  - full_analysis_results.csv (98,616 rows)
+  - channel_drift_stats.csv
+  - quarterly_drift_trends.csv
+  - did_observations.csv
+  - did_regression_summary.txt
