@@ -1,0 +1,31 @@
+{
+  "dataset": {
+    "channels": 115,
+    "videos": 5416,
+    "channels_1M_plus": 41
+  },
+  "commercial_detection_v2": {
+    "commercial_videos": 13,
+    "commercial_rate": 0.002333931777378815
+  },
+  "regression": {
+    "r_squared": 0.6024439844111228,
+    "n_observations": 5409,
+    "emotional_title_coeff": 0.2886586109028495,
+    "emotional_title_pvalue": 0.003714100504480955,
+    "commercial_coeff": 1.056418884643745,
+    "commercial_pvalue": 0.03163353498419874
+  },
+  "statistical_tests": {
+    "emotional_ttest_pvalue": NaN,
+    "emotional_mannwhitney_pvalue": NaN,
+    "cohens_d": 0.18644095022664894,
+    "crossplatform_commercial_corr": 0.001357272043395874
+  },
+  "risk_scoring": {
+    "highest_risk_channel": "TwinsFromRussia",
+    "highest_risk_score": 0.62813795507788,
+    "mean_risk_score": 0.13093074534128618,
+    "channels_above_75th_pct": 29
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": {
+    "n_videos": 5563,
+    "n_channels": 122
+  },
+  "model_performance": {
+    "model1_controls_R2": 0.5685,
+    "model2_nlp_R2": 0.5899,
+    "model3_full_R2": 0.618,
+    "delta_R2_nlp": 0.0215,
+    "delta_R2_cv": 0.0281,
+    "random_forest_cv_R2": 0.4448
+  },
+  "key_findings": {
+    "open_mouth_effect": "median views 27138 vs 16206, p=0.000000",
+    "text_overlay_effect": "median views 30768 vs 19298, p=0.000030",
+    "caps_effect": "median views 30474 vs 14475, p=0.000000",
+    "exclamation_effect": "median views 37670 vs 15938, p=0.000000"
+  }
+}

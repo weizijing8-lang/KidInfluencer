@@ -1,0 +1,18 @@
+{
+  "n_channels": 115,
+  "n_channels_with_indices": 75,
+  "n_videos_total": 5570,
+  "n_videos_annotated": 3059,
+  "ci_mean": 0.25724241217777416,
+  "ci_std": 0.1258115040239077,
+  "lii_mean": 0.3900746957478734,
+  "lii_std": 0.1404755620363824,
+  "pearson_r": 0.0015124581457605323,
+  "pearson_p": 0.8778576011262909,
+  "spearman_rho": -0.007396870554765292,
+  "spearman_p": 0.9497794883478513,
+  "mannwhitney_u": 685.0,
+  "mannwhitney_p": 0.5777137864158958,
+  "high_ci_lii_mean": 0.3897158051986856,
+  "low_ci_lii_mean": 0.3904432860416338
+}

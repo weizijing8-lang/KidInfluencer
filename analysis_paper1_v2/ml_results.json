@@ -1,0 +1,112 @@
+{
+  "video_model": {
+    "n_samples": 5563,
+    "n_features": 22,
+    "cv_r2_mean": -0.19485380892820583,
+    "cv_r2_std": 0.17970809020325884,
+    "train_r2": 0.7906129426034679
+  },
+  "hierarchical": {
+    "Structure Only": {
+      "R2": -0.29810950941395,
+      "std": 0.4554419079424824,
+      "n_features": 1
+    },
+    "+ NLP": {
+      "R2": -0.4395755840590354,
+      "std": 0.2783697112141009,
+      "n_features": 10
+    },
+    "+ CV": {
+      "R2": -0.29360076559925163,
+      "std": 0.2042413195582643,
+      "n_features": 17
+    },
+    "+ LLM": {
+      "R2": -0.32480625331047047,
+      "std": 0.13943628631266117,
+      "n_features": 22
+    }
+  },
+  "channel_model": {
+    "n_samples": 66,
+    "loo_r2": 0.15180611851798143,
+    "loo_mae": 0.12158611485451716
+  },
+  "exploit_score_regression": {
+    "family_beta": 0.9132224905638857,
+    "family_r2": 0.001432113485763331,
+    "family_n": 41157,
+    "adult_beta": 4.893918014337547,
+    "adult_r2": 0.05838681820256464,
+    "adult_n": 57456
+  },
+  "shap_top_features_video": [
+    {
+      "feature": "log_duration",
+      "mean_abs_shap": 0.533393144607544
+    },
+    {
+      "feature": "brightness",
+      "mean_abs_shap": 0.41331708431243896
+    },
+    {
+      "feature": "caps_ratio",
+      "mean_abs_shap": 0.2850418984889984
+    },
+    {
+      "feature": "colorfulness",
+      "mean_abs_shap": 0.27813687920570374
+    },
+    {
+      "feature": "title_length",
+      "mean_abs_shap": 0.25690481066703796
+    },
+    {
+      "feature": "num_faces",
+      "mean_abs_shap": 0.21622055768966675
+    },
+    {
+      "feature": "special_char_ratio",
+      "mean_abs_shap": 0.20700669288635254
+    },
+    {
+      "feature": "emoji_count",
+      "mean_abs_shap": 0.19461295008659363
+    },
+    {
+      "feature": "sentiment_compound",
+      "mean_abs_shap": 0.1847732663154602
+    },
+    {
+      "feature": "exclamation_count",
+      "mean_abs_shap": 0.14620628952980042
+    }
+  ],
+  "shap_top_features_channel": [
+    {
+      "feature": "n_child_brands",
+      "mean_abs_shap": 0.04724742870251282
+    },
+    {
+      "feature": "degree",
+      "mean_abs_shap": 0.024733742032078187
+    },
+    {
+      "feature": "sponsor_rate",
+      "mean_abs_shap": 0.010219814353127063
+    },
+    {
+      "feature": "family_partners",
+      "mean_abs_shap": 0.005636014731629945
+    },
+    {
+      "feature": "log_total_views",
+      "mean_abs_shap": 0.004202429128150193
+    },
+    {
+      "feature": "log_n_child_brands",
+      "mean_abs_shap": 0.0
+    }
+  ]
+}

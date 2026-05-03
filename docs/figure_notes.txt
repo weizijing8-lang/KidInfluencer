@@ -1,0 +1,9 @@
+Figure Quality Check Notes:
+- Fig 1 (Strategy Prevalence): Clean, clear labels. Good.
+- Fig 2 (Clickbait Impact): Violin+box hybrid. Shows +67%, +59%, +111%, +136% effects clearly. Good.
+- Fig 3 (Hierarchical R²): Stacked bar showing incremental variance. Clear labels. Good.
+- Fig 4 (Forest Plot): Shows coefficients with CI. Edge density dominates visually. Good.
+- Fig 5 (Clickbait Distribution): Histogram of channel-level scores. Good.
+- Fig 6 (Correlation Matrix): Low cross-correlations between NLP and CV features (mostly <0.12), confirming they capture independent dimensions. Notable: brightness-colorfulness (0.59), edge_density-brightness (0.62), num_faces-open_mouth (0.27).
+
+All figures are publication-quality at 300 DPI.

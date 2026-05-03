@@ -1,0 +1,342 @@
+nohup: ignoring input
+Loaded 112 new seed channels to collect
+[1/112]  (https://www.youtube.com/@RyansWorld)
+  → Ryan's World | 40,300,000 subs | 3684 vids
+  → 50 videos collected
+[2/112]  (https://www.youtube.com/@CKNToys)
+  → CKN  | 19,400,000 subs | 492 vids
+  → 50 videos collected
+[3/112]  (https://www.youtube.com/@FGTeeV)
+  → FGTeeV | 25,300,000 subs | 1875 vids
+  → 50 videos collected
+[4/112]  (https://www.youtube.com/@GamerGirl)
+  [SKIP] No data returned
+[5/112]  (https://www.youtube.com/@EvanTubeHD)
+  [SKIP] No data returned
+[6/112]  (https://www.youtube.com/@JillianTubeHD)
+  → JillianTubeHD | 1,740,000 subs | 277 vids
+  → 50 videos collected
+[7/112]  (https://www.youtube.com/@ToyLabTV)
+  [SKIP] No data returned
+[8/112]  (https://www.youtube.com/@BabyPlayful)
+  → Baby Playful | 387,000 subs | 297 vids
+  → 50 videos collected
+[9/112]  (https://www.youtube.com/@CocomelonenEspanol)
+  → Cocomelon en español | 2 subs | 0 vids
+  [SKIP] Too small (<1000 subs)
+[10/112]  (https://www.youtube.com/@BLIPPIofficial)
+  → Fun Kid Videos | 317 subs | 2 vids
+  [SKIP] Too small (<1000 subs)
+[11/112]  (https://www.youtube.com/@itsyeboi)
+  → ItsYeBoi | 2,670,000 subs | 586 vids
+  → 50 videos collected
+[12/112]  (https://www.youtube.com/@SIS_vs_BRO)
+  → SiS | 12,500 subs | 60 vids
+  → 50 videos collected
+[13/112]  (https://www.youtube.com/@TwinsFromRussia)
+  → TwinsFromRussia | 8,170,000 subs | 9149 vids
+  → 33 videos collected
+[14/112]  (https://www.youtube.com/@NikoandGabi)
+  [SKIP] No data returned
+[15/112]  (https://www.youtube.com/@BrooklynAndBailey)
+  → Brooklyn and Bailey | 7,410,000 subs | 1641 vids
+  → 50 videos collected
+[16/112]  (https://www.youtube.com/@8Passengers)
+  [SKIP] No data returned
+[17/112]  (https://www.youtube.com/@FantasticAdventures)
+  → Fantastic Adventures | 3 subs | 4 vids
+  [SKIP] Too small (<1000 subs)
+[18/112]  (https://www.youtube.com/@MYHouseIsFULL)
+  [SKIP] No data returned
+[19/112]  (https://www.youtube.com/@NotEnoughNelsons)
+  → Not Enough Nelsons | 5,410,000 subs | 2242 vids
+  → 50 videos collected
+[20/112]  (https://www.youtube.com/@FamilyFizz)
+  → Family Fizz | 2,780,000 subs | 1453 vids
+  → 50 videos collected
+[21/112]  (https://www.youtube.com/@Ohana)
+  [SKIP] No data returned
+[22/112]  (https://www.youtube.com/@TheFisherFamily)
+  → MarKey & The Boyz | 257 subs | 62 vids
+  [SKIP] Too small (<1000 subs)
+[23/112]  (https://www.youtube.com/@JacyandKacy)
+  → JacyandKacy | 4,070,000 subs | 1434 vids
+  → 50 videos collected
+[24/112]  (https://www.youtube.com/@TheCroutonCrackerjacks)
+  [SKIP] No data returned
+[25/112]  (https://www.youtube.com/@KidsFunTV)
+  → KidsFunTV | 38,700 subs | 273 vids
+  → 50 videos collected
+[26/112]  (https://www.youtube.com/@ToyMonster)
+  → TOY MONSTER © | 5,010 subs | 8 vids
+  → 8 videos collected
+[27/112]  (https://www.youtube.com/@TheEngineeringFamily)
+  → TheEngineeringFamily | 6,250,000 subs | 4121 vids
+  → 50 videos collected
+[28/112]  (https://www.youtube.com/@TheSuperHeroKid)
+  → The Superhero Project | 158 subs | 60 vids
+  [SKIP] Too small (<1000 subs)
+[29/112] MomOf4 Vlogs (UCj3tNa-UCt5Hhpvc4JnZGcQ)
+  → MomOf4 Vlogs | 90,300 subs | 1454 vids
+  → 50 videos collected
+[30/112] Mom of 6 Japan (UCUkdk5nI1If0-0it-JPrBAw)
+  → Mom of 6 Japan | 82,200 subs | 29 vids
+  → 29 videos collected
+[31/112] Big Family VLOG (UCx5SjA82hQIDPdd3uLCssGQ)
+  → Big Family VLOG | 479,000 subs | 2109 vids
+  → 50 videos collected
+[32/112] Big Big Family in the USA (UCMLqsgXvM6Vs0aiegOdrtLQ)
+  → Big Big Family in the USA | 164,000 subs | 2938 vids
+  → 50 videos collected
+[33/112] BIG FAMILY (UCYY3nXWjUXhMU24XQu4oucg)
+  → BIG FAMILY | 75,600 subs | 291 vids
+  → 50 videos collected
+[34/112] BIG FAMILY (UCFCKt1z8dli47-J5rI5yd3g)
+  → BIG FAMILY | 57,500 subs | 2391 vids
+  → 50 videos collected
+[35/112] The Young Fam (UCmrtxIX1NxdsaOfdGxSl5YQ)
+  → The Young Fam | 892,000 subs | 1299 vids
+  → 50 videos collected
+[36/112] Beyond Our Doorstep (UCGZA0_5LShndtki1B1WCQ3g)
+  → Beyond Our Doorstep | 161,000 subs | 231 vids
+  → 50 videos collected
+[37/112] YOUNG FAMILY VLOGS (UCN6KkKjOOWT5tR9vDkt_quA)
+  → YOUNG FAMILY VLOGS | 223 subs | 227 vids
+  [SKIP] Too small (<1000 subs)
+[38/112] New Young Family Vlogs (UCeHJ-4WP-6b54-Tj8Jck_Jw)
+  → New Young Family Vlogs | 98 subs | 179 vids
+  [SKIP] Too small (<1000 subs)
+[39/112] Noob Family Vlogs (UCqh9gGUn9Y9Soo94R2qPfcw)
+  → Noob Family Vlogs | 198,000 subs | 211 vids
+  → 50 videos collected
+[40/112] The Family Vlogs (UCaj3LX7pAAXqVIuOTLOPc2g)
+  → The Family Vlogs | 6,010 subs | 19 vids
+  → 19 videos collected
+[41/112] Caleb Kids Show (UC1CVU1pV2rqs8zSIy_OPPHA)
+  → Caleb Kids Show | 2,120,000 subs | 638 vids
+  → 50 videos collected
+[42/112] Kids Channel - Cartoon Videos for Kids (UC3KknIJZXRygH2pZ6MDtGbg)
+  → Kids Channel - Cartoon Videos for Kids | 6,900,000 subs | 2836 vids
+  → 50 videos collected
+[43/112] Star Light Kids (UC5mMf2NE17_MiTL94ihRN2w)
+  → Star Light Kids | 2,410,000 subs | 449 vids
+  → 50 videos collected
+[44/112] All Star Kid Children's Music Channel (UCcULZfOaRdjQo9eQnhOvTLg)
+  → All Star Kid Children's Music Channel | 238,000 subs | 393 vids
+  → 50 videos collected
+[45/112] Child Actor - Topic (UC_KMFkYbhKljbkFKmcd15IA)
+  → Child Actor - Topic | 48 subs | 95 vids
+  [SKIP] Too small (<1000 subs)
+[46/112] Child Actor - Topic (UCi8fMfMzujgCISho-BJ-RXQ)
+  → Child Actor - Topic | 102 subs | 30 vids
+  [SKIP] Too small (<1000 subs)
+[47/112] Actor boy sushil (UCbZyw49gycS3tZy6xQya0fw)
+  → Actor boy sushil | 7,570 subs | 279 vids
+  → 50 videos collected
+[48/112] Actor Ashwanth (UCT-eeAawywE0UG_qvoA_HBQ)
+  → Actor Ashwanth | 36,500 subs | 269 vids
+  → 50 videos collected
+[49/112] The young YouTuber (UCV3bpDlB-PfPEOjl7LRah5A)
+  → The young YouTuber | 184 subs | 325 vids
+  [SKIP] Too small (<1000 subs)
+[50/112] philthe young youtuber (UC5H2CHMl3v6wMGjDaBsoprQ)
+  → philthe young youtuber | 553 subs | 107 vids
+  [SKIP] Too small (<1000 subs)
+[51/112] Some Young YouTuber (UCnyP4y03ZQ7wfmynKKa5nHw)
+  → Some Young YouTuber | 50 subs | 80 vids
+  [SKIP] Too small (<1000 subs)
+[52/112] Young  Youtuber.   GEN-Z (UC-OOGqWiyKutpYtXEu11Vqg)
+  → Young  Youtuber.   GEN-Z | 34 subs | 86 vids
+  [SKIP] Too small (<1000 subs)
+[53/112] Kuhoo (young youtuber) (UCJ0Ubue8eVG3nvVGcGQ21Zw)
+  → Kuhoo (young youtuber) | 41 subs | 177 vids
+  [SKIP] Too small (<1000 subs)
+[54/112] That YouTub3 Family - The Adventurers (UCbZgDzTkBQMkPWYBFESJ3sQ)
+  → That YouTub3 Family - The Adventurers | 3,580,000 subs | 1728 vids
+  → 50 videos collected
+[55/112] Epic Family Road Trip (UC1Az_80tfW-1uEQBlUGXnww)
+  → Epic Family Road Trip | 285,000 subs | 604 vids
+  → 50 videos collected
+[56/112] @The Millitary Family  (UCWdE00ZmF4BATCgGgo92Mew)
+  → @The Millitary Family  | 466,000 subs | 827 vids
+  → 34 videos collected
+[57/112] Earls Family Vlogs (UCniCPy-kRxYshisooylV--g)
+  → Earls Family Vlogs | 541,000 subs | 877 vids
+  → 50 videos collected
+[58/112] The Mummy Vlogger (UC1vyr5sGa-vcl7nDVMj1s_A)
+  → The Mummy Vlogger | 45,000 subs | 341 vids
+  → 50 videos collected
+[59/112] Abi Firoz -Mommy Vlogger (UCKmK7BiD-WGWAmCxEG9__ew)
+  → Abi Firoz -Mommy Vlogger | 541,000 subs | 702 vids
+  → 50 videos collected
+[60/112] Hustle at Home Mom (UC_8BKDmjs7jWcjtxOUq9xmg)
+  → Hustle at Home Mom | 244,000 subs | 406 vids
+  → 50 videos collected
+[61/112] The Dad Vlog (UCvC7J4fzgzv2UL6ysQzS0-g)
+  → The Dad Vlog | 20,900 subs | 699 vids
+  → 50 videos collected
+[62/112] Mom 4 Kids Family Vlog  (UCQ5RpJBR0SOYjHKDixnBVQg)
+  → Mom 4 Kids Family Vlog  | 182 subs | 163 vids
+  [SKIP] Too small (<1000 subs)
+[63/112] Kids Cooking Channel (UC07e0Dz4iH7H6VZ69UWlqnA)
+  → Kids Cooking Channel | 129 subs | 6 vids
+  [SKIP] Too small (<1000 subs)
+[64/112] Village Cooking Boy (UClrJNVolt8PHT7o9HDkV-Bw)
+  → Village Cooking Boy | 3,060,000 subs | 118 vids
+  → 21 videos collected
+[65/112] Science Max - Scholastic (UCbprhISv-0ReKPPyhf7-Dtw)
+  → Science Max - Scholastic | 534,000 subs | 687 vids
+  → 50 videos collected
+[66/112] Baby Shark - Pinkfong Kids’ Songs & Stories (UCcdwLMPsaU2ezNSJU1nFoBQ)
+  → Baby Shark - Pinkfong Kids’ Songs & Stories | 84,500,000 subs | 3851 vids
+  → 50 videos collected
+[67/112] Nursery Rhymes TV (UCA4plE8LqhERSNUiYDuVUFg)
+  → Nursery Rhymes TV | 258,000 subs | 249 vids
+  → 50 videos collected
+[68/112] Kids Channel Nursery Rhymes and Baby Songs (UCv7TYWhF5jhtuY3FDPf06Aw)
+  → Kids Channel Nursery Rhymes and Baby Songs | 1,170,000 subs | 1119 vids
+  → 50 videos collected
+[69/112] Meekah - Educational Videos for Kids (UCx3RchaoRFpDpB60x7xRREw)
+  → Meekah - Educational Videos for Kids | 6,080,000 subs | 1190 vids
+  → 50 videos collected
+[70/112] Kids Tv - Preschool Learning Videos (UCpnDeduW4x-ww_UOaUAH6WQ)
+  → Kids Tv - Preschool Learning Videos | 2,200,000 subs | 1481 vids
+  → 50 videos collected
+[71/112] family lifestyle Channel  (UCGdKXGJm2SsrWKEjIchM9jQ)
+  → family lifestyle Channel  | 45 subs | 34 vids
+  [SKIP] Too small (<1000 subs)
+[72/112] Family Lifestyle  (UCWIXaSAwhR0KvMqZMdkolaA)
+  → Family Lifestyle  | 82,000 subs | 924 vids
+  → 8 videos collected
+[73/112] Daral - Iranian lifestyle (UCrXQvORCzycJ9mwE0bsLibQ)
+  → Daral - Iranian lifestyle | 214,000 subs | 1080 vids
+  → 50 videos collected
+[74/112] Family lifestyle TV (UCwdZZ2ogEogy9RlRnP8A7Xw)
+  → Family lifestyle TV | 18 subs | 21 vids
+  [SKIP] Too small (<1000 subs)
+[75/112] Sarah • Family Life | Cozy Home & Lifestyle 🤍 (UCnxJqjEqrGGQe2OAHiHd0Eg)
+  → Sarah • Family Life | Cozy Home & Lifestyle 🤍 | 14,500 subs | 136 vids
+  → 50 videos collected
+[76/112] The life style family (UCLLkH7S2WY4eB8DqXDnIQtA)
+  → The life style family | 31 subs | 113 vids
+  [SKIP] Too small (<1000 subs)
+[77/112] Isaac Family Lifestyle  (UC7zOxS8nYX214NlGa1ywNIw)
+  → Isaac Family Lifestyle  | 2,810 subs | 226 vids
+  → 50 videos collected
+[78/112] JOE BREEZY LIFESTYLE & FAMILY (UCUg7EafRUm0RPzrrxoQJhjw)
+  → JOE BREEZY LIFESTYLE & FAMILY | 44,200 subs | 27 vids
+  → 20 videos collected
+[79/112] Pari's Lifestyle (UCt_KDu-DtBqvIw7X-V7mlmQ)
+  → Pari's Lifestyle | 13,800,000 subs | 928 vids
+  → 50 videos collected
+[80/112] prabhati family lifestyle (UCi5_GXxKjgiW0oWAMYBnNIA)
+  → prabhati family lifestyle | 9,180 subs | 1786 vids
+  → 50 videos collected
+[81/112] Family Traveler அமெரிக்க VLOGS (UCTk9yzZAXir64WOpXt5DosA)
+  → Family Traveler அமெரிக்க VLOGS | 120,000 subs | 917 vids
+  → 50 videos collected
+[82/112] The Sangwan Family (UCN2FNjALOC1OoryKcssOi5Q)
+  → The Sangwan Family | 824,000 subs | 524 vids
+  → 50 videos collected
+[83/112] The Ingham Family (UCPu78bdv1WY6b9Kk7xixhQw)
+  → The Ingham Family | 1,380,000 subs | 3459 vids
+  → 50 videos collected
+[84/112] UK Family Vlog (UC-hM2NaWyPAVTp5aiDZttkA)
+  → UK Family Vlog | 8,730 subs | 0 vids
+  → 0 videos collected
+[85/112] Being UK  Family Vlog (UCa34wX6lIoc6tyQENlvjg6g)
+  → Being UK  Family Vlog | 181,000 subs | 1419 vids
+  → 50 videos collected
+[86/112] Priti’s family in Uk vlog (UCtg19lKuAVJpxn-Xhv-WLTA)
+  → Priti’s family in Uk vlog | 1,840 subs | 1095 vids
+  → 50 videos collected
+[87/112] Fil British family vlogs (UCYoiQfqe0J6J6BID0J6JTPg)
+  → Fil British family vlogs | 52,300 subs | 2153 vids
+  → 50 videos collected
+[88/112] Lovleen Vats (UCxq523tQwXhcgDDqBuwoiMQ)
+  → Lovleen Vats | 707,000 subs | 1465 vids
+  → 50 videos collected
+[89/112] My OzLife (UCmKxf6bbhkUuVu4Ps3bfC6A)
+  → My OzLife | 610,000 subs | 936 vids
+  → 50 videos collected
+[90/112] Maria & Family Vlogs (UCtAXjvtx_fJdc8-kTAEcv6g)
+  → Maria & Family Vlogs | 5,770 subs | 695 vids
+  → 50 videos collected
+[91/112] Deol family Australian  (UCLXoLWQU377BtTyQ0_0KTHA)
+  → Deol family Australian  | 399 subs | 239 vids
+  [SKIP] Too small (<1000 subs)
+[92/112] Australian Bangladeshi Family Vlog (UCXZqrquV66ZSWrt8MedDlCQ)
+  → Australian Bangladeshi Family Vlog | 950 subs | 549 vids
+  [SKIP] Too small (<1000 subs)
+[93/112] The Desi Australian Family (UC8aV4H4ITIcejDSyJxVQhLQ)
+  → The Desi Australian Family | 593 subs | 5 vids
+  [SKIP] Too small (<1000 subs)
+[94/112] Canada Family Vlogs (UCgWYulnI9jVbikYmU6bVpXA)
+  → Canada Family Vlogs | 14,300 subs | 720 vids
+  → 50 videos collected
+[95/112] Canadian Family Vlog (UCSvw8tv2nkY-CEmDB32QWzg)
+  → Canadian Family Vlog | 43 subs | 27 vids
+  [SKIP] Too small (<1000 subs)
+[96/112] Canadian Family Vlog (UCUA-OKbvCVNChlyaG5CsqhA)
+  → Canadian Family Vlog | 4,610 subs | 716 vids
+  → 50 videos collected
+[97/112] Gulati Family in Canada (UCochAaNGtKkuPsmpw1JkH1A)
+  → Gulati Family in Canada | 54,900 subs | 1327 vids
+  → 50 videos collected
+[98/112] Suharsh Family in Canada (UCv9KaLMgXHG4Cafo8_qopsg)
+  → Suharsh Family in Canada | 331,000 subs | 942 vids
+  → 50 videos collected
+[99/112] Patel Family vlog in canada (UCYeN331khfaBds9Ez8Psyfw)
+  → Patel Family vlog in canada | 129 subs | 112 vids
+  [SKIP] Too small (<1000 subs)
+[100/112] The Gujju family in Canada (UCEdhDTg-o0-6FqWsmeB1MAw)
+  → The Gujju family in Canada | 7,780 subs | 556 vids
+  → 50 videos collected
+[101/112] Canadian Family Life (UC0RIR-ic21_RJMJVMPP_0MQ)
+  → Canadian Family Life | 11,600 subs | 828 vids
+  → 50 videos collected
+[102/112] Canada Couple Vlogs (UCI86O2Dr9tU60b6CMhOZYNg)
+  → Canada Couple Vlogs | 887,000 subs | 727 vids
+  → 50 videos collected
+[103/112] Nav family vlog Canada (UCdPvn7Ka_fIlBK0ZKDWbI2Q)
+  → Nav family vlog Canada | 83 subs | 141 vids
+  [SKIP] Too small (<1000 subs)
+[104/112] Filipino Czech family (UC-0XZzV9y16bKIuWb4qWkCg)
+  → Filipino Czech family | 208,000 subs | 1044 vids
+  → 50 videos collected
+[105/112] Mami Aireh (Fil-Swiss Family vlog) (UCpX0Oh5UZSmoGdapjJLvvfQ)
+  → Mami Aireh (Fil-Swiss Family vlog) | 60,800 subs | 1072 vids
+  → 50 videos collected
+[106/112] Rhea & Roy Family Vlog (UCIVDPLH_7OhX0HAb8BYDsbA)
+  → Rhea & Roy Family Vlog | 10,000 subs | 613 vids
+  → 50 videos collected
+[107/112] RodVivKids Family Vlog Philippines 🇵🇭  (UCdBpCFv_RTOOBrImOlPT97g)
+  → RodVivKids Family Vlog Philippines 🇵🇭  | 11,000 subs | 1565 vids
+  → 50 videos collected
+[108/112] Fina's Vlog (UCOeJBQGvDaEXQZSwTr_V2ow)
+  → Fina's Vlog | 8,690 subs | 189 vids
+  → 50 videos collected
+[109/112] Rolwes  family Vlog  (UC-M2xqLWTXptiOSAom8GjFw)
+  → Rolwes  family Vlog  | 8,880 subs | 902 vids
+  → 50 videos collected
+[110/112] Indian Family Vlogs (UCJhuyGfCVEMCgpu8532Zt8w)
+  → Indian Family Vlogs | 230 subs | 130 vids
+  [SKIP] Too small (<1000 subs)
+[111/112] Simple Indian family vlog (UCKGhcY5F8Xo3O-R_eo58ISg)
+  → Simple Indian family vlog | 10,900 subs | 974 vids
+  → 50 videos collected
+[112/112] Indian Foodie Family Vlogs (UCpo_bRRIG8SfEXRhEvG94JA)
+  → Indian Foodie Family Vlogs | 2,320 subs | 1530 vids
+  → 50 videos collected
+
+Saved 78 channels → /home/ubuntu/KidInfluencer/scripts/../data/channels_v2_20260429_124756.csv
+Saved 3622 videos → /home/ubuntu/KidInfluencer/scripts/../data/videos_v2_20260429_124756.csv
+
+============================================================
+COLLECTION V2 COMPLETE
+  Channels: 78
+  Videos:   3622
+  Skipped (too small): 26
+  Failed:   8
+  Commercial: 12
+  Emotional:  194

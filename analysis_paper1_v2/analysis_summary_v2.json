@@ -1,0 +1,52 @@
+{
+  "n_channels_total": 66,
+  "n_family": 25,
+  "n_adult": 41,
+  "ci_pca_variance_explained": 0.44303475596635405,
+  "lii_pca_variance_explained": 0.5692182961586646,
+  "ci_lii_correlation": {
+    "all": {
+      "r": 0.25961635168702435,
+      "p": 0.035284707754954174,
+      "rho": 0.4088133682862099
+    },
+    "family": {
+      "r": 0.1741317918663593,
+      "p": 0.40514243205752004,
+      "rho": 0.26
+    },
+    "adult": {
+      "r": 0.46936783202406357,
+      "p": 0.0019625229883774705,
+      "rho": 0.48843590795056996
+    }
+  },
+  "family_vs_adult": {
+    "videos_per_week": {
+      "family": 2.698043831789821,
+      "adult": 1.9764910618887974
+    },
+    "mean_duration_min": {
+      "family": 7.413466853541795,
+      "adult": 10.743932093654731
+    },
+    "exploit_score": {
+      "family": 0.06342835292,
+      "adult": 0.03302470328780487
+    }
+  },
+  "labor_views_correlation": {
+    "family": {
+      "r": 0.4283500031075856,
+      "p": 0.03265504214922222
+    },
+    "adult": {
+      "r": 0.4102463958350243,
+      "p": 0.00772120746008729
+    }
+  },
+  "frequency_escalation": {
+    "family_pct_escalated": 0.48,
+    "adult_pct_escalated": 0.5121951219512195
+  }
+}

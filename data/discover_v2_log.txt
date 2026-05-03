@@ -1,0 +1,108 @@
+Already have 53 channels from previous discovery
+
+=== Adding additional known channels ===
+  Added 28 new known channels
+
+=== Searching with 48 queries ===
+  [1/48] Searching: 'family vlog 2024'
+    Found 1 results, 0 new unique channels
+  [2/48] Searching: 'family vlog daily routine'
+    Found 0 results, 0 new unique channels
+  [3/48] Searching: 'family of 4 vlog'
+    Found 1 results, 1 new unique channels
+  [4/48] Searching: 'family of 6 vlog'
+    Found 1 results, 1 new unique channels
+  [5/48] Searching: 'big family vlog'
+    Found 4 results, 4 new unique channels
+  [6/48] Searching: 'young family vlog'
+    Found 5 results, 4 new unique channels
+  [7/48] Searching: 'new family vlog channel'
+    Found 4 results, 2 new unique channels
+  [8/48] Searching: 'family vloggers'
+    Found 1 results, 0 new unique channels
+  [9/48] Searching: 'kid YouTuber channel'
+    Found 0 results, 0 new unique channels
+  [10/48] Searching: 'kids YouTube channel'
+    Found 2 results, 2 new unique channels
+  [11/48] Searching: 'children YouTube star'
+    Found 2 results, 2 new unique channels
+  [12/48] Searching: 'child actor YouTube'
+    Found 4 results, 4 new unique channels
+  [13/48] Searching: 'young YouTuber'
+    Found 5 results, 5 new unique channels
+  [14/48] Searching: 'teen YouTuber family'
+    Found 1 results, 1 new unique channels
+  [15/48] Searching: 'family challenge'
+    Found 1 results, 0 new unique channels
+  [16/48] Searching: 'kids challenge video'
+    Found 0 results, 0 new unique channels
+  [17/48] Searching: 'family prank video'
+    Found 0 results, 0 new unique channels
+  [18/48] Searching: 'kids surprise video'
+    Found 0 results, 0 new unique channels
+  [19/48] Searching: 'family road trip vlog'
+    Found 1 results, 1 new unique channels
+  [20/48] Searching: 'homeschool family vlog'
+    Found 0 results, 0 new unique channels
+  [21/48] Searching: 'adoption family vlog'
+    Found 0 results, 0 new unique channels
+  [22/48] Searching: 'military family vlog'
+    Found 2 results, 2 new unique channels
+  [23/48] Searching: 'interracial family vlog'
+    Found 0 results, 0 new unique channels
+  [24/48] Searching: 'mommy vlogger'
+    Found 2 results, 2 new unique channels
+  [25/48] Searching: 'stay at home mom vlog'
+    Found 1 results, 1 new unique channels
+  [26/48] Searching: 'dad vlog with kids'
+    Found 1 results, 1 new unique channels
+  [27/48] Searching: 'parenting vlog'
+    Found 0 results, 0 new unique channels
+  [28/48] Searching: 'mom of 3 vlog'
+    Found 0 results, 0 new unique channels
+  [29/48] Searching: 'mom of 4 vlog'
+    Found 2 results, 1 new unique channels
+  [30/48] Searching: 'kids toy review'
+    Found 0 results, 0 new unique channels
+  [31/48] Searching: 'toy unboxing channel'
+    Found 0 results, 0 new unique channels
+  [32/48] Searching: 'kids cooking channel'
+    Found 2 results, 2 new unique channels
+  [33/48] Searching: 'kids science experiments'
+    Found 1 results, 1 new unique channels
+  [34/48] Searching: 'baby shark dance'
+    Found 1 results, 1 new unique channels
+  [35/48] Searching: 'nursery rhymes channel'
+    Found 2 results, 2 new unique channels
+  [36/48] Searching: 'kids educational channel'
+    Found 2 results, 2 new unique channels
+  [37/48] Searching: 'family lifestyle channel'
+    Found 11 results, 10 new unique channels
+  [38/48] Searching: 'family travel vlog'
+    Found 1 results, 1 new unique channels
+  [39/48] Searching: 'family house tour'
+    Found 0 results, 0 new unique channels
+  [40/48] Searching: 'day in the life family'
+    Found 0 results, 0 new unique channels
+  [41/48] Searching: 'morning routine family'
+    Found 0 results, 0 new unique channels
+  [42/48] Searching: 'night routine kids'
+    Found 0 results, 0 new unique channels
+  [43/48] Searching: 'back to school vlog family'
+    Found 0 results, 0 new unique channels
+  [44/48] Searching: 'UK family vlog'
+    Found 6 results, 6 new unique channels
+  [45/48] Searching: 'Australian family vlog'
+    Found 6 results, 6 new unique channels
+  [46/48] Searching: 'Canadian family vlog'
+    Found 10 results, 10 new unique channels
+  [47/48] Searching: 'Filipino family vlog'
+    Found 6 results, 6 new unique channels
+  [48/48] Searching: 'Indian family vlog'
+    Found 5 results, 3 new unique channels
+
+=== DISCOVERY V2 COMPLETE ===
+  New channels found: 112
+  Combined total: 165
+  Saved new → /home/ubuntu/KidInfluencer/scripts/../data/discovered_channels_v2.csv
+  Saved combined → /home/ubuntu/KidInfluencer/scripts/../data/all_discovered_channels_combined.csv

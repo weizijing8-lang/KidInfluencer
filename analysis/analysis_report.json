@@ -1,0 +1,33 @@
+{
+  "dataset_overview": {
+    "total_channels": 38,
+    "total_videos_sampled": 1944,
+    "channels_with_1M_plus_subs": 20,
+    "channels_with_10M_plus_subs": 11
+  },
+  "subscriber_stats": {
+    "median": 1100000.0,
+    "mean": 15166498.94736842,
+    "max": 149000000.0,
+    "min": 3060.0
+  },
+  "video_stats": {
+    "median_duration_min": 17.4,
+    "mean_duration_min": 19.485193758573388,
+    "median_views": 40577.5,
+    "mean_views": 1465545.804526749
+  },
+  "risk_indicators": {
+    "total_emotional_titles": 156,
+    "emotional_title_rate": 0.08024691358024691,
+    "total_commercial_videos": 0,
+    "commercial_rate": 0.0
+  },
+  "cross_platform": {
+    "channels_with_instagram": 26,
+    "channels_with_tiktok": 7,
+    "channels_with_twitter": 5,
+    "channels_with_facebook": 15,
+    "avg_cross_platform_count": 1.394736842105263
+  }
+}

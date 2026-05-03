@@ -1,0 +1,56 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_views   R-squared:                       0.618
+Model:                            OLS   Adj. R-squared:                  0.616
+Method:                 Least Squares   F-statistic:                     298.4
+Date:                Sat, 02 May 2026   Prob (F-statistic):               0.00
+Time:                        05:30:09   Log-Likelihood:                -11103.
+No. Observations:                5563   AIC:                         2.227e+04
+Df Residuals:                    5532   BIC:                         2.247e+04
+Df Model:                          30                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                    1.4686      0.265      5.546      0.000       0.950       1.988
+log_subs                 0.5534      0.008     67.705      0.000       0.537       0.569
+duration_minutes         0.0116      0.001      8.618      0.000       0.009       0.014
+caps_ratio               0.3449      0.184      1.872      0.061      -0.016       0.706
+caps_word_count          0.0251      0.018      1.399      0.162      -0.010       0.060
+exclamation_count        0.0840      0.033      2.582      0.010       0.020       0.148
+question_count          -0.3497      0.067     -5.197      0.000      -0.482      -0.218
+emoji_count             -0.1084      0.037     -2.919      0.004      -0.181      -0.036
+sentiment_compound      -0.2082      0.184     -1.131      0.258      -0.569       0.153
+sentiment_pos            0.5280      0.337      1.568      0.117      -0.132       1.188
+sentiment_neg            0.3925      0.361      1.089      0.276      -0.314       1.099
+has_challenge            0.0089      0.127      0.071      0.944      -0.239       0.257
+has_prank               -0.8810      0.312     -2.826      0.005      -1.492      -0.270
+has_surprise             0.2407      0.147      1.633      0.102      -0.048       0.529
+has_emotional_word       0.0390      0.119      0.327      0.744      -0.195       0.273
+has_family_word         -0.1392      0.056     -2.477      0.013      -0.249      -0.029
+has_child_word           0.0463      0.067      0.689      0.491      -0.085       0.178
+has_first_person         0.4435      0.060      7.430      0.000       0.327       0.561
+has_clickbait_phrase     0.3556      0.209      1.703      0.089      -0.054       0.765
+word_count              -0.0096      0.014     -0.668      0.504      -0.038       0.018
+title_length            -0.0038      0.003     -1.495      0.135      -0.009       0.001
+special_char_ratio      -0.1788      0.402     -0.445      0.656      -0.966       0.609
+num_faces                0.0426      0.012      3.496      0.000       0.019       0.067
+max_face_ratio          -0.7470      0.583     -1.281      0.200      -1.890       0.396
+has_open_mouth           0.0846      0.057      1.490      0.136      -0.027       0.196
+has_text_overlay         0.0483      0.101      0.479      0.632      -0.149       0.246
+brightness               0.0091      0.001      7.558      0.000       0.007       0.011
+saturation               0.0012      0.002      0.659      0.510      -0.002       0.005
+colorfulness             0.0013      0.002      0.504      0.614      -0.004       0.006
+edge_density             6.8357      0.783      8.733      0.000       5.301       8.370
+contrast                -0.0141      0.002     -6.250      0.000      -0.019      -0.010
+==============================================================================
+Omnibus:                       82.330   Durbin-Watson:                   0.495
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              101.465
+Skew:                           0.224   Prob(JB):                     9.27e-23
+Kurtosis:                       3.487   Cond. No.                     7.16e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.16e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

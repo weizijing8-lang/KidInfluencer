@@ -1,0 +1,28 @@
+{
+  "dataset": {
+    "annotated_videos": 3059,
+    "merged_with_metadata": 3034,
+    "channels": 75,
+    "annotation_success_rate": "69.8%"
+  },
+  "key_findings": {
+    "emotional_manipulation_rate": "34.1%",
+    "commercial_rate": "5.9%",
+    "child_protagonist_rate": "27.2%",
+    "privacy_concern_rate": "53.0%",
+    "clickbait_rate": "65.9%"
+  },
+  "regression": {
+    "r_squared": "0.5637",
+    "emotional_coeff": "-0.0048",
+    "emotional_p": "0.943661",
+    "clickbait_coeff": "0.2711",
+    "clickbait_p": "0.000000",
+    "commercial_coeff": "0.4406",
+    "commercial_p": "0.001201"
+  },
+  "statistical_tests": {
+    "emotional_ttest_p": "0.000000",
+    "emotional_mannwhitney_p": "0.000000"
+  }
+}
