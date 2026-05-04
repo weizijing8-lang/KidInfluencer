@@ -1,0 +1,512 @@
+[
+  {
+    "cluster": 0,
+    "n_videos": 1290,
+    "pct": 0.03134339237553758,
+    "median_views": 37828951.0,
+    "view_boost": 72.4350238287051,
+    "top_words": [
+      "cocomelon",
+      "nursery",
+      "rhymes",
+      "songs",
+      "kids",
+      "song",
+      "more",
+      "yes",
+      "little",
+      "dance"
+    ],
+    "representative_titles": [
+      "The Hiccup Song | CoComelon Nursery Rhymes & Kids Songs",
+      "Looby Loo + More Nursery Rhymes & Kids Songs - CoComelon",
+      "Hiccup Song + More Nursery Rhymes & Kids Songs - CoComelon",
+      "Stick To It Song + More Nursery Rhymes & Kids Songs - CoComelon",
+      "Stick To It | CoComelon Nursery Rhymes & Kids Songs",
+      "This Is the Way | CoComelon Nursery Rhymes & Kids Songs",
+      "Looby Loo | CoComelon Nursery Rhymes & Kids Songs",
+      "Wave Hello Song + More Nursery Rhymes & Kids Songs - CoComelon"
+    ],
+    "top_channels": [
+      "cocomelon(1239)",
+      "ryansworld(20)",
+      "familyfunpack(19)"
+    ]
+  },
+  {
+    "cluster": 1,
+    "n_videos": 3156,
+    "pct": 0.07668197390480355,
+    "median_views": 296534.0,
+    "view_boost": -0.42435672202432373,
+    "top_words": [
+      "baby",
+      "baby's",
+      "pregnant",
+      "baby!",
+      "kids",
+      "pregnancy",
+      "toddler",
+      "mom",
+      "old",
+      "week"
+    ],
+    "representative_titles": [
+      "BABY'S FIRST STEPS! 8 MONTHS OLD",
+      "BABY STANDS UP! (8 months old)",
+      "ONE WEEK OLD!",
+      "BABY PARTIED TOO HARD!",
+      "MAYBE BABY?!",
+      "BABY'S FIRST STEPS!!! (10 MONTHS OLD)",
+      "ONLY 9 MONTHS OLD...",
+      "6 MONTH OLD BABY STANDS ON HIS OWN!"
+    ],
+    "top_channels": [
+      "thesacconejolys(772)",
+      "kkandbabyj(728)",
+      "dailybumps(583)"
+    ]
+  },
+  {
+    "cluster": 2,
+    "n_videos": 1795,
+    "pct": 0.04361348008844182,
+    "median_views": 4044170.0,
+    "view_boost": 6.850699331243266,
+    "top_words": [
+      "ryan",
+      "ryan's",
+      "play",
+      "pretend",
+      "kids",
+      "world",
+      "plays",
+      "challenge",
+      "giant",
+      "surprise"
+    ],
+    "representative_titles": [
+      "Ryan's Claymation Play Doh adventure with friends!",
+      "Ryan use Thanos Gauntlet on Mommy with fun Kids Adventure!",
+      "Tag with Ryan In Real Life Challenge and gameplay fun kids games!!!",
+      "Ryan Pretend Play Dreaming of Fun Kids Adventure!!!",
+      "Ryan's Toys Comes to Life in Ryan's Dream Pretend Play fun!!!",
+      "Ryan Pretend Play TV Adventure Funny Story!!!",
+      "Ryan Pretend Play with Giant Gobsmax Toys for kids!!!",
+      "Ryan plays Putt Putt Mini Goft and Arcades with family!"
+    ],
+    "top_channels": [
+      "ryansworld(1711)",
+      "thesuperherobuddy(49)",
+      "acefamily(9)"
+    ]
+  },
+  {
+    "cluster": 3,
+    "n_videos": 2360,
+    "pct": 0.05734140000485944,
+    "median_views": 621313.0,
+    "view_boost": 0.2061168431576188,
+    "top_words": [
+      "food",
+      "diy",
+      "kids",
+      "slime",
+      "science",
+      "assistant",
+      "family",
+      "candy",
+      "challenge",
+      "ice"
+    ],
+    "representative_titles": [
+      "YUMMY BRIE CHEESE APPETIZER",
+      "NUTELLA CREPES WITH HOMEMADE WHIP CREAM + BONUS",
+      "Real Life Magic  Beans",
+      "DIY DORITOS CHICKEN FINGERS TASTE TEST!!",
+      "MORE CHEESE PLEASE!",
+      "S'mores Maker DIY with Marshmallows Hershey's Chocolates taste test",
+      "I PUT VEGGIES IN THE PI\u00d1ATA!!",
+      "EXTREME DORITOS EXPERIMENT! - DORITOS KRISPIE SQUARES?"
+    ],
+    "top_channels": [
+      "familyfunpack(346)",
+      "ryansworld(308)",
+      "bonniehoellein(237)"
+    ]
+  },
+  {
+    "cluster": 4,
+    "n_videos": 4554,
+    "pct": 0.1106494642466652,
+    "median_views": 257558.0,
+    "view_boost": -0.500018441767692,
+    "top_words": [
+      "family",
+      "christmas",
+      "birthday",
+      "shopping",
+      "kids",
+      "fun",
+      "halloween",
+      "surprise",
+      "school",
+      "house"
+    ],
+    "representative_titles": [
+      "PRESENT FROM OKBABY!!!",
+      "GRETCHEN'S 8th BIRTHDAY MORNING + PARTY! OPENING PRESENTS!",
+      "SPECIAL GUESTS SQS! ONE WISH!",
+      "THE CRAZIEST NEW YEAR EVER!",
+      "CHRISTMAS ONESIE PARTY!!!",
+      "4th Birthday Morning Opening Presents!",
+      "SHOPPING FOR GWYNETH'S BIRTHDAY AND A FUN BASEBALL GAME! FAMILY VLOG",
+      "BRING YOUR OWN CUP SLURPEE DAY AT 7 - ELEVEN! | FAMILY VLOG"
+    ],
+    "top_channels": [
+      "familyfunpack(744)",
+      "dailybumps(654)",
+      "theweisslife(629)"
+    ]
+  },
+  {
+    "cluster": 5,
+    "n_videos": 4566,
+    "pct": 0.11094103068736788,
+    "median_views": 745134.0,
+    "view_boost": 0.446482960777272,
+    "top_words": [
+      "piper",
+      "rockelle",
+      "family",
+      "brent",
+      "rivera",
+      "best",
+      "life",
+      "daughter",
+      "rebecca",
+      "mom"
+    ],
+    "representative_titles": [
+      "I\u2019m named Koa Star but they call me\u2026",
+      "Remembering Our Sweet Kona",
+      "Twin Telepathy Daddy Makeover Edition!",
+      "WE KNOW THE GENDER FOR OKBABY!",
+      "RZ Twin Hypnotized Maddie\u2019s Ex Crush! Spending 24 hours in 50\u2019s Diner | Rebecca Zamolo",
+      "THIS WAS TOO MUCH FOR HER...",
+      "WHAT DID SHE SAY??",
+      "ARIZONA Fan Mail: Katerina"
+    ],
+    "top_channels": [
+      "familyfunpack(539)",
+      "bonniehoellein(402)",
+      "rebeccazamolo(373)"
+    ]
+  },
+  {
+    "cluster": 6,
+    "n_videos": 1865,
+    "pct": 0.045314284325874095,
+    "median_views": 348559.0,
+    "view_boost": -0.32336377842701425,
+    "top_words": [
+      "#shorts",
+      "#cocomelon",
+      "advent",
+      "cocomelon",
+      "learn",
+      "baby",
+      "calendars?",
+      "what\u2019s",
+      "kids",
+      "daughter"
+    ],
+    "representative_titles": [
+      "NEVER GIVE UP! #shorts",
+      "You almost got the cheese touch!\ud83e\uddc0 #shorts",
+      "You're a 10 But....  #shorts",
+      "EEEWWW .... #shorts",
+      "YOU NAILED IT!\ud83e\udd23 #shorts",
+      "I ruined my own joke \ud83d\ude02 #shorts",
+      "UPSIDE DOWN!\ud83d\ude43\ud83d\ude02 #shorts",
+      "NAILED IT!\ud83e\udd23 #shorts"
+    ],
+    "top_channels": [
+      "theweisslife(609)",
+      "cocomelon(397)",
+      "familyfunpack(271)"
+    ]
+  },
+  {
+    "cluster": 7,
+    "n_videos": 1191,
+    "pct": 0.028937969239740506,
+    "median_views": 207140.0,
+    "view_boost": -0.5978918147670028,
+    "top_words": [
+      "leroys",
+      "school",
+      "kesley",
+      "birthday",
+      "cheer",
+      "reese",
+      "shopping",
+      "christmas",
+      "rhett",
+      "kesley's"
+    ],
+    "representative_titles": [
+      "YOU'RE GROUNDED | THE LEROYS",
+      "I HAVEN'T TOLD THEM YET | THE LEROYS",
+      "THE BACHELOR IN GREECE  | THE LEROYS",
+      "Another one?  | The LeRoys",
+      "WHO ARE YOU TRYING TO IMPRESS? | THE LEROYS",
+      "I'M LATE | THE LEROYS",
+      "They Named It After You | The LeRoys",
+      "IT WASN'T MEANT TO BE | THE LEROYS"
+    ],
+    "top_channels": [
+      "theleray(1187)",
+      "thesacconejolys(2)",
+      "ehbee(1)"
+    ]
+  },
+  {
+    "cluster": 8,
+    "n_videos": 2226,
+    "pct": 0.054085574750346234,
+    "median_views": 726928.5,
+    "view_boost": 0.4111417395440031,
+    "top_words": [
+      "(wk",
+      "bratayley",
+      "annie",
+      "christmas",
+      "hayley",
+      "it's",
+      "annie's",
+      "gymnastics",
+      "hayley's",
+      "house"
+    ],
+    "representative_titles": [
+      "SOS (WK 205.3) | Bratayley",
+      "Think Fast (WK 104.4) | Bratayley",
+      "Trust Fall! (WK 107.5) | Bratayley",
+      "These 2 Meanies (WK 244.7) | Bratayley",
+      "ThiS is GoNna be a LitTle Bit WeiRd (WK 301.5) | Bratayley",
+      "Kiki is Here!  (WK 194.5) | Bratayley",
+      "Ba Bam, What?! (WK 156.3) | Bratayley",
+      "Totes Delish! (WK 140.6) | Bratayley"
+    ],
+    "top_channels": [
+      "bratayley(2224)",
+      "dailybumps(1)",
+      "piperrockelle(1)"
+    ]
+  },
+  {
+    "cluster": 9,
+    "n_videos": 4088,
+    "pct": 0.09932696746604466,
+    "median_views": 901332.5,
+    "view_boost": 0.7497015345491957,
+    "top_words": [
+      "challenge",
+      "game",
+      "challenge!",
+      "giant",
+      "family",
+      "real",
+      "kids",
+      "fun",
+      "pool",
+      "challenge!!"
+    ],
+    "representative_titles": [
+      "WHAT IS THAT?!",
+      "This is so FUN!",
+      "Jump on the Count of 3!",
+      "That Was So CLOSE!",
+      "HULAHOOP CONTEST!",
+      "1, 2, 3, RELEASE 'EM!",
+      "CLOSE Call with WILD Monkey! *in Gibraltar* \ud83c\uddec\ud83c\uddee ",
+      "No Hands! (WK 99)"
+    ],
+    "top_channels": [
+      "ryansworld(553)",
+      "familyfunpack(533)",
+      "dailybumps(437)"
+    ]
+  },
+  {
+    "cluster": 10,
+    "n_videos": 565,
+    "pct": 0.01372791991641762,
+    "median_views": 94475022.0,
+    "view_boost": 182.39856930707484,
+    "top_words": [
+      "vlad",
+      "niki",
+      "nikita",
+      "play",
+      "kids",
+      "toys",
+      "stories",
+      "toy",
+      "funny",
+      "mom"
+    ],
+    "representative_titles": [
+      "Vlad and Niki pretend to be Batman and play with Batman Toys",
+      "Vlad and Niki play with Black Adam toys and save the day",
+      "Vlad and Nikita build their own Toys",
+      "Vlad and Nikita in search of toys",
+      "Vlad and Niki play toys and make Giant T-Shirt",
+      "Vlad and Niki play with Monkey See Monkey Poo Fun Toy Story",
+      "Vlad and Niki have fun in museums and playgrounds",
+      "Vlad, Nikita and their funny stories for children"
+    ],
+    "top_channels": [
+      "vladandniki(563)",
+      "familyfunpack(1)",
+      "thesuperherobuddy(1)"
+    ]
+  },
+  {
+    "cluster": 11,
+    "n_videos": 2883,
+    "pct": 0.0700488373788177,
+    "median_views": 1195425.0,
+    "view_boost": 1.3206052782280375,
+    "top_words": [
+      "toy",
+      "toys",
+      "kids",
+      "video",
+      "surprise",
+      "unboxing",
+      "paw",
+      "patrol",
+      "review",
+      "play"
+    ],
+    "representative_titles": [
+      "Scooby Doo Five Figure Pack Who Dunnit Pack The Scooby Doo  Video Toy Review",
+      "OCTONAUTS  Octonauts Gup H with Funny Pig Octonauts Video Toy Review",
+      "Caillou Treehouse Caillou Firestation Toy with Surprise Guests Parody",
+      "Imaginext SpongeBob Glove World Amusement Park & Krusty Krab Playset",
+      "Humpty Dumpty Wall Game for kids! Family Fun Game Night Egg Surprise Disney Toys",
+      "FINDING DORY  Pixar Finding Dory Toys and Surprise Bags a Funny Toys Video",
+      "Opening Blind Bag Surprise with Alvine and the Chipmunks Toys",
+      "Play Doh Sesame Steet Elmo Shape and Spin Playset Sesame Street Play-Doh Play Set Toy"
+    ],
+    "top_channels": [
+      "thesuperherobuddy(1448)",
+      "ryansworld(653)",
+      "familyfunpack(224)"
+    ]
+  },
+  {
+    "cluster": 12,
+    "n_videos": 7347,
+    "pct": 0.17851155332021285,
+    "median_views": 289428.0,
+    "view_boost": -0.438151164257913,
+    "top_words": [
+      "house",
+      "(wk",
+      "found",
+      "school",
+      "hours",
+      "best",
+      "house!",
+      "don't",
+      "caught",
+      "bought"
+    ],
+    "representative_titles": [
+      "WHY DID I SAY THIS?!",
+      "\u2026",
+      "Again ?",
+      "I CAN'T EVEN!",
+      "OMG!",
+      "WHAT WAS I THINKING?!",
+      "SILLY ON PURPOSE!",
+      "I CAME HOME TO THIS..."
+    ],
+    "top_channels": [
+      "thesacconejolys(973)",
+      "bonniehoellein(958)",
+      "dailybumps(948)"
+    ]
+  },
+  {
+    "cluster": 13,
+    "n_videos": 1121,
+    "pct": 0.027237165002308234,
+    "median_views": 357667.0,
+    "view_boost": -0.30568297630718166,
+    "top_words": [
+      "family",
+      "fizz",
+      "baby",
+      "shopping",
+      "challenge!",
+      "kids",
+      "surprise",
+      "birthday",
+      "christmas",
+      "mum"
+    ],
+    "representative_titles": [
+      "WHOLE FAMILY GLOW UP! *before vs after* | Family Fizz",
+      "We waited 7 YEARS for this! | Family Fizz",
+      "We didn\u2019t expect this\u2026 | Family Fizz",
+      "Our cosy day trapped inside | Family Fizz",
+      "I wasn\u2019t allowed in\u2026 | Family Fizz",
+      "Going CRAZY in CHiNA! | Family  Fizz",
+      "It\u2019s PARENT\u2019S EVENING! | Family Fizz",
+      "SPECIAL DELIVERY! | Family Fizz"
+    ],
+    "top_channels": [
+      "familyfizz(1103)",
+      "familyfunpack(5)",
+      "dailybumps(2)"
+    ]
+  },
+  {
+    "cluster": 14,
+    "n_videos": 2150,
+    "pct": 0.05223898729256263,
+    "median_views": 673451.5,
+    "view_boost": 0.30733011734787974,
+    "top_words": [
+      "assistant",
+      "paw",
+      "patrol",
+      "masks",
+      "surprise",
+      "wiggles",
+      "plays",
+      "hunt",
+      "waggles",
+      "toy"
+    ],
+    "representative_titles": [
+      "Assistant Silly Hide n Seek with Paw Patrol Marshal and Scooby Doo",
+      "ASSISTANT Adventure as Despicable Me Minions Taken by Captain Hook",
+      "Evil Assistant Tries to Feed Dory and Nemo in the Bubble Fort",
+      "Assistant Rescues the DC League of Super Pets to Find Superman and Batman",
+      "Evil Assistant takes Paw Patrol Balls from Dogs Wiggles and Waggles",
+      "Assistant has a Trolls and Paw Patrol Christmas Party Toy Scavenger Hunt",
+      "Assistant Hide n Seek in the Ultimate Box Fort with the Gorilla and Paw patrol",
+      "Assistant Joins Marios and Paw Patrol in a Ghostbustin Halloween"
+    ],
+    "top_channels": [
+      "thesuperherobuddy(2021)",
+      "vladandniki(24)",
+      "ryansworld(23)"
+    ]
+  }
+]

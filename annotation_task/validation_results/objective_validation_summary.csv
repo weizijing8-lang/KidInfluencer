@@ -1,0 +1,6 @@
+Validation,Metric,Value,Interpretation
+Commercial (binary),Agreement,0.947,Good
+Clickbait (Spearman),Spearman ρ,0.398,Fair
+Clickbait (binary Kappa),Cohen's κ,0.189,Poor
+Emotional (strict Kappa),Cohen's κ,0.187,Poor
+Emotional (relaxed Kappa),Cohen's κ,0.164,Poor

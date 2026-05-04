@@ -1,0 +1,223 @@
+[
+  {
+    "category_name": "Nursery Rhymes & Kids Songs",
+    "manipulation_risk": "low",
+    "description": "This cluster consists predominantly of nursery rhyme and children's song videos, primarily from the CoComelon channel, designed for early childhood entertainment and education. The content features animated or live-action musical segments aimed at toddlers and young children.",
+    "exploitation_concerns": [],
+    "commercialization_level": "high",
+    "cluster_id": 0,
+    "n_videos": 1290,
+    "view_boost_pct": 7243.5,
+    "median_views": 37828951.0
+  },
+  {
+    "category_name": "Baby Milestones & Parenting Vlogs",
+    "manipulation_risk": "high",
+    "description": "This cluster features videos documenting infants' developmental milestones and family life, often emphasizing babies' ages and first achievements to attract views. The content is heavily centered on very young children and their parents, showcasing intimate moments to engage audiences.",
+    "exploitation_concerns": [
+      "Potential overexposure of infants leading to privacy violations",
+      "Emotional manipulation through staged or exaggerated baby milestones",
+      "Use of children\u2019s images and milestones primarily for channel growth and monetization"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 1,
+    "n_videos": 3156,
+    "view_boost_pct": -42.4,
+    "median_views": 296534.0
+  },
+  {
+    "category_name": "Pretend Play & Kids Adventures",
+    "manipulation_risk": "high",
+    "description": "This cluster features highly popular pretend play and adventure videos centered around a child influencer, Ryan, engaging in imaginative scenarios often involving toys and family participation. The content is designed to captivate young audiences through playful storytelling and interactive challenges.",
+    "exploitation_concerns": [
+      "Potential overexposure and pressure on the child influencer to perform for views and revenue",
+      "Use of staged scenarios that may blur the line between genuine child behavior and scripted content",
+      "Heavy commercialization through toy placements and branded play experiences targeting young viewers"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 2,
+    "n_videos": 1795,
+    "view_boost_pct": 685.1,
+    "median_views": 4044170.0
+  },
+  {
+    "category_name": "Food & DIY Kids Challenges",
+    "manipulation_risk": "medium",
+    "description": "This cluster features kidfluencer videos centered around food-related DIY projects, taste tests, and playful challenges involving snacks and sweets, often with family participation. The content is designed to be engaging and visually appealing to children and families.",
+    "exploitation_concerns": [
+      "Potential pressure on child creators to perform or participate in staged challenges for views",
+      "Use of children to promote branded food products or unhealthy eating habits",
+      "Emotional manipulation through exaggerated reactions or scripted scenarios to boost engagement"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 3,
+    "n_videos": 2360,
+    "view_boost_pct": 20.6,
+    "median_views": 621313.0
+  },
+  {
+    "category_name": "Family Vlogs & Celebrations",
+    "manipulation_risk": "medium",
+    "description": "This cluster features family-oriented vlogs centered around children's birthdays, holidays, and everyday family activities, often highlighting gift openings and special events. The content is designed to showcase family life and milestones, appealing to viewers interested in wholesome, relatable family moments.",
+    "exploitation_concerns": [
+      "Potential overexposure of children\u2019s private moments for views and monetization",
+      "Emotional manipulation through staged reactions or exaggerated celebrations",
+      "Pressure on children to perform or participate for content creation"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 4,
+    "n_videos": 4554,
+    "view_boost_pct": -50.0,
+    "median_views": 257558.0
+  },
+  {
+    "category_name": "Family Vlogs & Kid Challenges",
+    "manipulation_risk": "medium",
+    "description": "This cluster features family-oriented vlogs and challenge videos centered around kid influencers, often highlighting family dynamics, staged scenarios, and emotional storytelling. The content frequently involves children in scripted or semi-scripted situations designed to engage viewers emotionally.",
+    "exploitation_concerns": [
+      "Potential emotional manipulation through staged conflicts or dramatized family situations",
+      "Use of children\u2019s personal lives and relationships for content engagement",
+      "Pressure on children to perform or participate in emotionally charged or attention-seeking scenarios"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 5,
+    "n_videos": 4566,
+    "view_boost_pct": 44.6,
+    "median_views": 745134.0
+  },
+  {
+    "category_name": "Kid-Friendly Short Clips",
+    "manipulation_risk": "medium",
+    "description": "This cluster features short-form videos from kidfluencer channels focusing on lighthearted, humorous, and family-oriented content often using popular hashtags like #shorts and references to children\u2019s brands such as Cocomelon. The content is designed for quick engagement with playful, reaction-based titles.",
+    "exploitation_concerns": [
+      "Potential overexposure of children through frequent short clips",
+      "Use of emotional cues and staged reactions to maximize viewer engagement",
+      "Possible pressure on children to perform or maintain online personas"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 6,
+    "n_videos": 1865,
+    "view_boost_pct": -32.3,
+    "median_views": 348559.0
+  },
+  {
+    "category_name": "Family Vlog & Drama",
+    "manipulation_risk": "high",
+    "description": "This cluster features family vlog-style videos centered around the daily lives and interpersonal dynamics of the LeRoys, often highlighting staged conflicts or emotional moments to engage viewers. The content appears to focus on scripted drama and personal storytelling involving children.",
+    "exploitation_concerns": [
+      "Staged or exaggerated family conflicts potentially exploiting children's emotions",
+      "Emotional manipulation to increase viewer engagement",
+      "Children's privacy and consent in sharing personal or sensitive family moments"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 7,
+    "n_videos": 1191,
+    "view_boost_pct": -59.8,
+    "median_views": 207140.0
+  },
+  {
+    "category_name": "Family Vlog & Lifestyle",
+    "manipulation_risk": "medium",
+    "description": "This cluster primarily features family vlog content centered around the Bratayley channel, showcasing daily life, challenges, and interactions involving children. The videos have high engagement and often include staged or scripted scenarios to entertain viewers.",
+    "exploitation_concerns": [
+      "Potential staging of conflicts or emotional situations to increase viewer engagement",
+      "Use of children's personal lives and emotions for content creation without clear boundaries",
+      "High frequency of uploads possibly leading to pressure on child participants"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 8,
+    "n_videos": 2226,
+    "view_boost_pct": 41.1,
+    "median_views": 726928.5
+  },
+  {
+    "category_name": "Family Challenge & Game Videos",
+    "manipulation_risk": "medium",
+    "description": "This cluster features kidfluencer family channels producing high-energy challenge and game videos often involving children in playful competitions or stunts. The content is designed to be engaging and entertaining, frequently emphasizing excitement and suspense.",
+    "exploitation_concerns": [
+      "Potential staging or exaggeration of challenges to elicit emotional reactions",
+      "Pressure on children to perform or participate repeatedly for views",
+      "Use of children\u2019s likeness and reactions primarily for commercial gain"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 9,
+    "n_videos": 4088,
+    "view_boost_pct": 75.0,
+    "median_views": 901332.5
+  },
+  {
+    "category_name": "Children's Toy Play & Stories",
+    "manipulation_risk": "medium",
+    "description": "This cluster features highly popular videos of child influencers Vlad and Niki engaging in imaginative play with toys and storytelling, often involving branded characters and scenarios. The content is designed to entertain children through playful scenarios and toy interactions.",
+    "exploitation_concerns": [
+      "Potential overexposure and pressure on child influencers to perform for views",
+      "Use of branded toys and characters may blur lines between entertainment and advertising to children",
+      "Emotional manipulation through staged scenarios to maximize engagement"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 10,
+    "n_videos": 565,
+    "view_boost_pct": 18239.9,
+    "median_views": 94475022.0
+  },
+  {
+    "category_name": "Toy Unboxing & Review",
+    "manipulation_risk": "medium",
+    "description": "This cluster features videos primarily focused on toy unboxing, reviews, and play demonstrations by child influencers, often showcasing popular branded toys and surprise elements to engage young viewers. The content is designed to attract children's attention through familiar characters and interactive play scenarios.",
+    "exploitation_concerns": [
+      "Potential over-commercialization pressuring children to promote toys",
+      "Emotional manipulation through surprise and excitement to drive repeated views",
+      "Possible lack of clear disclosure about sponsorships or advertising"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 11,
+    "n_videos": 2883,
+    "view_boost_pct": 132.1,
+    "median_views": 1195425.0
+  },
+  {
+    "category_name": "Family Drama & Reaction Vlogs",
+    "manipulation_risk": "high",
+    "description": "This cluster features emotionally charged, reaction-based family vlogs often centered around staged conflicts or surprising events designed to elicit strong viewer engagement. The content frequently uses sensational titles and expressions to maximize emotional impact and viewer retention.",
+    "exploitation_concerns": [
+      "Staged or exaggerated conflicts that may emotionally manipulate child participants",
+      "Pressure on children to perform or react in ways that generate drama",
+      "Use of children\u2019s emotional responses for commercial gain without adequate safeguards"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 12,
+    "n_videos": 7347,
+    "view_boost_pct": -43.8,
+    "median_views": 289428.0
+  },
+  {
+    "category_name": "Family Lifestyle Vlogs",
+    "manipulation_risk": "medium",
+    "description": "This cluster features family-centered daily vlogs primarily from the Family Fizz channel, showcasing everyday moments, celebrations, and family interactions often involving children. The content is designed to engage viewers through relatable family experiences and emotional storytelling.",
+    "exploitation_concerns": [
+      "Potential overexposure of children\u2019s private lives for audience engagement",
+      "Emotional manipulation through staged or exaggerated family scenarios",
+      "Children\u2019s consent and autonomy in content creation may be limited"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 13,
+    "n_videos": 1121,
+    "view_boost_pct": -30.6,
+    "median_views": 357667.0
+  },
+  {
+    "category_name": "Roleplay & Toy Adventure",
+    "manipulation_risk": "high",
+    "description": "This cluster features child influencers engaging in imaginative roleplay scenarios involving popular toy characters and franchises, often with recurring themes of assistants, rescue missions, and playful conflicts. The content is designed to captivate children through familiar characters and interactive storylines.",
+    "exploitation_concerns": [
+      "Use of staged conflict and emotional manipulation to increase engagement",
+      "Potential overexposure and pressure on child performers to maintain high output",
+      "Heavy reliance on branded toys and characters may blur lines between entertainment and advertising"
+    ],
+    "commercialization_level": "high",
+    "cluster_id": 14,
+    "n_videos": 2150,
+    "view_boost_pct": 30.7,
+    "median_views": 673451.5
+  }
+]

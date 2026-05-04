@@ -1,0 +1,69 @@
+channel_title,channel_category,n_videos,mean_exploit,new_category,final_category
+-0.04882334,293,1,,family_adult,family_adult
+0.12348561,69465,1,,family_adult,family_adult
+2717,45770,1,,family_adult,family_adult
+3Blue1Brown,adult,234,0.002426527672307692,adult,adult
+Ali Abdaal,adult,1375,-0.01804737770887891,adult,adult
+Andrew Davila,family,3,0.19846207600000002,adult_mislabeled,adult
+Andymation,adult,187,0.006471789682192513,adult,adult
+Best Ever Food Review Show,adult,1796,-0.030510236922957686,adult,adult
+Bonnie Hoellein,family,2723,0.02740246535607786,family_adult,family_adult
+Bratayley,family,2614,-0.011111078150550114,kidfluencer,kidfluencer
+Brent Rivera,family,884,0.08871548738367081,adult_mislabeled,adult
+CaseyNeistat,adult,1127,0.06677230945401065,adult,adult
+Cocomelon - Nursery Rhymes,family,1983,0.03636248270531871,kidfluencer,kidfluencer
+Daily Bumps,family,3081,0.07888916733076469,kidfluencer,kidfluencer
+David Dobrik,adult,564,0.14413612407003545,adult,adult
+Drew Binsky,adult,1255,0.0018546676728446215,adult,adult
+Dude Perfect,adult,510,0.051226125772745094,adult,adult
+Family Fizz,family,1457,0.046805119192439945,kidfluencer,kidfluencer
+Family Fun Pack,family,3447,0.022700173178300698,kidfluencer,kidfluencer
+ForEverAndForAva,family,159,0.049133798405157234,kidfluencer,kidfluencer
+Graham Stephan,adult,1510,0.028773553989043046,adult,adult
+Greg Doucette,adult,4348,-0.026315670312776585,adult,adult
+Half as Interesting,adult,561,0.026669473417094476,adult,adult
+ItsYeBoi,family,587,0.07997827060274275,adult_mislabeled,adult
+Jake Paul,adult,1605,0.089301939779963,adult,adult
+James Charles,adult,698,0.08713206556108882,adult,adult
+Jeff Nippard,adult,617,-0.023513315053063207,adult,adult
+Jordan Matter,family,571,0.11646176553197898,adult_mislabeled,adult
+KKandbabyJ,family,2345,0.08174844611428998,family_adult,family_adult
+Kara and Nate,adult,1046,-0.07862289947204588,adult,adult
+Kurzgesagt – In a Nutshell,adult,357,0.027623049712109243,adult,adult
+Linus Tech Tips,adult,7168,0.021618627652526926,adult,adult
+Mark Wiens,adult,1597,-0.0940018706397514,adult,adult
+Markiplier,adult,5719,0.1032939464850738,adult,adult
+Marques Brownlee,adult,1813,0.057590214703491446,adult,adult
+Matt D'Avella,adult,467,0.04408848109141328,adult,adult
+MrBeast,adult,970,0.0872428076308866,adult,adult
+Mrwhosetheboss,adult,1900,0.053891352223094734,adult,adult
+Natacha Océane,adult,230,-0.06357872060434783,adult,adult
+NikkieTutorials,adult,944,0.06972487354496822,adult,adult
+Peter McKinnon,adult,818,0.03531263936871638,adult,adult
+PewDiePie,adult,4617,0.10138448932480464,adult,adult
+Piper Rockelle,family,816,0.1160396480923652,adult_mislabeled,adult
+PrestonPlayz,adult,1179,0.05408152674617854,adult,adult
+Rebecca Zamolo,family,1170,0.12400185982192306,adult_mislabeled,adult
+RoomieOfficial,adult,869,0.090723134230748,adult,adult
+Ryan's World,family,3685,0.008769433663424694,kidfluencer,kidfluencer
+SACCONEJOLYs,family,2852,0.0735099594776378,family_adult,family_adult
+Simone Giertz,adult,196,0.026304668355867346,adult,adult
+SmarterEveryDay,adult,395,0.006472549146582278,adult,adult
+THE WEISS LIFE,family,1818,0.05095567821094169,kidfluencer,kidfluencer
+Tannerites,family,1409,0.025291170626685594,kidfluencer,kidfluencer
+The ACE Family,family,713,0.10042236557779805,family_adult,family_adult
+The Bee Family,family,1150,0.03986479862054783,kidfluencer,kidfluencer
+The Labrant Fãm,family,3,0.06241623333333334,family_adult,family_adult
+The LeRoys,family,1896,0.013517690707109705,family_adult,family_adult
+TheEngineeringFamily,family,4121,0.04319542620147634,kidfluencer,kidfluencer
+Tom Scott,adult,737,0.015786549089986432,adult,adult
+TwoSetViolin,adult,1692,-0.009620570492618203,adult,adult
+Unspeakable,adult,1114,0.15802127690360862,adult,adult
+Veritasium,adult,499,0.00846662970490982,adult,adult
+Vlad and Niki,family,1014,0.04340944812450947,kidfluencer,kidfluencer
+Wendover Productions,adult,277,0.022392131216823104,adult,adult
+colinfurze,adult,412,0.021817550962864078,adult,adult
+emma chamberlain,adult,308,0.054839016957207797,adult,adult
+jacksepticeye,adult,5309,0.08392441250088266,adult,adult
+jeffreestar,adult,436,0.07938191336935206,adult,adult
+pierson,family,656,0.06880883530843292,adult_mislabeled,adult
