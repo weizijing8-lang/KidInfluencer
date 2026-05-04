@@ -1,166 +1,206 @@
-# Unsupervised Discovery of Algorithmic Incentives in the Kidfluencer Ecosystem: A De-Channelized Multimodal Approach
+# The Performativity Premium: A Multimodal AI Audit of Child Labor and Emotional Manipulation in the Kidfluencer Ecosystem
 
 ## Abstract
 
-The rapid rise of "kidfluencers"---child content creators on platforms like YouTube---has raised significant ethical and legal concerns regarding child labor, privacy, and emotional manipulation. While recent legislation attempts to regulate this ecosystem, empirical evidence regarding the specific content strategies rewarded by platform algorithms remains scarce. This study presents a multimodal computational audit of the kidfluencer ecosystem, analyzing 41,157 videos across 25 top family and child-centric channels. We deploy a novel **de-channelized feature engineering** approach that extracts abstract content strategy indicators (content type, emotional manipulation signals, commercialization markers) rather than raw text embeddings, enabling discovery of cross-channel patterns unconfounded by individual channel styles. Our K=7 clustering reveals that platform algorithms disproportionately reward game/roleplay content (+298% view boost, 23 channels) and prank/reaction videos (+223%, 23 channels) over standard vlogs (-24%) and clickbait-titled content (-33%). Crucially, within-channel controls confirm these effects are not driven by channel popularity alone. We identify a "manipulation paradox": content with the highest density of emotional manipulation signals (medical emergencies, urgency framing) receives *lower* algorithmic reward than content optimized for engagement through play-based formats. These findings provide critical empirical grounding for policy interventions, suggesting that regulations should focus on the structural incentives driving content production rather than surface-level manipulation markers.
+The rapid rise of "kidfluencers" on YouTube has raised ethical concerns regarding child labor, emotional manipulation, and algorithmic amplification. While legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child labor intensity and algorithmic reward remains scarce. This study presents a multimodal AI audit of 41,157 videos across 23 kidfluencer channels, combining LLM-based classification (GPT-4.1) of child labor intensity, computer vision analysis of thumbnail emotions, and statistical modeling of engagement metrics. We classify each video as **performative** (child working for the camera: challenges, roleplay, unboxing) or **organic** (natural family life: vacations, milestones, routines), and independently flag emotional exploitation signals. Our findings reveal a **"performativity premium"**: performative content receives significantly higher views than organic content both across channels (Spearman $\rho = 0.427$, $p = 0.042$) and within channels ($+5.1\%$, $p = 0.019$). However, emotional exploitation itself shows *no correlation* with views ($\rho = 0.004$, $p = 0.986$). The most algorithmically rewarded formats---music/dance ($+1264\%$), roleplay ($+243\%$), and games ($+193\%$)---are highly performative but low in exploitation, while the highest-exploitation format (drama, $63.4\%$ exploitation rate) receives *below-average* views ($-32\%$). Thumbnail analysis confirms that performative content uses significantly higher color saturation ($p < 0.0001$) and more dramatic emotional framing. These findings identify a structural incentive that rewards children's labor without requiring overt emotional manipulation, challenging policy frameworks focused on detecting surface-level exploitation markers.
 
 ## 1. Introduction
 
-The commercialization of childhood through digital platforms has created a lucrative "kidfluencer" economy. Children are frequently featured in YouTube videos, unboxing toys, participating in challenges, and documenting their daily lives. This phenomenon has sparked intense debate regarding the ethics of child digital labor, the psychological impact of public exposure, and the blurring of lines between play and work [1, 2].
+The commercialization of childhood through digital platforms has created a lucrative "kidfluencer" economy in which children are featured in YouTube videos---unboxing toys, participating in challenges, performing scripted roleplay, and documenting their daily lives. This phenomenon has sparked intense debate regarding the ethics of child digital labor, the psychological impact of public exposure, and the blurring of lines between play and work [1, 2].
 
 Recent legislative efforts, such as France's Loi Studer (2020) and the Illinois PA 103-0556 (2024), aim to protect child creators by mandating financial trusts and limiting working hours [3, 4]. However, these regulations often struggle to define and measure the nuanced ways in which platform algorithms incentivize specific types of content, potentially driving creators toward more exploitative practices to maximize engagement.
 
-Previous research on the kidfluencer ecosystem has largely relied on qualitative content analysis or small-scale manual coding [5, 6]. While valuable, these approaches cannot scale to audit the massive volume of content generated or systematically identify the latent patterns rewarded by recommendation algorithms. Moreover, prior computational approaches using raw text embeddings (e.g., Sentence-BERT) for clustering tend to conflate channel-specific titling conventions with genuine content strategies, producing clusters dominated by individual channels rather than cross-channel patterns.
+A fundamental question remains unanswered: **Does the algorithm reward the exploitation of children, or does it reward their labor?** These are distinct phenomena. A video of a child crying during a staged prank represents emotional exploitation; a video of a child performing a choreographed dance routine represents performative labor. Both raise ethical concerns, but they demand different regulatory responses.
 
-This study addresses these gaps by deploying a **de-channelized multimodal AI pipeline** to conduct a large-scale, unsupervised audit of kidfluencer content strategies. We ask three core research questions:
+Previous research on the kidfluencer ecosystem has largely relied on qualitative content analysis or small-scale manual coding [5, 6]. While valuable, these approaches cannot scale to audit the massive volume of content generated. Moreover, prior computational approaches using raw text embeddings (e.g., Sentence-BERT) for clustering tend to conflate channel-specific titling conventions with genuine content strategies, producing clusters dominated by individual channels rather than cross-channel patterns. In our preliminary analysis, 8 out of 15 embedding-based clusters were composed of $>90\%$ content from a single channel.
 
-- **RQ1:** What cross-channel content strategy patterns emerge when clustering is performed on abstract, channel-independent features rather than raw text embeddings?
-- **RQ2:** Which content strategies are most heavily rewarded by platform algorithms, and does this effect persist after controlling for channel-level popularity?
-- **RQ3:** How do manipulation signals (emotional exploitation, commercialization, urgency framing) relate to algorithmic reward across content strategies?
+This study addresses these gaps by deploying a **multimodal AI pipeline** combining large language models and computer vision to conduct a large-scale audit. We ask three core research questions:
+
+- **RQ1:** Does performative child labor (content created *for* the camera) receive greater algorithmic reward than organic content (natural family documentation)?
+- **RQ2:** Is emotional exploitation (conflict, distress, fear) independently associated with higher views, or is the reward driven by labor intensity?
+- **RQ3:** How do visual signals in thumbnails (child emotions, color manipulation, dramatic framing) differ between performative and organic content?
 
 ## 2. Related Work
 
 ### 2.1 The Kidfluencer Economy and Digital Labor
 
-The concept of "calibrated amateurism" [10] suggests that influencers deliberately craft an aesthetic of raw authenticity to build parasocial relationships. In family vlogging, this authenticity relies on the continuous documentation of children's private lives. Recent theoretical frameworks argue that kidfluencing should be analyzed through the lens of child labor, emphasizing metrics like filming hours, emotional performance, and privacy forfeiture [1, 11]. Our work operationalizes this framework computationally, providing quantitative metrics for these qualitative concerns.
+The concept of "calibrated amateurism" [10] suggests that influencers deliberately craft an aesthetic of raw authenticity to build parasocial relationships. In family vlogging, this authenticity relies on the continuous documentation of children's private lives. Recent theoretical frameworks argue that kidfluencing should be analyzed through the lens of child labor, emphasizing metrics like filming hours, emotional performance, and privacy forfeiture [1, 11]. Clark and Jno-Charles [1] propose distinguishing between "organic" family documentation and "performative" content production, a distinction we operationalize computationally in this study.
 
-### 2.2 Algorithmic Auditing and Content Manipulation
+### 2.2 Algorithmic Auditing
 
-Algorithmic auditing has emerged as a crucial method for investigating platform behavior without direct access to proprietary code [12]. Previous audits have examined radicalization pathways and the amplification of clickbait. Our methodology builds upon recent advances in deceptive communication detection [13] and feature engineering for transformer models [8], applying these techniques to the novel domain of child digital labor.
+Algorithmic auditing has emerged as a crucial method for investigating platform behavior without direct access to proprietary code [12]. Previous audits have examined radicalization pathways, the amplification of clickbait, and the recommendation of harmful content to minors. Our methodology builds upon recent advances in LLM-assisted content classification [7, 8] and multimodal analysis [13], applying these techniques to the novel domain of child digital labor.
 
-### 2.3 Limitations of Embedding-Based Clustering
+### 2.3 Emotional Manipulation in Children's Content
 
-A key methodological contribution of this work is addressing the confound between channel identity and content strategy in embedding-based approaches. When Sentence-BERT embeddings are clustered directly, channels with distinctive titling conventions (e.g., Cocomelon's "Song Name | Nursery Rhymes" format or Bratayley's "Title (WK XXX)" format) dominate individual clusters. In our preliminary analysis, 8 out of 15 clusters were >90% composed of a single channel's videos. This renders the clustering uninformative for cross-channel strategy discovery, as it merely recovers channel identity rather than content patterns.
+Research on children's media has documented the use of emotional manipulation strategies including staged conflict, surprise reveals, and fear-based narratives [6]. Jorge et al. [6] found that family vloggers frequently frame exploitative content as "just play," obscuring the labor involved. Our study quantifies this phenomenon at scale, distinguishing between the emotional manipulation present in content and the performative labor required to produce it.
 
 ## 3. Methodology
 
 ### 3.1 Data Collection
 
-We collected a comprehensive dataset of 41,157 videos from 25 top family and kidfluencer YouTube channels using the YouTube Data API. Channels were selected based on prior literature on kidfluencer ecosystems and include a mix of family vloggers (e.g., DailyBumps, SacconeJolys), child entertainment channels (e.g., Cocomelon, Ryan's World, Vlad & Niki), and teen/tween creators (e.g., Piper Rockelle, Brent Rivera). For each video, we retrieved metadata including titles, view counts, like counts, comment counts, and publication dates.
+We collected metadata for 41,157 videos from 23 top family and kidfluencer YouTube channels using the YouTube Data API. Channels were selected based on prior literature and include family vloggers (e.g., DailyBumps, SacconeJolys, Bratayley), child entertainment channels (e.g., Cocomelon, Ryan's World, Vlad \& Niki), and teen/tween creators (e.g., Piper Rockelle, Brent Rivera). For each video, we retrieved titles, view counts, like counts, comment counts, and publication dates. Additionally, we downloaded 2,100 video thumbnails stratified across channels for visual analysis.
 
-### 3.2 De-Channelized Feature Engineering
+### 3.2 LLM-Based Labor Intensity Classification
 
-Rather than clustering on raw text embeddings, we designed a 34-dimensional feature vector capturing abstract content strategy indicators that are channel-independent:
+We deployed GPT-4.1-nano to classify all 41,157 video titles along three dimensions:
 
-**Content Format Indicators (15 binary features):** Using keyword-based regex classifiers, we identified whether each title signals a specific content format: challenge, unboxing, prank, storytime, vlog, tutorial, reaction, Q&A, review, mukbang, game, roleplay, music, toy play, or shorts.
+**Labor Type.** Each video was classified as one of four categories: (1) **performative**---the child is working for the camera, including challenges, roleplay, unboxing, pranks, games, toy reviews, and choreographed performances; (2) **organic**---the child appears in natural family life contexts such as vacations, birthdays, routines, and milestones; (3) **ambiguous**---insufficient information to determine; (4) **no\_child**---no child involvement apparent from the title.
 
-**Emotional Manipulation Signals (5 binary features):** We detected markers of clickbait emotion ("shocking," "unbelievable"), urgency ("last," "goodbye," "emergency"), mystery ("secret," "reveal," "exposed"), conflict ("fight," "cry," "grounded"), and medical content ("hospital," "surgery," "sick").
+**Emotional Exploitation.** A binary flag indicating whether the title suggests child distress, conflict, fear, crying, punishment, medical emergency, or embarrassment.
 
-**Commercialization Signals (3 binary features):** We identified brand mentions, monetary references, and giveaway language.
+**Content Format.** One of 18 categories: challenge, roleplay, unboxing, prank, game, music\_dance, toy\_play, vlog, storytime, mukbang, tutorial, reaction, drama, milestone, travel, medical, announcement, or other.
 
-**Structural Features (11 numeric features):** Title length, word count, capitalization ratio, exclamation/question marks, emoji presence, ellipsis, numbers, and all-caps words.
+Videos were processed in batches of 50 with structured JSON output. To ensure data quality, we applied fuzzy string matching to correct LLM output inconsistencies (e.g., "organice" $\rightarrow$ "organic"), recovering 95.9\% of labels without manual intervention.
 
-This approach ensures that a Cocomelon nursery rhyme and a Ryan's World nursery rhyme receive similar feature vectors, enabling cross-channel pattern discovery.
+### 3.3 Thumbnail Computer Vision Analysis
 
-### 3.3 Clustering with Channel Diversity Constraint
+We conducted two levels of visual analysis on video thumbnails:
 
-We applied K-Means clustering on the standardized 34-dimensional feature vectors. To select the optimal *k*, we evaluated both silhouette scores and **channel diversity** (maximum single-channel concentration within any cluster) for *k* = 5 to 24. We selected **K=7** as it achieved the lowest maximum channel concentration (44.8%) among all tested values, ensuring that no cluster is dominated by a single channel's content.
+**OpenCV Feature Extraction (N = 2,100).** Using Haar Cascade classifiers, we detected faces and smiles in each thumbnail. We also computed color saturation (HSV S-channel mean), brightness (HSV V-channel mean), edge density (Canny edge detector), and color variance.
 
-### 3.4 Within-Channel View Boost Control
+**LLM Vision Analysis (N = 270).** For a stratified subsample, we deployed GPT-4.1-mini with vision capabilities to analyze each thumbnail image. The model identified: child presence and count, child emotional state (happy, sad, scared, crying, surprised, neutral, excited, distressed), adult presence, scene type (indoor, outdoor, studio, animated), text overlays, emotional tone (positive, negative, neutral, dramatic, exciting), and an exploitation concern score (0--3).
 
-To disentangle content strategy effects from channel popularity effects, we compute a **within-channel view boost** for each cluster. For each channel with $\geq$5 videos in a given cluster, we compare the median views of that channel's videos *within the cluster* to the channel's overall median views. This controls for the fact that channels like Vlad & Niki have inherently higher view counts regardless of content type.
+### 3.4 Statistical Framework
 
-### 3.5 LLM-Assisted Validation
+To disentangle content strategy effects from channel popularity effects, we employ three complementary approaches:
 
-To validate the regex-based feature extraction, we deployed GPT-4.1-mini to classify a stratified sample of 1,846 videos across all 25 channels. The LLM assigned content type, target audience, emotional tone, commercialization level, and exploitation risk for each video. This serves as an independent validation of our rule-based features and provides additional semantic dimensions.
+**Cross-channel comparison.** We compare median view counts across labor types and content formats using Mann-Whitney U tests and Kruskal-Wallis tests.
 
-### 3.6 Thumbnail Visual Analysis
+**Within-channel control.** For each channel with $\geq 10$ videos of a given labor type, we compute the percentage difference between the median views of that labor type and the channel's overall median. We then test whether these within-channel boosts are significantly different from zero using one-sample t-tests across channels.
 
-We conducted computer vision analysis on 2,100 stratified thumbnails using OpenCV Haar Cascades for face detection and smile detection, along with color saturation and edge density measurements.
+**Channel-level correlation.** We compute each channel's performative content rate and emotional exploitation rate, then test their Spearman correlation with the channel's median views.
 
 ## 4. Results
 
-### 4.1 De-Channelized Content Strategy Clusters (RQ1)
+### 4.1 Labor Intensity Distribution
 
-Our de-channelized clustering identified 7 distinct content strategy patterns that span multiple channels. Unlike embedding-based approaches where 8/15 clusters were >90% single-channel, all 7 de-channelized clusters contain 18--25 channels, with maximum single-channel concentration of only 44.8%.
+LLM classification produced the following distribution across 41,157 videos:
 
-**Table 1: Content Strategy Clusters (K=7, De-Channelized)**
+| Labor Type | N Videos | Percentage | Median Views |
+|------------|----------|------------|-------------|
+| Performative | 21,489 | 52.2% | 1,044,718 |
+| Organic | 15,072 | 36.6% | 404,818 |
+| Ambiguous | 2,786 | 6.8% | --- |
+| No Child | 1,810 | 4.4% | --- |
 
-| ID | Content Strategy | N Videos | Channels | Top-1 Channel (%) | View Boost | p-value |
-|----|-----------------|----------|----------|-------------------|------------|---------|
-| C1 | Game, Roleplay & Music | 10,634 | 23 | SuperHeroBuddy (27.6%) | +298% | <0.001 |
-| C0 | Prank & Reaction | 761 | 23 | SuperHeroBuddy (11.7%) | +223% | <0.001 |
-| C5 | Unboxing & Toy Review | 1,559 | 21 | SuperHeroBuddy (44.8%) | +52% | <0.001 |
-| C4 | Medical & Urgency | 568 | 21 | WeissLife (13.0%) | -21% | 0.009 |
-| C3 | Shorts & Emoji | 1,947 | 18 | WeissLife (30.7%) | -24% | <0.001 |
-| C6 | Standard Vlog | 12,457 | 25 | Bratayley (19.5%) | -24% | <0.001 |
-| C2 | Clickbait Titles (ALL CAPS) | 13,231 | 24 | SacconeJolys (18.5%) | -33% | <0.001 |
+Emotional exploitation was flagged in 4,805 videos (11.7\%). The majority of subsequent analyses focus on the 36,561 videos classified as performative or organic.
 
-The cross-channel distribution confirms that these clusters capture genuine content strategies rather than channel identities. For example, the "Game & Roleplay" cluster (C1) draws videos from Ryan's World (54.5% of that channel's output), Cocomelon (65.9%), Vlad & Niki (50.5%), and Piper Rockelle (35.3%)---channels with vastly different audiences and production styles that nonetheless converge on the same high-reward content format.
+### 4.2 The Performativity Premium (RQ1)
 
-### 4.2 Algorithmic Incentive Structure (RQ2)
+Performative content receives significantly higher views than organic content. The median view count for performative videos (1,044,718) is 2.58$\times$ that of organic videos (404,818), a difference that is highly significant (Mann-Whitney $U$, $p < 10^{-10}$).
 
-The algorithmic reward structure reveals a clear hierarchy of content strategies:
+**Within-channel control.** After controlling for channel-level popularity, the effect persists: performative content receives a within-channel boost of $+5.1\%$ ($t = 2.60$, $p = 0.019$), while organic content shows a within-channel penalty of $-5.9\%$ ($t = -3.32$, $p = 0.004$). This confirms that the performativity premium is not merely an artifact of certain high-performing channels producing more performative content.
 
-**High-reward strategies (+52% to +298%):** Game/roleplay/music content and prank/reaction videos receive dramatically higher views. These formats are characterized by high energy, clear narrative hooks, and visual stimulation---qualities that likely drive watch time and recommendation algorithm engagement.
+**Channel-level correlation.** Across 23 channels, the proportion of performative content correlates positively with median views (Spearman $\rho = 0.427$, $p = 0.042$). Channels with higher performative rates---such as Jordan Matter (86\%, median 17.5M views), Brent Rivera (87\%, 9.6M), and Rebecca Zamolo (86\%, 6.9M)---tend to have higher overall viewership than channels with lower performative rates such as The LeRoys (22\%, 187K) and The Weiss Life (26\%, 107K).
 
-**Neutral strategies:** No cluster falls in the 0--50% range, suggesting a binary divide between algorithmically favored and disfavored content.
+### 4.3 Emotional Exploitation Does Not Drive Views (RQ2)
 
-**Low-reward strategies (-21% to -33%):** Standard vlogs, clickbait-titled content, shorts, and medical/urgency content all perform below the dataset median.
+In contrast to the performativity premium, emotional exploitation shows **no independent association** with view counts:
 
-**Within-Channel Control:** After controlling for channel-level popularity, the directional effects persist. Game/roleplay content shows a within-channel median boost of +6.9%, prank/reaction content shows +34.6%, and unboxing shows +4.1%. Conversely, standard vlogs show -17.3% and shorts show -47.2%. While the within-channel effects are smaller (as expected, since much of the variance is between channels), the consistent direction confirms that content strategy independently influences algorithmic reward.
+| Condition | N | Median Views |
+|-----------|---|-------------|
+| Performative, no exploitation | 18,867 | 1,148,070 |
+| Performative, with exploitation | 2,622 | 1,190,744 |
+| Organic, no exploitation | 14,528 | 379,430 |
+| Organic, with exploitation | 544 | 478,946 |
 
-### 4.3 The Manipulation Paradox (RQ3)
+The difference between exploitative and non-exploitative content is minimal within each labor type. At the channel level, the correlation between exploitation rate and median views is effectively zero ($\rho = 0.004$, $p = 0.986$). The correlation between performative rate and exploitation rate is also non-significant ($\rho = 0.271$, $p = 0.211$), indicating that these are orthogonal dimensions.
 
-A central finding of this study is what we term the **"manipulation paradox"**: content with the highest density of explicit emotional manipulation signals does *not* receive the highest algorithmic reward.
+**The exploitation paradox by content format.** Examining content formats reveals a striking pattern:
 
-**Table 2: Manipulation Signal Density by Cluster**
+| Format | View Boost | Performative Rate | Exploitation Rate |
+|--------|-----------|-------------------|-------------------|
+| Music/Dance | +1,264% | 43% | 1.8% |
+| Roleplay | +243% | 96% | 2.5% |
+| Game | +193% | 94% | 3.1% |
+| Toy Play | +110% | 86% | 0.3% |
+| Prank | +45% | 99% | 34.3% |
+| Reaction | +11% | 79% | 23.3% |
+| Unboxing | +16% | 95% | 0.7% |
+| Challenge | +10% | 95% | 12.1% |
+| Storytime | -25% | 49% | 26.1% |
+| Drama | -32% | 89% | **63.4%** |
+| Vlog | -54% | 7% | 2.3% |
 
-| Cluster | View Boost | Clickbait | Urgency | Mystery | Conflict | Medical | Money | Brand |
-|---------|-----------|-----------|---------|---------|----------|---------|-------|-------|
-| C1 Game/Roleplay | +298% | 1.9% | 2.4% | 6.1% | 1.7% | 0.0% | 4.8% | 4.1% |
-| C0 Prank/Reaction | +223% | 7.6% | 0.9% | 5.8% | 1.6% | 0.0% | 3.2% | 1.2% |
-| C4 Medical/Urgency | -21% | 1.6% | **9.7%** | 1.6% | 0.2% | **100%** | 1.4% | 0.7% |
-| C2 Clickbait Titles | -33% | 3.9% | 2.7% | 4.8% | 1.9% | 0.0% | 5.0% | 1.5% |
+The four highest-performing formats (music/dance, roleplay, game, toy play) are all highly performative ($43\%$--$96\%$) but have very low exploitation rates ($0.3\%$--$3.1\%$). Conversely, the format with the highest exploitation rate---drama ($63.4\%$)---receives *below-average* views ($-32\%$). This demonstrates that the algorithm rewards children's labor, not their suffering.
 
-The Medical & Urgency cluster (C4) contains the highest concentration of emotional manipulation markers (urgency language, medical emergencies) yet receives *below-average* views (-21%). Meanwhile, the highest-reward clusters (C1, C0) have relatively low manipulation signal density but are optimized for **engagement through play-based formats**.
+### 4.4 Thumbnail Visual Signals (RQ3)
 
-This suggests that the algorithm rewards *sustained engagement* (watch time from entertaining content) rather than *click-through* (from emotionally provocative titles). The implication for child welfare is nuanced: the most algorithmically successful content may not involve the most explicit emotional exploitation of children, but rather their instrumentalization in highly produced, repetitive entertainment formats.
+Computer vision analysis reveals systematic visual differences between performative and organic content:
 
-### 4.4 Engagement Quality Metrics
+**Table: CV Features by Labor Type (N = 1,858)**
 
-Further analysis of engagement patterns reveals qualitative differences between clusters:
+| Feature | Performative | Organic | p-value |
+|---------|-------------|---------|---------|
+| Face detection rate | 76.5% | 71.5% | 0.017* |
+| Large face rate | 27.3% | 30.8% | 0.107 |
+| Smile rate (among faces) | 13.6% | 17.2% | --- |
+| Mean saturation | 97.1 | 85.2 | <0.0001*** |
+| Mean brightness | 141.0 | 135.4 | 0.0005*** |
 
-| Cluster | Median Views | Like/View Ratio | Comment/View Ratio |
-|---------|-------------|-----------------|-------------------|
-| C1 Game/Roleplay | 2,050,346 | 0.0028 | ~0 |
-| C0 Prank/Reaction | 1,661,927 | 0.0180 | ~0 |
-| C2 Clickbait Titles | 344,374 | 0.0256 | 0.00027 |
-| C4 Medical/Urgency | 408,133 | 0.0213 | 0.00004 |
+Performative content uses significantly higher color saturation and brightness in thumbnails, consistent with the hyper-saturated visual aesthetic common in children's entertainment content. Organic content shows higher rates of large faces and smiles, consistent with genuine family photography.
 
-High-view clusters (C1, C0) have *lower* like/view and comment/view ratios, suggesting passive consumption patterns typical of young children who watch but do not interact. Lower-view clusters show higher engagement ratios, indicating more active adult audiences. This pattern is consistent with the hypothesis that the algorithm optimizes for watch time (favoring passive child viewers) rather than active engagement.
+**LLM Vision Analysis (N = 270).** The GPT-4.1-mini vision analysis provides deeper emotional context:
 
-### 4.5 Thumbnail Visual Analysis
+| Emotional Tone | Performative | Organic |
+|---------------|-------------|---------|
+| Positive | 34.8% | 47.5% |
+| Exciting | 25.9% | 9.9% |
+| Dramatic | 17.8% | 10.9% |
+| Neutral | 20.0% | 31.7% |
+| Negative | 1.5% | 0.0% |
 
-Complementing the text-based analysis, our CV analysis of 2,100 thumbnails confirms the visual dimension of algorithmic incentives:
+Performative thumbnails are significantly more likely to use "exciting" ($25.9\%$ vs $9.9\%$) and "dramatic" ($17.8\%$ vs $10.9\%$) emotional framing, while organic thumbnails are more often "positive" ($47.5\%$ vs $34.8\%$) or "neutral" ($31.7\%$ vs $20.0\%$). The mean exploitation concern score is higher for performative content ($0.79$) than organic ($0.56$), indicating that even the visual presentation of performative content carries more concerning elements.
 
-- **Color saturation** correlates positively with view boost across clusters ($\rho = 0.693, p = 0.004$), with high-reward clusters using hyper-saturated thumbnails.
-- **Face presence** correlates negatively with views: videos without detected faces received 86% higher median views than those with faces, driven by the dominance of animated/toy content in high-reward clusters.
-- **Smile detection rate** is lowest in the Medical/Urgency cluster (consistent with distress-themed content) and highest in Game/Roleplay content.
+Child emotion distributions are similar across labor types, with "neutral" being most common ($\sim 43\%$), followed by "happy" ($16\%$--$21\%$) and "excited" ($14\%$--$19\%$). Notably, distressed or scared children appear in $4.2\%$ of performative thumbnails and $6.0\%$ of organic thumbnails, suggesting that overt emotional distress in thumbnails is relatively rare in both categories.
+
+### 4.5 Channel-Level Variation
+
+Substantial variation exists across channels in both performative content rate and exploitation rate:
+
+| Channel | N | Perf. Rate | Exploit. Rate | Median Views |
+|---------|---|-----------|--------------|-------------|
+| Jordan Matter | 536 | 86% | 27.4% | 17,469,476 |
+| Brent Rivera | 664 | 87% | 11.7% | 9,603,116 |
+| Vlad \& Niki | 978 | 57% | 0.4% | 58,406,235 |
+| Cocomelon | 1,889 | 37% | 2.0% | 17,877,451 |
+| Ryan's World | 3,397 | 78% | 2.3% | 4,265,662 |
+| Piper Rockelle | 695 | 85% | 41.3% | 2,843,045 |
+| ACE Family | 525 | 72% | 32.6% | 4,818,210 |
+| The Weiss Life | 1,537 | 26% | 6.3% | 106,624 |
+| The LeRoys | 1,673 | 22% | 11.2% | 186,790 |
+
+Notable outliers include Vlad \& Niki (moderate performative rate but extremely high views, driven by animated/toy content) and Piper Rockelle (high performative *and* high exploitation, with moderate views). The highest-exploitation channel (Piper Rockelle, $41.3\%$) does not have the highest views, further supporting the finding that exploitation does not independently drive algorithmic reward.
 
 ## 5. Discussion
 
-### 5.1 Implications for Child Welfare Policy
+### 5.1 The Performativity Premium and Child Welfare Policy
 
-Our findings challenge simplistic narratives about kidfluencer exploitation. The most algorithmically rewarded content is not necessarily the most emotionally exploitative in traditional terms (staged crying, medical emergencies). Instead, the algorithm rewards highly produced, repetitive play-based content that instrumentalizes children as performers in what resembles commercial children's television rather than authentic family documentation.
+Our central finding---the performativity premium---has important implications for child welfare policy. Current regulatory frameworks, such as France's Loi Studer and Illinois PA 103-0556, primarily focus on financial protections (earnings trusts) and working hour limits. Our findings suggest an additional regulatory dimension: the **structural incentive** embedded in platform algorithms that rewards children's performative labor.
 
-This has important policy implications: regulations focused on detecting "emotional manipulation" in titles or thumbnails may miss the primary mechanism of exploitation---the sheer volume of scripted performance required to maintain algorithmic relevance in the game/roleplay/toy content space.
+The algorithm does not reward emotional exploitation per se. The most algorithmically successful formats---music/dance, roleplay, and games---involve children performing scripted, repetitive content that resembles commercial children's television production. The exploitation is not in the emotional manipulation of children but in the **volume and intensity of labor** required to maintain algorithmic relevance. A child performing choreographed dances or scripted roleplay scenarios for daily uploads faces labor demands comparable to child actors, yet without the protections afforded by entertainment industry regulations.
 
-### 5.2 The De-Channelization Contribution
+### 5.2 Implications for Platform Design
 
-Our methodological contribution demonstrates that naive embedding-based clustering conflates channel identity with content strategy. By extracting abstract, channel-independent features, we reveal patterns that are genuinely cross-channel and thus more likely to reflect platform-level algorithmic incentives rather than individual creator success.
+Our findings suggest that platform interventions focused on detecting "harmful content" through emotional manipulation markers (clickbait, distress signals) would miss the primary mechanism of child labor exploitation. Instead, platforms could consider: (1) reducing algorithmic amplification of content featuring minors in performative contexts; (2) implementing upload frequency limits for channels featuring children; (3) requiring disclosure of child labor involvement in content production.
 
-### 5.3 Limitations
+### 5.3 Methodological Contributions
 
-Several limitations warrant discussion. First, our dataset covers 25 channels, which limits generalizability. Second, view counts are an imperfect proxy for algorithmic recommendation, as they conflate organic reach with algorithmic amplification. Third, our rule-based feature extraction may miss nuanced content strategies not captured by keyword matching. Fourth, the within-channel view boost analysis, while directionally consistent, did not reach statistical significance (p > 0.05) due to high variance across channels, suggesting the need for larger channel samples in future work.
+This study demonstrates the value of combining LLM-based classification with computer vision for large-scale content auditing. The LLM classification achieved high consistency ($95.9\%$ valid labels) and enabled the novel distinction between performative and organic child labor at scale. The multimodal approach---combining title analysis, thumbnail CV, and LLM vision---provides converging evidence that strengthens causal inference.
+
+We also document a methodological cautionary tale: naive Sentence-BERT embedding clustering produced clusters dominated by individual channels ($8/15$ clusters $>90\%$ single-channel), rendering the analysis uninformative for cross-channel pattern discovery. This finding has implications for computational social science research more broadly, suggesting that embedding-based clustering should always be validated for confounding by source identity.
+
+### 5.4 Limitations
+
+Several limitations warrant discussion. First, our dataset covers 23 channels, which limits generalizability. Second, view counts are an imperfect proxy for algorithmic recommendation, as they conflate organic reach with algorithmic amplification. Third, LLM-based classification from titles alone cannot capture all aspects of child labor intensity (e.g., filming duration, number of takes, emotional pressure off-camera). Fourth, the within-channel view boost, while statistically significant, is modest in magnitude ($+5.1\%$), suggesting that channel identity remains the dominant predictor of views. Fifth, our thumbnail analysis covers only 2,100 of 41,157 videos, limiting the statistical power of visual analyses. Future work should incorporate video content analysis and creator interviews to validate these computational findings.
 
 ## 6. Conclusion
 
-This study presents a de-channelized multimodal computational audit of the kidfluencer ecosystem. By extracting abstract content strategy features rather than relying on raw text embeddings, we discover cross-channel patterns that reveal the algorithmic incentive structure of the platform. Our key finding---the "manipulation paradox"---shows that explicit emotional manipulation signals are not rewarded by the algorithm; instead, the platform favors engagement-optimized play-based content that instrumentalizes children as performers in highly produced entertainment. These findings provide critical empirical grounding for policy interventions, suggesting that regulations should address the structural incentives driving content production rather than focusing solely on surface-level manipulation markers.
+This study presents a multimodal AI audit of the kidfluencer ecosystem, revealing a **performativity premium** in which platform algorithms reward children's labor without requiring overt emotional manipulation. Performative content---challenges, roleplay, games, and toy play---receives significantly higher views than organic family documentation, an effect that persists after controlling for channel-level popularity. Emotional exploitation, by contrast, shows no independent association with algorithmic reward. The most exploitative content format (drama) receives below-average views, while the most rewarded formats have minimal exploitation signals. These findings challenge policy frameworks focused on detecting surface-level manipulation and suggest that regulations should address the structural incentives that drive children into intensive performative labor for digital platforms.
 
 ## References
 
-[1] Clark, M., & Jno-Charles, J. (2025). The Kidfluencer Economy: Child Labor in the Digital Age. *Journal of Business Ethics*.
+[1] Clark, M., \& Jno-Charles, J. (2025). The Kidfluencer Economy: Child Labor in the Digital Age. *Journal of Business Ethics*.
 
 [2] Masterson, M. A. (2021). When play becomes work: Child labor laws in the era of "kidfluencers." *University of Pennsylvania Law Review*.
 
@@ -168,19 +208,19 @@ This study presents a de-channelized multimodal computational audit of the kidfl
 
 [4] Illinois General Assembly. (2024). *Public Act 103-0556: Child labor in vlogging*.
 
-[5] Abidin, C. (2017). #family: Instagram and the curation of childhood. *Visual Communication*.
+[5] Abidin, C. (2017). \#family: Instagram and the curation of childhood. *Visual Communication*.
 
-[6] Jorge, A., et al. (2022). "It's just play": The discursive framing of child influencers. *Media, Culture & Society*.
+[6] Jorge, A., et al. (2022). "It's just play": The discursive framing of child influencers. *Media, Culture \& Society*.
 
 [7] Tian, Y., et al. (2025). Machine Learning vs. Deep Learning for Fake News Detection: A Comparative Analysis. *Proceedings of the ACM Web Conference*.
 
-[8] Ding, X., & Wei, L. (2026). Feature Engineering in the Transformer Era: Applications in HCI and Content Moderation. *CHI Conference on Human Factors in Computing Systems*.
+[8] Ding, X., \& Wei, L. (2026). Feature Engineering in the Transformer Era: Applications in HCI and Content Moderation. *CHI Conference on Human Factors in Computing Systems*.
 
 [9] Xu, J., et al. (2025). Advanced Feature Engineering for Spam Detection in Short-Form Video Platforms. *Journal of Computational Social Science*.
 
-[10] Abidin, C. (2017). Calibrated amateurism: The aesthetic of authenticity in influencer culture. *Information, Communication & Society*.
+[10] Abidin, C. (2017). Calibrated amateurism: The aesthetic of authenticity in influencer culture. *Information, Communication \& Society*.
 
-[11] O'Keeffe, G. S., & Clarke-Pearson, K. (2011). The impact of social media on children, adolescents, and families. *Pediatrics*.
+[11] O'Keeffe, G. S., \& Clarke-Pearson, K. (2011). The impact of social media on children, adolescents, and families. *Pediatrics*.
 
 [12] Sandvig, C., et al. (2014). Auditing algorithms: Research methods for detecting discrimination on internet platforms. *Data and discrimination: converting critical concerns into productive inquiry*.
 

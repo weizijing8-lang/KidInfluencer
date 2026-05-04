@@ -1,0 +1,154 @@
+[
+  {
+    "cluster": 0,
+    "n_videos": 5014,
+    "n_channels": 24,
+    "top1_channel": "familyfunpack",
+    "top1_pct": 0.11966493817311527,
+    "median_views": 450396.5,
+    "view_boost": -0.12567288186591866,
+    "within_channel_boost_median": -0.02380634490726234,
+    "within_channel_p": 0.6133375928838015,
+    "sample_titles": [
+      "[acefamily] IT'S FINALLY TIME....",
+      "[bonniehoellein] Flying Alone - Back to UTAH!",
+      "[bratayley] Finally, A House Tour (WK 411.3) | Bratayley",
+      "[brentrivera] Tetr college is my kinda college! @tetrcollege",
+      "[cocomelon] Rain Rain Go Away! \u2614 | NEW \ud83d\udc1c JJ's Animal Time | CoComelon Nursery Rhym",
+      "[dailybumps] CALIFORNIA HOUSE TOUR!"
+    ]
+  },
+  {
+    "cluster": 1,
+    "n_videos": 4634,
+    "n_channels": 24,
+    "top1_channel": "dailybumps",
+    "top1_pct": 0.12408286577470867,
+    "median_views": 500201.0,
+    "view_boost": -0.02899045881176779,
+    "within_channel_boost_median": 0.2270546774714889,
+    "within_channel_p": 0.0014655240467354824,
+    "sample_titles": [
+      "[acefamily] OUR 2 YEAR OLD GOES ON HIS FIRST DATE!!! **GUESS WITH WHO**",
+      "[andrewdavila] Irma beating pi\u00f1ata flashing back on her kids",
+      "[bonniehoellein] Here's what Pelvic Floor Therapy Did for Me!",
+      "[bratayley] Baby Thief (WK 439) Bratayley",
+      "[brentrivera] Conjoined twins!",
+      "[cocomelon] Bath Time Belly Button Song! \ud83d\udec1 | Bath Time with Mommy! | CoComelon Nur"
+    ]
+  },
+  {
+    "cluster": 2,
+    "n_videos": 8121,
+    "n_channels": 23,
+    "top1_channel": "thesuperherobuddy",
+    "top1_pct": 0.15232114271641423,
+    "median_views": 492460.0,
+    "view_boost": -0.04401758762266202,
+    "within_channel_boost_median": -0.09951520912547529,
+    "within_channel_p": 0.00675393114379333,
+    "sample_titles": [
+      "[acefamily] We're back",
+      "[bonniehoellein] MRI Results + Surgery Appointment UPDATE",
+      "[bratayley] She Messed with the Wrong Person, Again! (WK 458) Bratayley",
+      "[brentrivera] \u2764\ufe0f",
+      "[cocomelon] Who's Behind the MYSTERY Door\u2049\ufe0f Knock Knock and Find out! #shorts",
+      "[dailybumps] He Loves The Drama"
+    ]
+  },
+  {
+    "cluster": 3,
+    "n_videos": 3188,
+    "n_channels": 24,
+    "top1_channel": "ryansworld",
+    "top1_pct": 0.1458594730238394,
+    "median_views": 651824.0,
+    "view_boost": 0.2653459772680948,
+    "within_channel_boost_median": -0.04693989823564207,
+    "within_channel_p": 0.6395349656836777,
+    "sample_titles": [
+      "[acefamily] OUR KIDS GO GROCERY SHOPPING FOR US!!! **WHO HAS THE BEST CART???**",
+      "[andrewdavila] Bang",
+      "[bonniehoellein] Our First Week Back Home!!",
+      "[bratayley] How to Make Rainbow Lava Lamps! | Hayley LeBlanc & London Angel",
+      "[brentrivera] Donut prank GONE WRONG",
+      "[cocomelon] What shape is a donut \ud83c\udf69?! Yummy Snack Lessons! #shorts"
+    ]
+  },
+  {
+    "cluster": 4,
+    "n_videos": 5718,
+    "n_channels": 23,
+    "top1_channel": "thesuperherobuddy",
+    "top1_pct": 0.12661769849597762,
+    "median_views": 505740.5,
+    "view_boost": -0.018236967008648217,
+    "within_channel_boost_median": -0.007968260661630472,
+    "within_channel_p": 0.4605554241784644,
+    "sample_titles": [
+      "[acefamily] SURPRISING MY GIRLS FOR VALENTINE'S DAY!!!",
+      "[bonniehoellein] Tour Grandma's RV & Make Dinner Together!",
+      "[bratayley] Looking at Caleb's Things (WK 459) Bratayley",
+      "[brentrivera] Let us know quick!",
+      "[cocomelon] Easy CoComelon Crafts! DIY Boba Bear 1-2-3! #shorts #cocomelon",
+      "[dailybumps] Everything We Found Trapped Inside Our Couch While Cleaning! (Disgusti"
+    ]
+  },
+  {
+    "cluster": 5,
+    "n_videos": 1408,
+    "n_channels": 20,
+    "top1_channel": "theweisslife",
+    "top1_pct": 0.390625,
+    "median_views": 196342.5,
+    "view_boost": -0.6188523396779485,
+    "within_channel_boost_median": -0.49542821862229147,
+    "within_channel_p": 0.7393451506620851,
+    "sample_titles": [
+      "[acefamily] WHO KNOWS EACH OTHER BEST!!!",
+      "[bonniehoellein] Surprising Grandma with Flowers + First Beach Day!",
+      "[brentrivera] We all have that short friend \ud83d\ude2d\ud83d\ude02",
+      "[cocomelon] What color should we paint the carrot\ud83e\udd55? How about a lemon\ud83c\udf4b?! Easy Craf",
+      "[dailybumps] It all started with them #takesyouback",
+      "[ehbee] Top Bee Family KIDS SAY YES MOMENTS! | The Bee Family"
+    ]
+  },
+  {
+    "cluster": 6,
+    "n_videos": 7458,
+    "n_channels": 24,
+    "top1_channel": "thesuperherobuddy",
+    "top1_pct": 0.11732367927058193,
+    "median_views": 365540.5,
+    "view_boost": -0.2903986333679521,
+    "within_channel_boost_median": -0.11838742357000705,
+    "within_channel_p": 0.7239334760889219,
+    "sample_titles": [
+      "[acefamily] Our first video back on youtube...",
+      "[bonniehoellein] Fillet Your Own Fish! Unexpected Surprise.",
+      "[bratayley] The End of an Era (WK 465) | Bratayley",
+      "[brentrivera] Click there to watch the new video\u2b06\ufe0f",
+      "[cocomelon] PeekaBOO BOP \ud83e\udea9\ud83c\udfb6! Baby DJ has a new REMIX! #shorts #kidsdance",
+      "[dailybumps] Trying To Save Our New Baby Kitten"
+    ]
+  },
+  {
+    "cluster": 7,
+    "n_videos": 5616,
+    "n_channels": 25,
+    "top1_channel": "ryansworld",
+    "top1_pct": 0.13283475783475784,
+    "median_views": 1492158.0,
+    "view_boost": 1.8966348627058927,
+    "within_channel_boost_median": 0.1527523604766587,
+    "within_channel_p": 0.07869501069556252,
+    "sample_titles": [
+      "[acefamily] ANSWERING ALL OF THE QUESTIONS",
+      "[andrewdavila] Ely playing just dance 2",
+      "[bonniehoellein] Catching Sharks in The Florida Keys",
+      "[bratayley] Maryland Gymnastics (WK 461) Bratayley",
+      "[brentrivera] Exposing Levels!!",
+      "[cocomelon] Head Shoulders Knees and Toes \ud83e\udd16 | @CoComelonSanrioPlaydates | CoComelo"
+    ]
+  }
+]
