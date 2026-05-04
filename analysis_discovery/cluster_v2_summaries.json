@@ -1,0 +1,268 @@
+[
+  {
+    "cluster": 0,
+    "n_videos": 761,
+    "pct_of_total": 0.01849017178122798,
+    "n_channels": 23,
+    "top1_channel": "thesuperherobuddy",
+    "top1_pct": 0.11695137976346912,
+    "top3_pct": 0.328515111695138,
+    "top_channels_list": {
+      "thesuperherobuddy": 89,
+      "piperrockelle": 83,
+      "ryansworld": 78,
+      "dailybumps": 55,
+      "itsyeboi": 50
+    },
+    "median_views": 1661927.0,
+    "view_boost": 2.226197016316111,
+    "top_enriched_features": [
+      "is_prank",
+      "is_review",
+      "is_reaction",
+      "has_clickbait_emotion",
+      "is_mukbang"
+    ],
+    "enrichment_scores": [
+      34.27034457011463,
+      12.536939667803068,
+      1.8697091111946587,
+      1.439464293139922,
+      1.1042491168826043
+    ],
+    "sample_titles": [
+      "[acefamily] HUGE TEDDY BEAR PRANK ON STEEL BOY!!!",
+      "[bonniehoellein] Pushing Olivia in the Pool Fully Clothed! Harmless - Hilarious - ",
+      "[bratayley] Scared Her So Bad! (WK 405.6) | Bratayley",
+      "[brentrivera] Donut prank GONE WRONG"
+    ]
+  },
+  {
+    "cluster": 1,
+    "n_videos": 10634,
+    "pct_of_total": 0.25837646086935395,
+    "n_channels": 23,
+    "top1_channel": "thesuperherobuddy",
+    "top1_pct": 0.27571939063381606,
+    "top3_pct": 0.5876434079368065,
+    "top_channels_list": {
+      "thesuperherobuddy": 2932,
+      "ryansworld": 2010,
+      "cocomelon": 1307,
+      "familyfunpack": 639,
+      "vladandniki": 512
+    },
+    "median_views": 2050346.0,
+    "view_boost": 2.98021101264717,
+    "top_enriched_features": [
+      "is_game",
+      "is_roleplay",
+      "is_music",
+      "is_toy",
+      "is_tutorial"
+    ],
+    "enrichment_scores": [
+      1.673180657552591,
+      1.4986222582381648,
+      1.3606455345879218,
+      1.2105159396934404,
+      0.8817972440403002
+    ],
+    "sample_titles": [
+      "[acefamily] SURPRISING OUR DAUGHTERS WITH A NEW ROOM MAKEOVER REVEAL!!! **ADO",
+      "[bonniehoellein] Surprising Grandma with Flowers + First Beach Day!",
+      "[bratayley] How to Make Rainbow Lava Lamps! | Hayley LeBlanc & London Angel",
+      "[brentrivera] AGAIN! This time at the airport!! Let us know before our flight l"
+    ]
+  },
+  {
+    "cluster": 2,
+    "n_videos": 13231,
+    "pct_of_total": 0.3214762980780912,
+    "n_channels": 24,
+    "top1_channel": "thesacconejolys",
+    "top1_pct": 0.18517118887461265,
+    "top3_pct": 0.40987075806817325,
+    "top_channels_list": {
+      "thesacconejolys": 2450,
+      "dailybumps": 2130,
+      "tannerites": 843,
+      "ehbee": 834,
+      "theweisslife": 808
+    },
+    "median_views": 344374.0,
+    "view_boost": -0.3314878624050006,
+    "top_enriched_features": [
+      "has_all_caps_word",
+      "caps_ratio",
+      "has_ellipsis",
+      "has_clickbait_emotion",
+      "has_milestone"
+    ],
+    "enrichment_scores": [
+      1.1177920953539502,
+      0.9310003520078983,
+      0.4060511259508605,
+      0.386433794287593,
+      0.2620041516851375
+    ],
+    "sample_titles": [
+      "[acefamily] ANSWERING ALL OF THE QUESTIONS",
+      "[bonniehoellein] Flying Alone - Back to UTAH!",
+      "[bratayley] THE POP ROCKS + COKE EXPLOSION!",
+      "[brentrivera] I Met 7 Rare People You WONT Believe Exist!"
+    ]
+  },
+  {
+    "cluster": 3,
+    "n_videos": 1947,
+    "pct_of_total": 0.04730665500400904,
+    "n_channels": 18,
+    "top1_channel": "theweisslife",
+    "top1_pct": 0.3071391884951207,
+    "top3_pct": 0.6728299948638932,
+    "top_channels_list": {
+      "theweisslife": 598,
+      "cocomelon": 441,
+      "familyfunpack": 271,
+      "theleray": 203,
+      "piperrockelle": 151
+    },
+    "median_views": 391971.0,
+    "view_boost": -0.23909072379085095,
+    "top_enriched_features": [
+      "is_shorts",
+      "has_emoji",
+      "question_mark",
+      "has_conflict",
+      "is_tutorial"
+    ],
+    "enrichment_scores": [
+      16.13765011935339,
+      2.492706943827602,
+      1.3447668983010654,
+      0.29791858223354345,
+      0.21225411159412827
+    ],
+    "sample_titles": [
+      "[bonniehoellein] Before and After Long Haircut to Short Haircut",
+      "[bratayley] Eclipse Fail : Thanks Universe \ud83c\udf11 (WK 346.6) | Bratayley",
+      "[brentrivera] We all have that short friend \ud83d\ude2d\ud83d\ude02",
+      "[cocomelon] PeekaBOO BOP \ud83e\udea9\ud83c\udfb6! Baby DJ has a new REMIX! #shorts #kidsdance"
+    ]
+  },
+  {
+    "cluster": 4,
+    "n_videos": 568,
+    "pct_of_total": 0.01380081152659329,
+    "n_channels": 21,
+    "top1_channel": "theweisslife",
+    "top1_pct": 0.13028169014084506,
+    "top3_pct": 0.33274647887323944,
+    "top_channels_list": {
+      "theweisslife": 74,
+      "kkandbabyj": 63,
+      "dailybumps": 52,
+      "familyfunpack": 50,
+      "thesacconejolys": 47
+    },
+    "median_views": 408133.0,
+    "view_boost": -0.20771642385005873,
+    "top_enriched_features": [
+      "has_medical",
+      "has_urgency",
+      "is_storytime",
+      "has_ellipsis",
+      "has_emoji"
+    ],
+    "enrichment_scores": [
+      41.435527833641295,
+      2.146062728395675,
+      0.7557540364136036,
+      0.5392595438588793,
+      0.34094654263329377
+    ],
+    "sample_titles": [
+      "[acefamily] AUSTIN'S GETTING LIFE CHANGING SURGERY....",
+      "[bonniehoellein] MRI Results + Surgery Appointment UPDATE",
+      "[bratayley] They Are So Sick (WK 462) Bratayley",
+      "[brentrivera] When the McDonald\u2019s ice cream machine is broken\u2026"
+    ]
+  },
+  {
+    "cluster": 5,
+    "n_videos": 1559,
+    "pct_of_total": 0.037879340087955876,
+    "n_channels": 21,
+    "top1_channel": "thesuperherobuddy",
+    "top1_pct": 0.4477228992944195,
+    "top3_pct": 0.7119948685054522,
+    "top_channels_list": {
+      "thesuperherobuddy": 698,
+      "ryansworld": 282,
+      "theweisslife": 130,
+      "familyfunpack": 89,
+      "familyfizz": 62
+    },
+    "median_views": 781283.0,
+    "view_boost": 0.5166567987032525,
+    "top_enriched_features": [
+      "is_unboxing",
+      "is_toy",
+      "is_review",
+      "has_brand",
+      "has_money"
+    ],
+    "enrichment_scores": [
+      19.13425071564539,
+      4.444379571847113,
+      1.4183436161010634,
+      1.3266249714394898,
+      0.8140045919672672
+    ],
+    "sample_titles": [
+      "[acefamily] 1 YEAR OLD BABY UNBOXING THE NEW IPHONE 8!!!",
+      "[bonniehoellein] CHRISTMAS HAUL - What I Got for Christmas 2025",
+      "[bratayley] Birthday Haul (WK 400.3) | Bratayley",
+      "[cocomelon] Christmas Surprise Box! \ud83c\udf81 What\u2019s Inside? \ud83e\udd14"
+    ]
+  },
+  {
+    "cluster": 6,
+    "n_videos": 12457,
+    "pct_of_total": 0.30267026265276864,
+    "n_channels": 25,
+    "top1_channel": "bratayley",
+    "top1_pct": 0.19466966364293167,
+    "top3_pct": 0.46969575339166736,
+    "top_channels_list": {
+      "bratayley": 2425,
+      "familyfunpack": 1783,
+      "bonniehoellein": 1643,
+      "kkandbabyj": 1222,
+      "ryansworld": 816
+    },
+    "median_views": 393108.0,
+    "view_boost": -0.23688353538392848,
+    "top_enriched_features": [
+      "is_vlog",
+      "has_number",
+      "has_emoji",
+      "is_storytime",
+      "is_qa"
+    ],
+    "enrichment_scores": [
+      1.569732829154672,
+      0.5673709386634029,
+      0.22226851464992972,
+      0.06841964542307379,
+      0.03678211241444916
+    ],
+    "sample_titles": [
+      "[acefamily] Our first video back on youtube...",
+      "[andrewdavila] Ely playing just dance 2",
+      "[bonniehoellein] Our First Week Back Home!!",
+      "[bratayley] The End of an Era (WK 465) | Bratayley"
+    ]
+  }
+]
