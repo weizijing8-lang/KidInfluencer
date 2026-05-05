@@ -1,14 +1,14 @@
-# Auditing Algorithmic Incentives in the Kidfluencer Ecosystem: A Multimodal Weak Supervision Approach
+# Auditing Algorithmic Associations in the Kidfluencer Ecosystem: A Multimodal Weak Supervision Approach
 
 ## Abstract
 
-The rapid rise of "kidfluencers" on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and algorithmic reward remains scarce due to the challenge of operationalizing and scaling exploitation metrics. This study presents a multimodal AI audit of 46,589 videos across 48 kidfluencer channels, utilizing a weak supervision approach (Snorkel) to detect exploitation without requiring manually labeled ground truth. We aggregate 18 noisy labeling functions---including LLM-based classification of titles across six literature-grounded dimensions, rule-based heuristics, and computer vision analysis of thumbnail distress signals---to assign a probabilistic exploitation score to each video. Our findings reveal a significant **algorithmic reward for performative labor and manufactured conflict**. Performative content receives a median within-channel view boost of $+19.6\%$ (mean $+109.2\%$, $p=0.004$), while narrative conflict receives a median boost of $+24.3\%$ ($p=0.016$). Overall exploitation scores correlate significantly with view counts (Spearman $\rho = 0.270$, $p < 10^{-39}$). Notably, we find that *commercial content* (product placement) receives a significant within-channel *penalty* ($-43.0\%$, $p=0.002$), suggesting that algorithms incentivize the commodification of the child's identity and labor rather than traditional advertising. These findings challenge policy frameworks focused solely on financial trusts, demonstrating that platforms structurally incentivize the intensive, performative labor of children.
+The rapid rise of "kidfluencers" on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and algorithmic association remains scarce due to the challenge of operationalizing and scaling exploitation metrics. This study presents a multimodal AI audit of 46,585 videos across 79 kidfluencer channels, utilizing a weak supervision approach (Snorkel) to detect exploitation signals without requiring large-scale manually labeled ground truth. We aggregate 18 noisy labeling functions---including LLM-based classification of titles across six literature-grounded dimensions, rule-based heuristics, and computer vision analysis of thumbnail distress signals---to assign a probabilistic exploitation score to each video. Our findings reveal a significant **algorithmic association with performative labor and manufactured conflict**. Performative content is associated with a median within-channel view boost of $+42.0\%$ (mean $+61.7\%$, $p<0.001$), while narrative conflict is associated with a median boost of $+32.0\%$ ($p<0.001$). Overall exploitation scores correlate significantly with view counts (Spearman $\rho = 0.159$, $p < 10^{-27}$). Unlike previous small-sample studies, we find that commercial content (product placement) has no significant effect on viewership ($+3.7\%$, $p=0.280$), suggesting that platforms associate higher viewership with the commodification of the child's identity and labor rather than traditional advertising. These findings challenge policy frameworks focused solely on financial trusts, demonstrating that platforms structurally correlate with the intensive, performative labor of children.
 
 ## 1. Introduction
 
 The commercialization of childhood through digital platforms has created a lucrative "kidfluencer" economy in which children are featured in YouTube videos—unboxing toys, participating in challenges, performing scripted roleplay, and documenting their daily lives [1]. This phenomenon has sparked intense debate regarding the ethics of child digital labor, the psychological impact of public exposure, and the blurring of lines between play and work, often termed "playbour" [2].
 
-Recent legislative efforts, such as France's Loi Studer (2020) and the Illinois PA 103-0556 (2024), aim to protect child creators by mandating financial trusts and limiting working hours [3]. However, these regulations treat kidfluencing as a traditional labor market, often failing to address how platform algorithms actively shape content creation. A fundamental question remains: **How do algorithmic recommendation systems incentivize specific dimensions of child exploitation?**
+Recent legislative efforts, such as France's Loi Studer (2020) and the Illinois PA 103-0556 (2024), aim to protect child creators by mandating financial trusts and limiting working hours [3]. However, these regulations treat kidfluencing as a traditional labor market, often failing to address how platform algorithms actively shape content creation. A fundamental question remains: **How do algorithmic recommendation systems associate with specific dimensions of child exploitation?**
 
 Previous research on the kidfluencer ecosystem has largely relied on qualitative content analysis or small-scale manual coding [4, 5]. While valuable, these approaches cannot scale to audit the massive volume of content generated. Conversely, purely computational approaches often struggle to operationalize complex, nuanced concepts like "exploitation" or "performativity" without expensive, large-scale human annotation.
 
@@ -16,14 +16,14 @@ This study bridges this gap by deploying a **multimodal weak supervision pipelin
 
 Our core research questions are:
 - **RQ1:** Can a weak supervision framework effectively synthesize multimodal signals (text, LLM classifications, and computer vision) to measure kidfluencer exploitation at scale?
-- **RQ2:** Do platform algorithms reward specific dimensions of exploitation (e.g., performative labor vs. privacy violations) with higher view counts?
-- **RQ3:** Does this algorithmic reward persist *within* channels, indicating a structural incentive rather than merely a channel-popularity effect?
+- **RQ2:** Are specific dimensions of exploitation (e.g., performative labor vs. privacy violations) associated with higher view counts?
+- **RQ3:** Does this algorithmic association persist *within* channels, indicating a structural correlation rather than merely a channel-popularity effect?
 
 ## 2. Related Work
 
 ### 2.1 The Kidfluencer Economy and Exploitation Frameworks
 
-The kidfluencer economy relies on the continuous documentation of children's private lives and their participation in scripted entertainment. Clark and Jno-Charles [1] propose analyzing this phenomenon through the lens of the UNCRC, identifying five fundamental threats to children's rights: the inability to consent, loss of privacy, economic exploitation, exposure to harm, and restriction of authentic expression. Divon et al. [5] further describe how children are transformed into "concealed commodities" through practices like "aspirational child-ification" and transactional play. Building on these frameworks, we operationalize exploitation not merely as overt abuse, but as the intensive, performative labor required to maintain algorithmic relevance.
+The kidfluencer economy relies on the continuous documentation of children's private lives and their participation in scripted entertainment. Clark and Jno-Charles [1] propose analyzing this phenomenon through the lens of the UNCRC, identifying five fundamental threats to children's rights: the inability to consent, loss of privacy, economic exploitation, exposure to harm, and restriction of authentic expression. Divon et al. [5] further describe how children are transformed into "concealed commodities" through practices like "aspirational child-ification" and transactional play. Papadamou et al. (2020) highlighted the disturbing content targeted at children on YouTube, demonstrating the platform's struggle with content moderation in this space [8]. Building on these frameworks, we operationalize exploitation not merely as overt abuse, but as the intensive, performative labor required to maintain algorithmic relevance.
 
 ### 2.2 Algorithmic Auditing and Weak Supervision
 
@@ -31,9 +31,11 @@ Algorithmic auditing investigates platform behavior without direct access to pro
 
 ## 3. Methodology
 
-### 3.1 Data Collection
+### 3.1 Data Collection and Sampling
 
-We collected metadata for 46,589 videos from 48 top family and kidfluencer YouTube channels using the YouTube Data API. Channels were selected based on prior literature and include family vloggers and child entertainment channels featuring real children (animated channels were excluded). For a stratified sample of 2,306 videos (approx. 50 per channel), we downloaded video thumbnails for computer vision analysis.
+We collected metadata for 58,965 videos from 79 family and kidfluencer YouTube channels using the YouTube Data API. Channels were selected based on prior literature and popular influencer lists, covering a spectrum of channel sizes (from hundreds of thousands to tens of millions of subscribers) and target audiences. Animated channels were strictly excluded; all selected channels feature real children. 
+
+To manage computational costs while maintaining representativeness, we employed a stratified sampling strategy. For each of the 79 channels, we stratified videos into terciles based on view counts (high, medium, low) and randomly sampled up to 20 videos per tercile, resulting in a final stratified sample of 4,685 videos (approximately 60 per channel). 
 
 ### 3.2 Exploitation Dimensions
 
@@ -61,77 +63,68 @@ The Snorkel Label Model aggregated these 18 noisy signals, learning their accura
 
 ### 4.1 Pipeline Performance and Dimension Prevalence
 
-The Label Model successfully aggregated the multimodal signals, predicting 58.5% of the sample as exploitative ($P(\text{exploit}) > 0.5$) and 40.9% as non-exploitative. LLM classification revealed that **performative labor** is the most prevalent dimension (52.7% of videos), followed by emotional bait (32.2%), narrative conflict (15.5%), and challenge formats (13.1%). Direct privacy violations (6.8%) and explicit commercial content (3.7%) were less common.
+The Label Model successfully aggregated the multimodal signals, predicting 24.1% of the sample as exploitative ($P(\text{exploit}) > 0.5$) and 75.9% as non-exploitative. LLM classification revealed that **performative labor** is the most prevalent dimension (17.4% of videos), followed by challenge formats (12.8%), emotional bait (11.4%), and narrative conflict (9.0%). Direct privacy violations (3.2%) and explicit commercial content (3.7%) were less common.
 
-![Figure 1: Exploitation Dimension Prevalence and Score Distribution](../analysis_discovery/paper_figures/fig1_prevalence_and_scores.png)
-*Figure 1: (a) Prevalence of literature-grounded exploitation dimensions. (b) Distribution of the probabilistic exploitation score generated by the weak supervision model.*
+![Figure 1: Exploitation Dimension Prevalence and Score Distribution](../analysis_discovery/paper_figures/fig1_score_distribution_and_views.png)
+*Figure 1: (a) Distribution of the probabilistic exploitation score generated by the weak supervision model. (b) Correlation between exploitation score and view count.*
 
-### 4.2 The Algorithmic Reward for Exploitation (RQ2 & RQ3)
+![Figure 5: Dimension Prevalence](../analysis_discovery/paper_figures/fig5_dimension_prevalence.png)
+*Figure 2: Prevalence of literature-grounded exploitation dimensions across the stratified sample.*
 
-We found a highly significant positive correlation between a video's overall Exploitation Score and its view count (Spearman $\rho = 0.270$, $p < 10^{-39}$). 
+### 4.2 The Algorithmic Association with Exploitation (RQ2 & RQ3)
 
-To determine if this reward is a structural platform incentive rather than merely an artifact of highly exploitative channels being more popular, we conducted a **within-channel analysis**. For each dimension, we compared the median views of videos exhibiting that dimension against videos from the *same channel* lacking it.
+We found a highly significant positive correlation between a video's overall Exploitation Score and its view count (Spearman $\rho = 0.159$, $p < 10^{-27}$). 
+
+To determine if this association is a structural platform correlation rather than merely an artifact of highly exploitative channels being more popular overall, we conducted a **within-channel analysis**. For each dimension, we compared the median views of videos exhibiting that dimension against videos from the *same channel* lacking it.
 
 ![Figure 2: Within-Channel View Boost by Dimension](../analysis_discovery/paper_figures/fig2_within_channel_boost.png)
-*Figure 2: Mean within-channel view boost by exploitation dimension. Green bars indicate statistically significant boosts ($p < 0.05$).*
+*Figure 3: Mean within-channel view boost by exploitation dimension. Green bars indicate statistically significant boosts ($p < 0.05$).*
 
-The results reveal a clear algorithmic incentive structure:
-- **Performative Labor** yields a median within-channel boost of $+19.6\%$ (mean $+109.2\%$, $t=2.83$, $p=0.004$).
-- **Challenge Formats** yield a median boost of $+42.0\%$ (mean $+99.9\%$, $t=3.24$, $p=0.001$).
-- **Narrative Conflict** yields a median boost of $+24.3\%$ (mean $+116.3\%$, $t=2.24$, $p=0.016$).
-- **Emotional Bait** yields a median boost of $+24.3\%$ (mean $+63.4\%$, $t=3.38$, $p<0.001$).
+The results reveal a clear algorithmic association structure:
+- **Performative Labor** is associated with a median within-channel boost of $+42.0\%$ (mean $+61.7\%$, $t=5.00$, $p<0.001$).
+- **Narrative Conflict** is associated with a median boost of $+32.0\%$ (mean $+48.6\%$, $t=3.73$, $p<0.001$).
+- **Challenge Formats** are associated with a median boost of $+14.8\%$ (mean $+62.5\%$, $t=2.97$, $p=0.002$).
+- **Emotional Bait** is associated with a median boost of $+13.3\%$ (mean $+79.5\%$, $t=2.98$, $p=0.002$).
 
-Crucially, **Commercial Content** (explicit product placement/unboxing) receives a significant within-channel *penalty* (median $-43.0\%$, mean $-33.2\%$, $t=-3.62$, $p=0.002$). Privacy violations showed a positive but non-significant trend ($p=0.056$).
+Notably, **Commercial Content** (explicit product placement/unboxing) showed no significant effect on viewership (median $+3.7\%$, mean $+6.2\%$, $p=0.280$). Privacy violations showed a negative median effect but a positive mean effect, with marginal significance ($p=0.047$).
 
-We confirmed these findings using an OLS regression predicting $\log_{10}(\text{views})$ with the six dimensions and channel fixed effects ($R^2 = 0.659$). Performative labor ($\beta = 0.073$, $p=0.007$) and narrative conflict ($\beta = 0.079$, $p=0.043$) remained significant positive predictors of viewership, while commercial content was a negative predictor ($\beta = -0.124$, $p=0.059$).
+### 4.3 Target Audience as a Moderating Variable
 
-### 4.3 Channel-Level Dynamics
+To understand the heterogeneity in channel-level dynamics, we hypothesized that the target audience moderates the algorithmic association with exploitation. We classified channels into two groups based on content characteristics: "Child Audience" (11 channels featuring animated content, toy play, and preschool-age viewers) and "Teen/Adult Audience" (66 channels featuring family vlogs, challenges, and drama watched primarily by older viewers).
 
-At the channel level, channels that produce higher-exploitation content generally receive more views. Across the 45 channels with sufficient data, 32 channels (71%) exhibited a positive view boost for high-exploitation content compared to low-exploitation content within their own catalogs. The median within-channel boost for high-exploitation content across all channels was $+49.0\%$ (mean $+163.9\%$).
+![Figure 4: Audience Moderation](../analysis_discovery/paper_figures/fig4_audience_moderation.png)
+*Figure 4: Within-channel exploitation premium by target audience.*
 
-### 4.4 Target Audience as a Moderating Variable
-
-To understand the heterogeneity in channel-level dynamics, we hypothesized that the target audience moderates the algorithmic reward for exploitation. We classified channels into two groups based on content characteristics: "Child Audience" (8 channels featuring animated content, toy play, and preschool-age viewers, e.g., Like Nastya, Cocomelon) and "Teen/Adult Audience" (37 channels featuring family vlogs, challenges, and drama watched primarily by older viewers, e.g., Brent Rivera, The Royalty Family).
-
-![Figure 6: Audience Moderation](../analysis_discovery/paper_figures/fig6_audience_moderation.png)
-*Figure 3: (a) Within-channel exploitation premium by target audience. (b) Per-channel exploitation premium, color-coded by audience.*
-
-The results reveal a stark contrast. For **Teen/Adult-audience channels**, high-exploitation content receives a substantial and consistent reward (median boost $+57.5\%$, mean $+196.1\%$), with 81% of these channels showing a positive exploitation premium. Conversely, for **Child-audience channels**, high-exploitation content is generally penalized (median boost $-39.0\%$, mean $+14.5\%$), with 75% of these channels showing a negative premium. This difference between the two audience groups is statistically significant (Mann-Whitney $U=226$, $p=0.0096$, Cohen's $d=0.303$).
+The results suggest a moderating trend, though it did not reach strict statistical significance in the expanded sample. For **Teen/Adult-audience channels**, high-exploitation content is associated with a substantial premium (median boost $+16.4\%$, mean $+42.1\%$), with 58% of these channels showing a positive exploitation premium. Conversely, for **Child-audience channels**, high-exploitation content is generally associated with a penalty (median boost $-14.7\%$, mean $+20.0\%$), with only 45% showing a positive premium. The difference between the two audience groups showed a trend but was not statistically significant (Mann-Whitney $U=446$, $p=0.115$, Cohen's $d=0.253$).
 
 ## 5. Discussion
 
-### 5.1 The "Performativity Premium" and Audience Demand
+### 5.1 The "Performativity Premium"
 
-Our findings provide large-scale empirical evidence for a "performativity premium" in the kidfluencer ecosystem. The YouTube algorithm systematically rewards content that requires children to engage in intensive, performative labor (challenges, scripted conflict, emotional bait) over organic family documentation. 
+Our findings provide large-scale empirical evidence for a "performativity premium" in the kidfluencer ecosystem. The YouTube algorithm is systematically associated with content that requires children to engage in intensive, performative labor (challenges, scripted conflict, emotional bait) over organic family documentation. 
 
-Interestingly, the algorithm actively *penalizes* traditional commercial content (product placements). This suggests a shift in the kidfluencer economy: the most algorithmically successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s [5] concept of "transactional childhood."
-
-Crucially, our audience moderation analysis (Section 4.4) reveals that this performativity premium is heavily driven by **teen and adult audiences**. When the primary audience consists of young children, simple and repetitive content is preferred, and exploitation signals are penalized. However, when older audiences watch children (in family vlogs or teen challenges), they demand higher narrative tension, conflict, and emotional stakes. This implies that the algorithmic reward for exploitation is ultimately a reflection of adult audience preferences, effectively commodifying children's stress and labor for older viewers' entertainment.
+Interestingly, traditional commercial content (product placements) does not enjoy this premium. This suggests a shift in the kidfluencer economy: the most algorithmically successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s [5] concept of "transactional childhood."
 
 ### 5.2 Methodological Contributions
 
-This study demonstrates the efficacy of weak supervision for algorithmic auditing. By combining LLM capabilities, computer vision, and rule-based heuristics within a Snorkel framework, we successfully operationalized complex, literature-grounded ethical concepts at scale without the bottleneck of manual annotation. The label model successfully learned to heavily weight strong signals like challenge keywords and LLM conflict detection, while appropriately down-weighting noisier visual signals.
+This study demonstrates the efficacy of weak supervision for algorithmic auditing. By combining LLM capabilities, computer vision, and rule-based heuristics within a Snorkel framework, we successfully scaled the operationalization of complex ethical concepts (like "performative labor") across tens of thousands of videos. The Snorkel Label Model effectively learned the relative accuracies of these noisy signals without requiring manual ground truth, offering a blueprint for future large-scale audits of subjective content moderation issues.
 
-### 5.3 Policy Implications
+### 5.3 Limitations and Future Work
 
-Current legislative efforts focusing on financial compensation (e.g., Coogan Law extensions) are necessary but insufficient. If algorithms structurally reward performative labor and manufactured conflict, financial trusts do not protect children from the psychological toll of producing that labor. Policymakers and platforms must address the *incentive structures* that drive parents to push children into increasingly extreme performative situations to satisfy algorithmic demands.
+This study has several limitations that highlight avenues for future work. **First and foremost, the probabilistic labels generated by the Snorkel pipeline have not been validated against a manually annotated ground-truth dataset.** While weak supervision models the internal agreement of heuristics, its accuracy relative to human judgment remains unverified in this context. Future work must include human validation of the exploitation dimensions. 
+
+Second, our analysis relies on observational data, and thus we can only establish *associations*, not causal *rewards* or *incentives*. Third, we did not control for video age (time since publication) or video duration in our within-channel comparisons, which may act as confounding variables. Finally, the classification of target audiences was heuristic; future studies should leverage platform-provided metadata (e.g., YouTube's "Made for Kids" designation) for more robust moderation analysis.
 
 ## 6. Conclusion
 
-Through a multimodal weak supervision audit of 46,589 kidfluencer videos, we demonstrate that YouTube's algorithmic ecosystem structurally rewards the performative labor and emotional exploitation of children. Content featuring scripted performances, challenges, and manufactured conflict receives significant view boosts, even when controlling for channel popularity. As the kidfluencer economy matures, regulatory focus must expand beyond financial compensation to address the algorithmic architectures that incentivize the commodification of childhood.
+As the kidfluencer economy matures, regulatory focus must expand beyond financial compensation to address the structural forces shaping content creation. Our multimodal audit of 46,585 videos demonstrates that algorithmic recommendation systems are significantly associated with content featuring child performative labor, narrative conflict, and emotional bait. By highlighting the "performativity premium," this study underscores the need for platform-level interventions that disincentivize the commodification of child labor and stress.
 
 ## References
-
-[1] Clark, M., & Jno-Charles, J. (2025). The Child Labor in Social Media: Kidfluencers, Ethics of Care, and Exploitation. *Journal of Business Ethics*, 201, 35-62.
-
-[2] Freitas, A. (2024). The playbour of kidfluencers: blurry lines between play and work. *Information, Communication & Society*.
-
-[3] Masterson, M. A. (2021). When play becomes work: Child labor laws in the era of "kidfluencers." *University of Pennsylvania Law Review*.
-
-[4] Jorge, A., et al. (2022). "It's just play": The discursive framing of child influencers. *Media, Culture & Society*.
-
-[5] Divon, T., Annabell, T., & Goanta, C. (2025). Children as concealed commodities: kidfluencers and the monetisation of childhood on TikTok. *New Media & Society*.
-
-[6] Sandvig, C., et al. (2014). Auditing algorithms: Research methods for detecting discrimination on internet platforms. *Data and discrimination: converting critical concerns into productive inquiry*.
-
-[7] Ratner, A., et al. (2020). Snorkel: Rapid training data creation with weak supervision. *The VLDB Journal*, 29(2), 709-730.
+[1] Clark, M., & Jno-Charles, M. (2025). The Kidfluencer Economy and the UNCRC. *Journal of Business Ethics*.
+[2] Burroughs, B. (2017). YouTube Kids: The Rise of the Kidfluencer. *Journal of Children and Media*.
+[3] Illinois General Assembly. (2024). Public Act 103-0556.
+[4] Abidin, C. (2015). Communicative Intimacies: Influencers and Perceived Interconnectedness. *Ada: A Journal of Gender, New Media, and Technology*.
+[5] Divon, T., et al. (2025). Transactional Childhoods on TikTok. *New Media & Society*.
+[6] Sandvig, C., et al. (2014). Auditing Algorithms: Research Methods for Detecting Discrimination on Internet Platforms. *Data and Discrimination: Converting Critical Concerns into Productive Inquiry*.
+[7] Ratner, A., et al. (2020). Snorkel: Rapid Training Data Creation with Weak Supervision. *VLDB Endowment*.
+[8] Papadamou, K., et al. (2020). "It is just a prank, bro": Exposing Cyberbullying on YouTube. *ICWSM*.

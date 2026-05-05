@@ -1,0 +1,28 @@
+[2026-05-05 04:00:44.481910] Loaded 4685 videos for classification
+  [04:01:44] Batch 1/188: 25/4685 done, 0 errors
+  [04:03:16] Batch 2/188: 50/4685 done, 0 errors
+  [04:04:26] Batch 3/188: 75/4685 done, 0 errors
+  [13:15:56] Batch 20/188: 500/4685 done, 0 errors
+  [14:22:23] Batch 40/188: 1000/4685 done, 0 errors
+  [14:49:42] Batch 60/188: 1500/4685 done, 0 errors
+  [15:12:30] Batch 80/188: 2000/4685 done, 0 errors
+  [15:32:57] Batch 100/188: 2500/4685 done, 0 errors
+  [15:59:12] Batch 120/188: 3000/4685 done, 0 errors
+  [16:25:43] Batch 140/188: 3500/4685 done, 0 errors
+  [16:51:42] Batch 160/188: 4000/4685 done, 0 errors
+  [ERROR] API call failed: 'NoneType' object is not subscriptable
+  [17:18:13] Batch 180/188: 4500/4685 done, 1 errors
+
+============================================================
+CLASSIFICATION COMPLETE
+============================================================
+Total classified: 4685
+Errors: 1
+
+Dimension prevalence:
+  performative_labor: 17.4%
+  emotional_bait: 11.4%
+  narrative_conflict: 9.0%
+  challenge_format: 12.8%
+  commercial_content: 3.7%
+  privacy_violation: 3.2%

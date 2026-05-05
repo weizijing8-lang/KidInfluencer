@@ -1,0 +1,82 @@
+{
+  "n_videos": 4685,
+  "n_channels": 79,
+  "n_labeling_functions": 18,
+  "n_lf_llm": 6,
+  "n_lf_rule": 9,
+  "n_lf_cv": 3,
+  "mean_exploitation_score": 0.4769810583380039,
+  "median_exploitation_score": 0.3518848116172382,
+  "exploit_predicted": 1130,
+  "not_exploit_predicted": 3555,
+  "abstained": 0,
+  "spearman_rho_score_views": 0.15877565002766864,
+  "spearman_pvalue": 7.905375731797529e-28,
+  "dimension_prevalence": {
+    "performative": 0.17374599786552827,
+    "emotional_bait": 0.11419423692636073,
+    "narrative_conflict": 0.09007470651013874,
+    "challenge_format": 0.12764140875133403,
+    "commercial_content": 0.03735325506937033,
+    "privacy_violation": 0.032017075773746
+  },
+  "within_channel_results": [
+    {
+      "dimension": "performative",
+      "n_channels": 59,
+      "mean_within_boost": 61.72449349247063,
+      "median_within_boost": 42.015720267391465,
+      "t_stat": 4.9976889108418545,
+      "p_value": 2.8328130530670376e-06
+    },
+    {
+      "dimension": "emotional_bait",
+      "n_channels": 49,
+      "mean_within_boost": 79.52579779415663,
+      "median_within_boost": 13.315699072483689,
+      "t_stat": 2.976252108236355,
+      "p_value": 0.0022800732834006667
+    },
+    {
+      "dimension": "narrative_conflict",
+      "n_channels": 50,
+      "mean_within_boost": 48.62048344349347,
+      "median_within_boost": 31.950320638129494,
+      "t_stat": 3.729771461315491,
+      "p_value": 0.0002489412282021178
+    },
+    {
+      "dimension": "challenge_format",
+      "n_channels": 46,
+      "mean_within_boost": 62.47286513963973,
+      "median_within_boost": 14.789695202073094,
+      "t_stat": 2.96596691097265,
+      "p_value": 0.0024076891267006987
+    },
+    {
+      "dimension": "commercial_content",
+      "n_channels": 19,
+      "mean_within_boost": 6.199945609294793,
+      "median_within_boost": 3.734360996594366,
+      "t_stat": 0.5939892060953489,
+      "p_value": 0.27995558031453216
+    },
+    {
+      "dimension": "privacy_violation",
+      "n_channels": 21,
+      "mean_within_boost": 70.6497194602812,
+      "median_within_boost": -7.419778799509224,
+      "t_stat": 1.7536631111233016,
+      "p_value": 0.0474007703606393
+    }
+  ],
+  "n_channels_with_significant_boost": 10,
+  "mean_within_channel_boost": 38.958805974106234,
+  "median_within_channel_boost": 15.184759960879358,
+  "audience_moderation": {
+    "child_channels": 11,
+    "teen_adult_channels": 66,
+    "child_mean_boost": 19.968180056965014,
+    "teen_adult_mean_boost": 42.123910293629784
+  }
+}
