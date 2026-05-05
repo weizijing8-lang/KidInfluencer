@@ -1,0 +1,13 @@
+{
+  "child_channels_n": 8,
+  "teen_adult_channels_n": 37,
+  "child_mean_boost": 14.525954249773978,
+  "child_median_boost": -38.979330499864986,
+  "child_pct_positive": 25.0,
+  "teen_adult_mean_boost": 196.14021031791825,
+  "teen_adult_median_boost": 57.51590495975072,
+  "teen_adult_pct_positive": 81.08108108108108,
+  "mann_whitney_u": 226.0,
+  "mann_whitney_p": 0.009628848229319913,
+  "cohens_d": 0.3032479831139927
+}

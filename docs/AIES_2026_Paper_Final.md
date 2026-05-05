@@ -87,15 +87,26 @@ We confirmed these findings using an OLS regression predicting $\log_{10}(\text{
 
 ### 4.3 Channel-Level Dynamics
 
-At the channel level, channels that produce higher-exploitation content receive more views. Across the 48 channels, 6 channels (13%) exhibited a statistically significant view boost for high-exploitation content compared to low-exploitation content within their own catalogs. The mean within-channel boost for high-exploitation content across all channels was $+50.0\%$.
+At the channel level, channels that produce higher-exploitation content generally receive more views. Across the 45 channels with sufficient data, 32 channels (71%) exhibited a positive view boost for high-exploitation content compared to low-exploitation content within their own catalogs. The median within-channel boost for high-exploitation content across all channels was $+49.0\%$ (mean $+163.9\%$).
+
+### 4.4 Target Audience as a Moderating Variable
+
+To understand the heterogeneity in channel-level dynamics, we hypothesized that the target audience moderates the algorithmic reward for exploitation. We classified channels into two groups based on content characteristics: "Child Audience" (8 channels featuring animated content, toy play, and preschool-age viewers, e.g., Like Nastya, Cocomelon) and "Teen/Adult Audience" (37 channels featuring family vlogs, challenges, and drama watched primarily by older viewers, e.g., Brent Rivera, The Royalty Family).
+
+![Figure 6: Audience Moderation](../analysis_discovery/paper_figures/fig6_audience_moderation.png)
+*Figure 3: (a) Within-channel exploitation premium by target audience. (b) Per-channel exploitation premium, color-coded by audience.*
+
+The results reveal a stark contrast. For **Teen/Adult-audience channels**, high-exploitation content receives a substantial and consistent reward (median boost $+57.5\%$, mean $+196.1\%$), with 81% of these channels showing a positive exploitation premium. Conversely, for **Child-audience channels**, high-exploitation content is generally penalized (median boost $-39.0\%$, mean $+14.5\%$), with 75% of these channels showing a negative premium. This difference between the two audience groups is statistically significant (Mann-Whitney $U=226$, $p=0.0096$, Cohen's $d=0.303$).
 
 ## 5. Discussion
 
-### 5.1 The "Performativity Premium"
+### 5.1 The "Performativity Premium" and Audience Demand
 
 Our findings provide large-scale empirical evidence for a "performativity premium" in the kidfluencer ecosystem. The YouTube algorithm systematically rewards content that requires children to engage in intensive, performative labor (challenges, scripted conflict, emotional bait) over organic family documentation. 
 
 Interestingly, the algorithm actively *penalizes* traditional commercial content (product placements). This suggests a shift in the kidfluencer economy: the most algorithmically successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s [5] concept of "transactional childhood."
+
+Crucially, our audience moderation analysis (Section 4.4) reveals that this performativity premium is heavily driven by **teen and adult audiences**. When the primary audience consists of young children, simple and repetitive content is preferred, and exploitation signals are penalized. However, when older audiences watch children (in family vlogs or teen challenges), they demand higher narrative tension, conflict, and emotional stakes. This implies that the algorithmic reward for exploitation is ultimately a reflection of adult audience preferences, effectively commodifying children's stress and labor for older viewers' entertainment.
 
 ### 5.2 Methodological Contributions
 
