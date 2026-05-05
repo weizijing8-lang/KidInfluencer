@@ -1,0 +1,16 @@
+{
+  "n_videos": 2306,
+  "n_channels": 48,
+  "n_labeling_functions": 18,
+  "n_lf_llm": 5,
+  "n_lf_rule": 10,
+  "n_lf_cv": 3,
+  "mean_exploitation_score": 0.5988914862859175,
+  "median_exploitation_score": 0.6456573229855913,
+  "exploit_predicted": 1327,
+  "not_exploit_predicted": 958,
+  "correlation_score_views": 0.1946624508978028,
+  "correlation_pvalue": 4.057667303525985e-21,
+  "within_channel_mean_boost": 63.28777212152447,
+  "within_channel_median_boost": 16.275864761906313
+}

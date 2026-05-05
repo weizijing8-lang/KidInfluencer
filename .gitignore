@@ -23,9 +23,10 @@ data/results_v4/full_results_v4.csv
 data/results_v4/embeddings_v4.npy
 data/results_v4/direction_vector_v4.npy
 
-# Thumbnails (too many files for git, ~7000 images)
+# Thumbnails (too many files for git)
 data/thumbnails/
+data/thumbnails_sample/
 
 # Large embedding files
 *.npy
-analysis_paper1_v2/v4_reclassified.csv
+literature/*.pdf

@@ -1,0 +1,218 @@
+child_present,child_emotion,emotion_appears_genuine,visual_clickbait_elements,exploitation_concern,concern_reason,video_id,channel
+False,not_visible,False,"['circles', 'text_overlay']",0,,Ksk_K5PgMZM,acefamily
+False,not_visible,False,"['emoji_overlay', 'text_overlay']",0,,myBCVyhq-6Y,acefamily
+True,neutral,True,['text_overlay'],0,,TBYKtkBUHJU,acefamily
+True,neutral,True,['none'],0,,N1PXjVdmMs4,acefamily
+True,happy,True,"['text_overlay', 'split_screen']",0,,KA3d8pSiQJE,acefamily
+True,excited,False,"['text_overlay', 'emoji_overlay', 'bright_border']",1,"The thumbnail uses exaggerated and manipulated images of children, including miniaturized versions, which may be considered mild exploitation for entertainment purposes.",N3b24Gj3FMQ,aforadley
+True,neutral,True,['text_overlay'],0,,vv-DZJYhluo,aforadley
+True,neutral,True,['none'],0,,y7JdT0iOBZg,aforadley
+True,neutral,True,"['emoji_overlay', 'text_overlay']",0,,8LDYWm7u8LU,aforadley
+True,excited,True,['none'],0,,DBkcuepQY9I,aforadley
+True,not_visible,False,['none'],0,,g7mzGOfdVLQ,andrewdavila
+True,not_visible,False,['none'],3,"The image appears to show a child in a vulnerable and potentially inappropriate situation, raising high concerns about exploitation.",O6VON2LNNik,andrewdavila
+False,not_visible,False,['none'],0,,OPZrTetean8,andrewdavila
+False,not_visible,False,['none'],0,,--2RsDMl8yE,ballingerfamily
+False,not_visible,False,['text_overlay'],0,,cAgToLiPZrg,ballingerfamily
+True,happy,True,['text_overlay'],0,,Rbr5O__uzJM,ballingerfamily
+True,neutral,True,['none'],0,,rBA7E-X3Sfc,ballingerfamily
+True,neutral,True,['text_overlay'],0,,9YN0-g-XagA,ballingerfamily
+True,disgusted,False,"['arrows', 'text_overlay']",0,,XjZv_kzQ_H0,bonniehoellein
+True,not_visible,False,['none'],0,,k-7pvtiRGpE,bonniehoellein
+True,neutral,True,['text_overlay'],0,,9KBP8ZETpkQ,bonniehoellein
+False,not_visible,False,['none'],0,,uA0jE78e-zo,bonniehoellein
+True,not_visible,False,['none'],0,,eWjRmHvhihg,bonniehoellein
+True,neutral,True,['text_overlay'],0,,A-QkKraNM2Q,bratayley
+True,not_visible,False,['text_overlay'],0,,O5hptG47iO8,bratayley
+True,not_visible,False,['none'],0,,60AFYb3Rhyg,bratayley
+True,not_visible,False,['none'],0,,LuxFXcvPp2w,bratayley
+True,neutral,True,['text_overlay'],0,,f-llqtsHIsc,bratayley
+True,neutral,True,['none'],0,,b0RBWMgazYU,brentrivera
+True,neutral,True,['text_overlay'],0,,_NKsy8LzzLk,brentrivera
+False,not_visible,False,['text_overlay'],0,,q1S0g4Tr5-s,brentrivera
+True,neutral,False,['text_overlay'],3,"The thumbnail depicts a young person in a suggestive context involving physical interaction and a game with potentially inappropriate actions, raising high child exploitation concerns.",_ezmceSGPew,brentrivera
+False,not_visible,False,['none'],0,,AXZcCNc7ffk,brentrivera
+True,happy,False,"['emoji_overlay', 'text_overlay']",0,,TRvbHo6woD4,dailybumps
+True,neutral,True,"['emoji_overlay', 'text_overlay']",0,,DqcmQDPfaTE,dailybumps
+True,neutral,True,['none'],0,,cBV2MSa-kgk,dailybumps
+False,not_visible,False,['none'],0,,ApHCFFMXT48,dailybumps
+True,excited,False,"['arrows', 'text_overlay']",1,"The thumbnail uses exaggerated elements like a large arrow and staged water play to attract clicks, which may mildly exploit children's images for engagement.",vJ7mszZiKKI,dailybumps
+True,excited,False,['none'],0,,GM038ihfr3A,ehbee
+True,neutral,True,"['split_screen', 'text_overlay']",0,,gB9Q3rGA280,ehbee
+True,surprised,False,['none'],0,,abr9-2zOKj4,ehbee
+False,not_visible,False,"['text_overlay', 'question_marks']",0,,m91kF-nk-1U,ehbee
+True,neutral,True,['text_overlay'],0,,Wb8mu9GT33Y,ehbee
+False,not_visible,False,['text_overlay'],0,,5RzAncsQt5o,ethangamer
+False,not_visible,False,['none'],0,,v2UcVdmuW0g,ethangamer
+False,not_visible,False,"['text_overlay', 'bright_border']",0,,C6lk8v5OqHw,ethangamer
+True,neutral,True,['none'],0,,OqUply4mzEo,ethangamer
+True,not_visible,False,"['text_overlay', 'bright_border']",0,,vVQhdSbStGI,ethangamer
+True,neutral,True,['text_overlay'],0,,246XtiyIKm0,everleighrose
+True,excited,False,['none'],1,Children are shown with makeup products in a posed manner that may encourage early cosmetic use or commercial promotion.,1kLrLzVhL0Y,everleighrose
+True,neutral,True,['none'],0,,D3gTHpkv7kE,everleighrose
+True,happy,True,['text_overlay'],0,,p0VoRUmPMP4,everleighrose
+True,not_visible,False,"['text_overlay', 'emoji_overlay']",1,"Children are prominently featured with added graphic elements and text that may be used to attract attention, raising mild concerns about exploitation.",KkdkmRUjMFM,everleighrose
+True,neutral,True,"['text_overlay', 'bright_border']",0,,mxogJG_xkfU,familyfizz
+True,neutral,True,"['emoji_overlay', 'text_overlay']",0,,9Q7O1DcqosA,familyfizz
+True,neutral,True,"['emoji_overlay', 'text_overlay']",0,,QXf5fiEYAmg,familyfizz
+True,neutral,False,"['text_overlay', 'circles']",1,"The thumbnail uses bright colors and exaggerated elements to attract attention, potentially exploiting the child's image for views.",RmyJO2N1aiQ,familyfizz
+True,surprised,False,['text_overlay'],0,,7N6eoKxrsW4,familyfizz
+True,neutral,True,"['arrows', 'text_overlay']",0,,ZDMN-C3vDRo,familyfudge
+True,neutral,False,['text_overlay'],0,,vqXJvC3hnOI,familyfudge
+False,not_visible,False,['text_overlay'],0,,eTTMeNZlZK4,familyfudge
+True,not_visible,False,['text_overlay'],0,,2oK_EXQZd4k,familyfudge
+True,not_visible,False,['text_overlay'],0,,6UIyoTRmnsA,familyfudge
+True,not_visible,False,"['arrows', 'text_overlay']",0,,eG7A3AgmjqY,familyfunpack
+True,scared,False,"['arrows', 'text_overlay', 'circles']",1,"The child is shown in a fearful pose likely exaggerated for dramatic effect, which may mildly exploit the child's emotions for views.",B43WUkSYQew,familyfunpack
+True,neutral,True,['text_overlay'],0,,9QGNElKNf-g,familyfunpack
+True,scared,False,"['text_overlay', 'bright_border']",1,"The child appears to be in distress or scared, possibly exaggerated for dramatic effect in the thumbnail.",d7Bi22N1jvo,familyfunpack
+True,neutral,True,"['text_overlay', 'emoji_overlay']",1,"The thumbnail shows a child in a medical emergency setting, which could be sensitive content and may exploit the child's situation for views.",-xS9RbOyFHk,familyfunpack
+True,neutral,True,['text_overlay'],0,,UenSVPkM0NE,funsquadfamily
+True,excited,False,['text_overlay'],1,"The child is placed in an unusual and potentially unsafe context (immersed in a pool of chocolate) which may be used to attract views, raising mild exploitation concerns.",XAw2ByLKOFA,funsquadfamily
+False,not_visible,False,['none'],0,,c3hihUDgD6s,funsquadfamily
+True,neutral,False,"['arrows', 'text_overlay']",1,"The thumbnail uses children in a staged, exaggerated context with suggestive text ('ADOPTED'), which may imply mild exploitation for views.",YOw-rtKgvq0,funsquadfamily
+True,happy,False,['text_overlay'],0,,hn14vcLQOEM,funsquadfamily
+False,not_visible,False,['text_overlay'],0,,kpox7zp5ndE,gavinmagnus
+True,neutral,False,"['text_overlay', 'arrows', 'speech_bubbles']",1,"The thumbnail uses a child in a staged, exaggerated emotional context which may exploit their image for views.",uED3DBIzMTQ,gavinmagnus
+True,neutral,False,"['text_overlay', 'bright_border']",1,"Repeated text 'Are you dating Piper?' may pressure or embarrass the child, raising mild concern.",X_3HdKEqCiQ,gavinmagnus
+True,not_visible,False,['text_overlay'],1,The thumbnail uses images of missing minors in a sensationalized manner which may exploit their situation for views.,4_XGwcuO9NA,gavinmagnus
+False,not_visible,False,['text_overlay'],0,,vI1dPUBiNY8,gavinmagnus
+True,surprised,False,"['arrows', 'text_overlay']",0,,5WqtxV1svb4,inghamfamily
+True,neutral,True,['none'],0,,dgJfL6A0_Gk,inghamfamily
+True,neutral,True,"['arrows', 'text_overlay']",0,,EMRm2tdMibg,inghamfamily
+False,not_visible,False,['text_overlay'],0,,s3-3mqD1rvc,inghamfamily
+False,not_visible,False,"['text_overlay', 'arrows']",0,,liUHF6Xzlts,inghamfamily
+True,neutral,True,['text_overlay'],0,,cteOqd6fULY,itsjudyslife
+True,neutral,True,['text_overlay'],0,,pKYHjt5II5A,itsjudyslife
+True,neutral,True,['text_overlay'],0,,7PyLBZd9tjg,itsjudyslife
+False,not_visible,False,['text_overlay'],0,,d-7i5VHewPA,itsjudyslife
+True,neutral,True,"['arrows', 'text_overlay', 'emoji_overlay']",0,,LDqJC-c4jHg,itsjudyslife
+True,neutral,False,"['arrows', 'emoji_overlay', 'text_overlay']",2,"The thumbnail suggests a child is involved in getting a tattoo, which raises concerns about promoting or normalizing tattooing minors.",zMPm5Ybnw6M,itsyeboi
+False,not_visible,False,"['text_overlay', 'none']",0,,L5gG4HIUxJA,itsyeboi
+False,not_visible,False,['text_overlay'],0,,RxbmSXxp-k0,itsyeboi
+False,not_visible,False,['text_overlay'],0,,gKyif-XFNLQ,itsyeboi
+False,not_visible,False,['none'],0,,m9MmngQecog,itsyeboi
+True,neutral,True,"['arrow', 'text_overlay']",0,,8rGI4_6tWII,jesssfam
+True,scared,False,"['arrows', 'text_overlay', 'split_screen']",1,"The child is shown with an exaggerated scared expression, which may be used to provoke emotional reaction and clicks, raising mild concern about emotional exploitation.",3CdKjWH-0m8,jesssfam
+True,neutral,True,['text_overlay'],3,"The thumbnail shows a child holding a gun, which raises serious child exploitation and safety concerns.",3RTiDTM1elw,jesssfam
+False,not_visible,False,"['arrows', 'text_overlay']",0,,48KJDJD0BkY,jesssfam
+True,excited,False,"['arrows', 'text_overlay']",1,"The child is posed in a way that seems exaggerated for attention, combined with clickbait elements which may exploit the child's image for views.",iBn5M3mJPLg,jesssfam
+True,not_visible,False,['none'],0,,i5KR3FvoLbs,jhousevlogs
+True,excited,False,['emoji_overlay'],0,,bHMryT8FHI0,jhousevlogs
+True,excited,False,['text_overlay'],0,,8iGpBZgTFfk,jhousevlogs
+True,excited,False,['emoji_overlay'],0,,Xjp-3jylvj8,jhousevlogs
+True,excited,False,['text_overlay'],0,,atWXnnpjyGw,jhousevlogs
+True,neutral,True,['none'],0,,lVS5-GQ91vo,jillianandaddie
+True,neutral,True,['arrows'],0,,YwbmMedc2jo,jillianandaddie
+True,neutral,True,['text_overlay'],0,,w2QXJNzddVw,jillianandaddie
+True,neutral,True,['none'],0,,mRrrXsdQFXU,jillianandaddie
+True,neutral,True,['circles'],0,,YXON5vIPef0,jillianandaddie
+True,not_visible,False,"['text_overlay', 'emoji_overlay']",0,,mt9SaGY_fco,johnsonsfam
+True,surprised,False,['text_overlay'],0,,s-Wic4NWBbo,johnsonsfam
+True,neutral,True,"['text_overlay', 'emoji_overlay']",0,,fjX1jgfS4yw,johnsonsfam
+True,happy,True,['text_overlay'],0,,1xBKtusQJww,johnsonsfam
+True,neutral,True,['text_overlay'],0,,WvJePRwDW1I,johnsonsfam
+True,neutral,True,['text_overlay'],1,"The thumbnail features a young child in a bodybuilding context, which may raise mild concerns about promoting adult fitness ideals to children.",c65wnT5hM5w,jordanmatter
+True,neutral,False,['text_overlay'],1,"The thumbnail features children in a potentially unsafe or abandoned roller coaster setting with a negative warning text, which could be seen as exploiting fear or distress for views.",Zf23JqCZxlU,jordanmatter
+True,neutral,True,['text_overlay'],0,,8s3G77tC28w,jordanmatter
+True,scared,False,['text_overlay'],1,The thumbnail uses a child in a fearful context which may be intended to attract views by exploiting the child's emotion.,dARtcG5DFkY,jordanmatter
+True,neutral,False,['text_overlay'],0,,pfLM6dtAM0g,jordanmatter
+True,neutral,False,['text_overlay'],0,,innGFkO5gRQ,kidsdianashow
+True,happy,False,['text_overlay'],0,,RMTYsmXHkTo,kidsdianashow
+True,happy,True,['text_overlay'],0,,yHPxRlTauOU,kidsdianashow
+True,neutral,False,['text_overlay'],0,,H7uX6kb8SS0,kidsdianashow
+True,neutral,False,['text_overlay'],0,,nnSJVMSicaQ,kidsdianashow
+True,neutral,True,['none'],0,,_wlj8rECGsY,kkandbabyj
+False,not_visible,False,['none'],0,,cQmsSfN4SHI,kkandbabyj
+True,excited,True,['text_overlay'],0,,P1NM2FM5WcY,kkandbabyj
+False,not_visible,False,['none'],0,,nAk-mLphCbQ,kkandbabyj
+True,neutral,True,"['text_overlay', 'none']",0,,F3DTNnamtI0,kkandbabyj
+True,angry,False,['text_overlay'],0,,axHot1FvcYc,labrantfam
+True,sad,False,['text_overlay'],2,"The thumbnail depicts a child character with visible injuries and a distressed expression, combined with the text 'They also hurt me!', which may be used to evoke strong emotional reactions and could be seen as exploiting child suffering for views.",75VHfV3Y8Bk,labrantfam
+False,not_visible,False,['text_overlay'],0,,8LWobFWuGbc,labrantfam
+True,neutral,False,['text_overlay'],0,,AB7kXrla_0w,likenastya
+True,excited,False,"['arrows', 'text_overlay']",0,,6QNpyX8fKjA,likenastya
+True,excited,False,"['emoji_overlay', 'text_overlay']",0,,TwySyVXi49c,likenastya
+True,neutral,False,['text_overlay'],0,,jPIPzqN3DH0,likenastya
+True,neutral,False,['text_overlay'],2,The thumbnail contrasts children labeled as 'FAT' and 'STRONG' which can promote body shaming and negative self-image among children.,Yppgtexgnrc,likenastya
+True,neutral,True,['none'],0,,_ZufHiGoSZw,mccluretwins
+True,happy,True,['bright_border'],0,,yP5RNN5yTOE,mccluretwins
+True,angry,False,['text_overlay'],1,"The thumbnail depicts children in a confrontational pose which may be used to attract attention through conflict, raising mild concern about exploitation for views.",RpGTrMi_Zr8,mccluretwins
+True,surprised,False,"['text_overlay', 'emoji_overlay']",0,,EpTd3Tu3GBs,mccluretwins
+True,neutral,True,['text_overlay'],0,,QiM9Zy7MImY,mccluretwins
+False,not_visible,False,"['text_overlay', 'split_screen']",0,,7MZaxkt5t1s,norrisnuts
+True,neutral,True,['text_overlay'],0,,son6wI2pK1A,norrisnuts
+True,excited,False,"['text_overlay', 'none']",1,"The thumbnail uses exaggerated facial expressions and multiple images of children to attract clicks, which may mildly exploit children's images for engagement.",QknT67Jjzsg,norrisnuts
+True,angry,False,['text_overlay'],0,,y3wVvfnF7FY,norrisnuts
+True,neutral,True,['none'],0,,ZpWULcg1MnQ,norrisnuts
+True,neutral,True,['none'],0,,PRfSg_ZlU78,ohanaadventure
+True,excited,False,['text_overlay'],0,,3DGSKsEM8Yw,ohanaadventure
+True,neutral,True,['text_overlay'],0,,qeChecAFbmQ,ohanaadventure
+True,neutral,False,"['text_overlay', 'none']",1,"Use of children in a context emphasizing expensive luxury items and money, potentially encouraging materialism or unrealistic expectations.",MPGZqmwLr7A,ohanaadventure
+True,neutral,False,['text_overlay'],1,"The thumbnail shows children in a context suggesting escape or running away, which could be sensitive or exploitative depending on the video's content.",n7d2muTiwG8,ohanaadventure
+True,excited,False,"['text_overlay', 'bright_border']",0,,SSOspDdafuw,onyxfamily
+False,not_visible,False,['text_overlay'],0,,kCN6ZIeU05Y,onyxfamily
+False,not_visible,False,['text_overlay'],0,,o6WaiMc1TpM,onyxfamily
+False,not_visible,False,['text_overlay'],0,,qn6K85m5f4s,onyxfamily
+True,excited,False,"['text_overlay', 'split_screen', 'emoji_overlay']",0,,edZ5z_n1yXg,onyxfamily
+True,neutral,True,['none'],0,,E_0Jz2-5S3c,piersonwodzynski
+False,not_visible,False,['none'],0,,RTH1oCit03I,piersonwodzynski
+False,not_visible,False,"['arrows', 'text_overlay']",0,,eeB3cC3KSo0,piersonwodzynski
+True,neutral,True,"['text_overlay', 'circles']",0,,wujAEGPVVuA,piersonwodzynski
+False,not_visible,False,['none'],0,,BTK3U2E3-DE,piersonwodzynski
+True,neutral,False,"['text_overlay', 'emoji_overlay']",1,"Child is featured in a messy and potentially uncomfortable situation for entertainment, which may raise mild exploitation concerns.",Ew-ONQOUTFc,piperrockelle
+True,neutral,True,"['text_overlay', 'emoji_overlay']",1,The child is dressed in a costume and posed in a stylized manner that could be seen as suggestive or overly mature for their age.,fkgTVsGLdws,piperrockelle
+False,not_visible,False,"['split_screen', 'text_overlay']",0,,gPHDWFyexlU,piperrockelle
+True,neutral,True,['none'],0,,iRr64f_BBVg,piperrockelle
+False,not_visible,False,"['text_overlay', 'bright_border']",0,,cTU-tozjI0Y,piperrockelle
+False,not_visible,False,"['text_overlay', 'bright_border']",0,,uFIDct9rQ7M,rebeccazamolo
+True,neutral,False,"['text_overlay', 'none']",1,"The thumbnail features children in unusual and potentially uncomfortable poses, which may be used to attract clicks.",UiCCh3LYuwI,rebeccazamolo
+False,not_visible,False,"['text_overlay', 'bright_border', 'emoji_overlay']",0,,lySrFFZYJGY,rebeccazamolo
+True,neutral,True,['text_overlay'],1,"The thumbnail uses a missing person theme involving a child, which can be sensitive and potentially exploitative for attention.",i6B1qmRgQQo,rebeccazamolo
+True,neutral,False,['text_overlay'],2,"The thumbnail depicts a child in a potentially distressing or violent context, which raises moderate concerns about exploitation or inappropriate use.",27j0tPJh99w,rebeccazamolo
+True,excited,True,['none'],0,,s1Etw0X_h24,royaltyfamily
+True,neutral,False,['text_overlay'],0,,y9FLKhfh8JA,royaltyfamily
+True,neutral,False,"['text_overlay', 'none']",1,"Child is featured prominently with exaggerated elements like money and popcorn, which may be used to attract views but does not show overt exploitation.",DHg3dFCCuTE,royaltyfamily
+True,not_visible,False,['text_overlay'],0,,EvrZoRRiP30,royaltyfamily
+True,neutral,False,"['text_overlay', 'bright_border']",0,,Lq4UK822eys,royaltyfamily
+True,neutral,True,"['bright_border', 'text_overlay']",0,,yC6hcPat6BI,ryansworld
+True,excited,False,"['text_overlay', 'bright_border']",0,,42_65qPfENQ,ryansworld
+True,not_visible,False,"['text_overlay', 'bright_border']",0,,PK8KMpJSoXY,ryansworld
+True,neutral,True,['text_overlay'],0,,q_MuNU-N83I,tannerites
+True,happy,False,"['text_overlay', 'bright_border']",0,,Xl0JhNSikiM,tannerites
+True,surprised,False,"['text_overlay', 'emoji_overlay']",1,"The thumbnail uses a child in a dramatic context with exaggerated emotion and suggestive text, which may mildly exploit the child's image for views.",xp9zeI0PbZE,tannerites
+True,excited,False,['none'],0,,zHSPuuv_v4I,thatyoutub3family
+True,neutral,True,['text_overlay'],0,,G4VBR2_Jd10,thatyoutub3family
+True,neutral,True,['text_overlay'],0,,PT1pNeoZlbk,thatyoutub3family
+True,neutral,True,['text_overlay'],0,,nzrLtC8Too0,thatyoutub3family
+False,not_visible,False,['none'],0,,ifF5lUCbFd4,thatyoutub3family
+False,not_visible,False,['text_overlay'],0,,wyTMyAZMwms,theleray
+True,happy,True,['none'],0,,NAHdiuxCPpE,theleray
+False,not_visible,False,['none'],0,,98dF7LK9VTQ,theleray
+False,not_visible,False,"['emoji_overlay', 'text_overlay']",0,,u4Dlh7QS4GY,theleray
+True,happy,True,['text_overlay'],0,,6o6jDDlqzMs,theleray
+True,neutral,True,['none'],0,,D3Eq8lPvXP0,thesacconejolys
+True,surprised,False,"['split_screen', 'text_overlay']",1,"The thumbnail uses exaggerated child emotions and a split-screen format to attract clicks, which may mildly exploit the child's image for engagement.",6sRwnQElEus,thesacconejolys
+False,not_visible,False,['text_overlay'],0,,c83JDkg7xnQ,thesacconejolys
+False,not_visible,False,['none'],0,,VZnPP2EJrvM,thesacconejolys
+False,not_visible,False,['none'],0,,oZpvV2SAdKc,thesacconejolys
+True,neutral,True,"['emoji_overlay', 'text_overlay']",0,,xqUbmjSSQ-s,theweisslife
+True,neutral,True,['none'],0,,MVk0qFtT1nk,theweisslife
+True,scared,True,['text_overlay'],0,,jli6oCaHVYQ,theweisslife
+True,neutral,True,['text_overlay'],0,,NGHqEASWZSc,theweisslife
+True,neutral,True,"['text_overlay', 'split_screen', 'bright_border']",0,,wdjU_fqB-yc,theweisslife
+True,neutral,True,['none'],1,"Child is holding scissors near their head, which could imply a risky or unsafe behavior being promoted.",jBXQqyBizaI,tydustalbott
+True,surprised,True,['none'],0,,trz1sToPIx4,tydustalbott
+True,neutral,True,['none'],0,,UYR3S8K0x8A,tydustalbott
+True,neutral,True,['text_overlay'],0,,VhAXxeYj1tk,tydustalbott
+True,neutral,True,['text_overlay'],0,,Udh7lQ0njwE,tydustalbott
+True,sad,False,"['text_overlay', 'thought_bubble']",0,,9N8Zio00xc0,vladandniki
+True,neutral,True,['text_overlay'],0,,ZHrG8X43p4w,vladandniki
+True,not_visible,False,['text_overlay'],0,,0Q-PFTUs_oc,vladandniki
+True,neutral,False,['text_overlay'],0,,1ESlSrQ5l6E,vladandniki
+True,neutral,True,['text_overlay'],0,,b9ehRN1_04o,vladandniki
+True,surprised,False,['text_overlay'],0,,rW9q5xS0kC4,wearethedavises
+True,neutral,True,['text_overlay'],0,,jy97JQ-b_iU,wearethedavises
+True,not_visible,False,"['text_overlay', 'bright_border']",0,,SE6otD0ZIn8,wearethedavises
+True,neutral,True,"['text_overlay', 'bright_border']",0,,wZxnRhHUfrI,wearethedavises
+True,neutral,True,['text_overlay'],0,,5LBCSBgu6P0,wearethedavises

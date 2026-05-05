@@ -1,0 +1,15 @@
+{
+  "ols_r_squared": 0.6587294266830186,
+  "ols_adj_r_squared": 0.650538932923411,
+  "dimension_coefficients": {
+    "performative": 0.07307230825866418,
+    "emotional_bait": 0.018740556390593355,
+    "narrative_conflict": 0.07906597229988743,
+    "challenge_format": 0.06905906979137755,
+    "commercial_content": -0.124441070073608,
+    "privacy_violation": -0.0026068020537156067
+  },
+  "n_valid_views": 2305,
+  "mean_views": 8793689.380911063,
+  "median_views": 578202.0
+}
