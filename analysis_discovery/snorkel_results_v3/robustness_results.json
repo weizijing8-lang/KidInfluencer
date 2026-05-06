@@ -1,0 +1,17 @@
+{
+  "robustness_views_per_day": {
+    "spearman_rho": NaN,
+    "spearman_p": NaN,
+    "within_channel_mean_boost": 174.27021346333035,
+    "within_channel_median_boost": -2.7444396103403053,
+    "pct_positive": 47.61904761904761,
+    "wilcoxon_p": 0.5854024887084961
+  },
+  "robustness_same_year": {
+    "n_channel_year_groups": 26,
+    "mean_boost": 79.19794480235639,
+    "median_boost": 26.2081575597349,
+    "pct_positive": 73.07692307692307,
+    "wilcoxon_p": 0.0017795562744140625
+  }
+}

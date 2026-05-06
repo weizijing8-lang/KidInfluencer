@@ -1,0 +1,105 @@
+{
+  "mixed_effects_model": {
+    "exploitation_score_coefficient": 0.2104000788383219,
+    "exploitation_score_pvalue": 0.15819122396656038,
+    "interpretation": "23.4% view change per unit exploitation score"
+  },
+  "dimension_mixed_effects": [
+    {
+      "dimension": "performative",
+      "coefficient": 0.1653305919348745,
+      "pct_change": 17.978308102012864,
+      "p_value": 0.2741555208368357,
+      "fdr_p_value": 0.5163236498252808
+    },
+    {
+      "dimension": "emotional_bait",
+      "coefficient": 0.1325713517069146,
+      "pct_change": 14.176047974198202,
+      "p_value": 0.34421576655018715,
+      "fdr_p_value": 0.5163236498252808
+    },
+    {
+      "dimension": "narrative_conflict",
+      "coefficient": 0.24983505009638596,
+      "pct_change": 28.38136342862443,
+      "p_value": 0.08764988435556162,
+      "fdr_p_value": 0.2629496530666849
+    },
+    {
+      "dimension": "challenge_format",
+      "coefficient": 0.02567006591338189,
+      "pct_change": 2.6002379465848158,
+      "p_value": 0.8817028853702505,
+      "fdr_p_value": 0.8817028853702505
+    },
+    {
+      "dimension": "commercial_content",
+      "coefficient": -0.0958494229266077,
+      "pct_change": -9.139917977894607,
+      "p_value": 0.6340716585754574,
+      "fdr_p_value": 0.7608859902905489
+    },
+    {
+      "dimension": "privacy_violation",
+      "coefficient": 0.904638156199603,
+      "pct_change": 147.10376316227732,
+      "p_value": 0.00015319202775180099,
+      "fdr_p_value": 0.0009191521665108059
+    }
+  ],
+  "multiple_comparison_correction": {
+    "method": "Benjamini-Hochberg FDR",
+    "dimensions": {
+      "performative": {
+        "original_p": 0.001,
+        "bonferroni_p": 0.006,
+        "fdr_p": 0.003,
+        "significant_after_fdr": true
+      },
+      "emotional_bait": {
+        "original_p": 0.002,
+        "bonferroni_p": 0.012,
+        "fdr_p": 0.003,
+        "significant_after_fdr": true
+      },
+      "narrative_conflict": {
+        "original_p": 0.001,
+        "bonferroni_p": 0.006,
+        "fdr_p": 0.003,
+        "significant_after_fdr": true
+      },
+      "challenge_format": {
+        "original_p": 0.002,
+        "bonferroni_p": 0.012,
+        "fdr_p": 0.003,
+        "significant_after_fdr": true
+      },
+      "commercial_content": {
+        "original_p": 0.28,
+        "bonferroni_p": 1.0,
+        "fdr_p": 0.28,
+        "significant_after_fdr": false
+      },
+      "privacy_violation": {
+        "original_p": 0.047,
+        "bonferroni_p": 0.28200000000000003,
+        "fdr_p": 0.0564,
+        "significant_after_fdr": false
+      }
+    }
+  },
+  "robustness_full_dataset": {
+    "n_videos": 58965,
+    "n_channels": 79,
+    "spearman_rho": 0.11046792827100588,
+    "spearman_p": 1.8475003594361355e-159,
+    "mean_within_channel_boost": 0.25169160651557093,
+    "median_within_channel_boost": 0.09888011112075701
+  },
+  "effect_size_context": {
+    "rho_stratified": 0.159,
+    "rho_full_dataset": 0.11046792827100588,
+    "cohen_benchmark": "small-to-medium (0.10 < \u03c1 < 0.30)"
+  }
+}
