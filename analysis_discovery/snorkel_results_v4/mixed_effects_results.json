@@ -1,0 +1,41 @@
+{
+  "model1_overall": null,
+  "model2_dimensions": {
+    "performative_labor": {
+      "coefficient": 0.29077425516208005,
+      "std_err": 0.048877920967691994,
+      "z_value": 5.948989838464693,
+      "p_value": 2.6980238691149075e-09
+    },
+    "emotional_bait": {
+      "coefficient": 0.2046385105908435,
+      "std_err": 0.04781689848526189,
+      "z_value": 4.279627434512866,
+      "p_value": 1.872064248606843e-05
+    },
+    "narrative_conflict": {
+      "coefficient": 0.06050958180327795,
+      "std_err": 0.041366404940839305,
+      "z_value": 1.4627711035033504,
+      "p_value": 0.14353002254758124
+    },
+    "challenge_format": {
+      "coefficient": -0.017244437818156832,
+      "std_err": 0.03242921638161685,
+      "z_value": -0.5317562291740168,
+      "p_value": 0.5948948420056344
+    },
+    "commercial_content": {
+      "coefficient": 0.004931255331650156,
+      "std_err": 0.041837931213708324,
+      "z_value": 0.11786565895099553,
+      "p_value": 0.9061741037198743
+    },
+    "privacy_violation": {
+      "coefficient": 0.3163166204538335,
+      "std_err": 0.06222652847226588,
+      "z_value": 5.083308168071992,
+      "p_value": 3.709171719635199e-07
+    }
+  }
+}

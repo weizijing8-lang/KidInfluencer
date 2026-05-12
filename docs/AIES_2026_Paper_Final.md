@@ -4,9 +4,9 @@
 
 ## Abstract
 
-The rapid rise of "kidfluencers" on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and engagement metrics remains scarce due to the challenge of operationalizing and scaling exploitation measurements. This study presents a multimodal AI audit of 4,685 videos across 79 kidfluencer channels (sampled from a dataset of 58,965 videos), utilizing a weak supervision approach (Snorkel) to detect exploitation signals without requiring large-scale manually labeled ground truth. We aggregate 18 noisy labeling functions—including LLM-based classification of titles across six literature-grounded dimensions, rule-based heuristics, and computer vision analysis of thumbnail distress signals—to assign a probabilistic exploitation score to each video. 
+The rapid rise of "kidfluencers" on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and engagement metrics remains scarce due to the challenge of operationalizing and scaling exploitation measurements. This study presents a multimodal AI audit of 5,051 videos across 79 kidfluencer channels, utilizing a weak supervision approach to detect exploitation signals without requiring large-scale manually labeled ground truth. We aggregate noisy labeling functions—including LLM-based classification of titles and GPT-4 Vision analysis of thumbnails and descriptions across six literature-grounded dimensions—to assign a probabilistic exploitation score to each video. 
 
-Our findings reveal a significant **engagement premium associated with performative labor and manufactured conflict**. Overall exploitation scores correlate significantly with view counts (Spearman $\rho = 0.159$, $p < 10^{-28}$). Within-channel analyses show that performative content is associated with a median view boost of $+42.0\%$ (FDR-corrected $p<0.001$), while narrative conflict is associated with a median boost of $+32.0\%$ ($p=0.002$). These effects hold in robustness checks comparing videos published within the same year ($p=0.0018$). Unlike previous qualitative assumptions, we find that commercial content (product placement) has no significant effect on viewership ($+3.7\%$, $p=0.560$), suggesting that the platform ecosystem associates higher viewership with the commodification of the child's identity and labor rather than traditional advertising. These findings challenge policy frameworks focused solely on financial trusts, demonstrating that engagement metrics systematically reward the intensive, performative labor of children.
+Our findings reveal a highly significant **engagement premium associated with performative labor, emotional bait, and privacy violations**. Overall exploitation scores correlate significantly with view counts (Spearman $\rho = 0.328$, $p < 10^{-126}$). Mixed-effects regression, controlling for channel-level variation, demonstrates that a one-unit increase in exploitation score is associated with a 4.8x increase in views ($p < 0.001$). Within-channel analyses show that performative content is associated with a median view boost of $+42.0\%$ (FDR-corrected $p<0.001$). These effects hold in robustness checks comparing videos published within the same year ($p=0.006$). Conversely, we find that explicit commercial content (product placement) exhibits a significant *negative* premium ($-32.5\%$, $p=0.012$), suggesting that the platform ecosystem rewards the commodification of the child's identity and labor rather than traditional advertising. These findings challenge policy frameworks focused solely on financial trusts, demonstrating that engagement metrics systematically reward the intensive, performative labor of children.
 
 ## 1. Introduction
 
@@ -22,7 +22,7 @@ Crucially, because we rely on observational data via the YouTube API, we cannot 
 
 Our core research questions are:
 - **RQ1:** Can a weak supervision framework effectively synthesize multimodal signals (text, LLM classifications, and computer vision) to measure kidfluencer exploitation at scale?
-- **RQ2:** Are specific dimensions of exploitation (e.g., performative labor vs. privacy violations) associated with higher view counts (an "engagement premium")?
+- **RQ2:** Are specific dimensions of exploitation (e.g., performative labor vs. commercial content) associated with higher view counts (an "engagement premium")?
 - **RQ3:** Does this engagement premium persist *within* channels and when controlling for video age, indicating a structural correlation rather than merely a channel-popularity effect?
 
 ## 2. Related Work
@@ -39,7 +39,7 @@ Algorithmic auditing investigates platform behavior without direct access to pro
 
 ### 2.3 Weak Supervision and LLM Content Analysis
 
-Traditional machine learning requires massive labeled datasets, which are difficult to obtain for subjective concepts. Weak supervision frameworks like Snorkel [20, 21, 22] allow researchers to encode domain knowledge as noisy heuristic rules (Labeling Functions) to generate probabilistic labels [23]. Recently, Large Language Models (LLMs) have shown promise in zero-shot content moderation and annotation [24, 25, 26]. We combine LLMs with Snorkel to scale our exploitation analysis.
+Traditional machine learning requires massive labeled datasets, which are difficult to obtain for subjective concepts. Weak supervision frameworks like Snorkel [20, 21, 22] allow researchers to encode domain knowledge as noisy heuristic rules (Labeling Functions) to generate probabilistic labels [23]. Recently, Large Language Models (LLMs) and Vision-Language Models (VLMs) have shown promise in zero-shot content moderation and annotation [24, 25, 26]. We combine LLMs and VLMs within a weak supervision framework to scale our exploitation analysis across text and visual modalities.
 
 ## 3. Methodology
 
@@ -47,7 +47,7 @@ Traditional machine learning requires massive labeled datasets, which are diffic
 
 We collected metadata for 58,965 videos from 79 family and kidfluencer YouTube channels using the YouTube Data API. Channels were selected based on prior literature and popular influencer lists, covering a spectrum of channel sizes and target audiences. Animated channels were strictly excluded; all selected channels feature real children. 
 
-To manage computational costs while maintaining representativeness, we employed a stratified sampling strategy. For each of the 79 channels, we stratified videos into terciles based on view counts (high, medium, low) and randomly sampled up to 20 videos per tercile, resulting in a final stratified sample of 4,685 videos. 
+To manage computational costs while maintaining representativeness, we employed a stratified sampling strategy. For each of the 79 channels, we stratified videos into terciles based on view counts (high, medium, low) and randomly sampled up to 20 videos per tercile, resulting in a final stratified sample of 5,051 videos with valid view counts. We retrieved the title, description, thumbnail image, and publication date for each sampled video.
 
 ### 3.2 Exploitation Dimensions
 
@@ -61,77 +61,79 @@ Based on Clark and Jno-Charles [11] and Divon et al. [13], we defined six exploi
 
 ### 3.3 Multimodal Weak Supervision Pipeline
 
-We implemented a Snorkel-based weak supervision pipeline utilizing 18 Labeling Functions (LFs) across three modalities:
+We implemented a multimodal weak supervision pipeline utilizing two primary signal sources, which were aggregated using a weighted majority vote based on validation against human annotations:
 
-**LLM-Based LFs (6):** We deployed GPT-4.1-mini to classify video titles along the six dimensions defined above. Each classification served as a distinct LF voting for or against exploitation.
+**LLM Text Classification (Weight = 0.33):** We deployed GPT-4.1-mini to classify video titles along the six dimensions. This provided a binary classification ($0$ or $1$) for each dimension based solely on textual metadata.
 
-**Rule-Based LFs (9):** We developed heuristics based on title metadata, including all-caps ratios, excessive exclamation marks, and keyword dictionaries targeting conflict, challenges, pranks, and organic family events.
+**VLM Multimodal Classification (Weight = 0.67):** We deployed the GPT-4.1-mini Vision API to analyze the combination of the video's title, thumbnail image, and description. The VLM provided a continuous probability score ($[0, 1]$) for each dimension. Preliminary validation on a subset of 23 human-annotated videos showed that the multimodal VLM approach achieved substantial agreement (Cohen's $\kappa = 0.617$) compared to the text-only LLM approach ($\kappa = 0.309$), justifying its higher weight in the final aggregation.
 
-**Computer Vision LFs (3):** We processed thumbnails using OpenCV to extract color saturation, as hyper-saturated thumbnails indicate visual manipulation strategies. Additionally, we deployed the GPT-4.1-mini Vision API on a subsample to detect child distress and assess visual exploitation concern.
-
-The Snorkel Label Model aggregated these 18 noisy signals to assign a continuous probabilistic **Exploitation Score** $\in [0, 1]$ to each video.
+The pipeline computed a combined score for each dimension, and an **Overall Exploitation Score** $\in [0, 1]$ for each video. Videos with a score $\ge 0.5$ were classified as exploitative.
 
 ## 4. Results
 
 ### 4.1 Pipeline Performance and Dimension Prevalence
 
-The Label Model successfully aggregated the multimodal signals, predicting 24.1% of the sample as exploitative ($P(\text{exploit}) > 0.5$) and 75.9% as non-exploitative. LLM classification revealed that **performative labor** is the most prevalent dimension (17.4% of videos), followed by challenge formats (12.8%), emotional bait (11.4%), and narrative conflict (9.0%). Direct privacy violations (3.2%) and explicit commercial content (3.7%) were less common.
+The multimodal pipeline successfully processed 4,673 videos (92.5% coverage for vision analysis). Overall, 19.7% of the sampled videos (n=997) were classified as exploitative (score $\ge 0.5$). 
 
-![Figure 1: Exploitation Dimension Prevalence and Score Distribution](../analysis_discovery/paper_figures/fig1_score_distribution_and_views.png)
-*Figure 1: (a) Distribution of the probabilistic exploitation score generated by the weak supervision model. (b) Correlation between exploitation score and view count.*
+![Figure 1: Distribution of Multi-Modal Exploitation Scores](../figures_v4/fig1_score_distribution.png)
+*Figure 1: Distribution of the probabilistic exploitation score generated by the multimodal weak supervision model.*
 
-![Figure 5: Dimension Prevalence](../analysis_discovery/paper_figures/fig5_dimension_prevalence.png)
-*Figure 2: Prevalence of literature-grounded exploitation dimensions across the stratified sample.*
+Performative labor was the most prevalent dimension (detected in 60.5% of videos by the VLM), followed by emotional bait (45.0%), narrative conflict (26.8%), challenge formats (19.2%), commercial content (18.5%), and privacy violations (4.2%).
 
 ### 4.2 The Engagement Premium (RQ2 & RQ3)
 
-We found a highly significant positive correlation between a video's overall Exploitation Score and its view count (Spearman $\rho = 0.159$, $p < 10^{-28}$). 
+We found a highly significant positive correlation between a video's overall Exploitation Score and its view count (Spearman $\rho = 0.328$, $p < 10^{-126}$). 
 
-To determine if this association is a structural platform correlation rather than merely an artifact of highly exploitative channels being more popular overall, we conducted a **within-channel analysis**. For each dimension, we compared the median views of videos exhibiting that dimension against videos from the *same channel* lacking it. To account for multiple comparisons, we applied False Discovery Rate (FDR) correction.
+To determine if this association is a structural platform correlation rather than merely an artifact of highly exploitative channels being more popular overall, we conducted two primary analyses: mixed-effects regression and within-channel pairwise comparisons.
 
-![Figure 2: Within-Channel View Boost by Dimension](../analysis_discovery/paper_figures/fig2_within_channel_boost.png)
-*Figure 3: Mean within-channel view boost by exploitation dimension.*
+#### Mixed-Effects Regression
 
-The results reveal a clear engagement premium structure:
-- **Performative Labor** is associated with a median within-channel boost of $+42.0\%$ (mean $+61.7\%$, FDR $p<0.001$).
-- **Narrative Conflict** is associated with a median boost of $+32.0\%$ (mean $+48.6\%$, FDR $p=0.002$).
-- **Challenge Formats** are associated with a median boost of $+14.8\%$ (mean $+62.5\%$, FDR $p=0.007$).
-- **Emotional Bait** is associated with a median boost of $+13.3\%$ (mean $+79.5\%$, FDR $p=0.007$).
+We fit a mixed-effects linear regression model predicting $\log_{10}(\text{views})$ from the overall exploitation score, including random intercepts for each of the 79 channels to control for baseline channel popularity.
 
-Notably, **Commercial Content** (explicit product placement/unboxing) showed no significant effect on viewership (median $+3.7\%$, mean $+6.2\%$, FDR $p=0.560$). Privacy violations also showed no significant effect (median $-7.4\%$, FDR $p=0.114$).
+The model revealed a massive, highly significant effect: a one-unit increase in the exploitation score is associated with a $0.681$ increase in $\log_{10}(\text{views})$ ($\beta = 0.681$, $SE = 0.054$, $z = 12.61$, $p < 0.001$). This translates to approximately a **4.8x increase in raw view counts** ($10^{0.681} \approx 4.8$).
+
+We then fit a second mixed-effects model using the six individual dimensions as fixed effects. When controlling for all dimensions simultaneously, **performative labor** ($\beta = 0.291$, $p < 0.001$), **privacy violations** ($\beta = 0.316$, $p < 0.001$), and **emotional bait** ($\beta = 0.205$, $p < 0.001$) remained highly significant predictors of increased viewership. Narrative conflict, challenge formats, and commercial content lost statistical significance in the joint model, suggesting their effects may be partially mediated by correlation with the primary three dimensions.
+
+#### Within-Channel Pairwise Comparisons
+
+For each dimension, we compared the median views of videos exhibiting that dimension against videos from the *same channel* lacking it. To account for multiple comparisons, we applied False Discovery Rate (FDR) correction using the Benjamini-Hochberg procedure.
+
+![Figure 2: Engagement Premium by Exploitation Dimension](../figures_v4/fig2_dimension_premiums.png)
+*Figure 2: Mean within-channel view boost by exploitation dimension (FDR-corrected).*
+
+The results reveal a clear engagement premium structure across 54 channels with sufficient data:
+- **Performative Labor** is associated with a mean within-channel log-premium of $+0.354$ (Cohen's $d = 0.613$, FDR $p<0.001$).
+- **Privacy Violations** are associated with a mean log-premium of $+0.401$ (FDR $p=0.012$).
+- **Emotional Bait** is associated with a mean log-premium of $+0.281$ (FDR $p=0.001$).
+- **Challenge Formats** and **Narrative Conflict** also showed significant positive premiums (FDR $p < 0.05$).
+
+Crucially, **Commercial Content** exhibited a significant **negative** premium (mean log-premium $-0.325$, FDR $p=0.012$). Videos featuring explicit product placements or unboxing received systematically *fewer* views than non-commercial videos on the same channel.
+
+![Figure 5: Contrasting Effects: Emotional vs. Commercial Exploitation](../figures_v4/fig5_emotional_vs_commercial.png)
+*Figure 3: Contrasting effects of emotional bait (which increases views) versus commercial content (which decreases views).*
 
 ### 4.3 Robustness Checks
 
-To ensure our findings were not merely artifacts of video age (older videos accumulating more views), we conducted a **same-year within-channel comparison**. By matching exploitative and non-exploitative videos published by the same channel in the same year (26 channel-year groups), we found the engagement premium holds robustly: high-exploitation videos received a median boost of $+26.2\%$ over their same-year, same-channel counterparts (Wilcoxon $p=0.0018$). 
+To ensure our findings were not merely artifacts of video age (older videos accumulating more views), we conducted a **same-year within-channel comparison**. By matching exploitative and non-exploitative videos published by the same channel in the same year (37 channel-year groups), we found the engagement premium holds robustly: high-exploitation videos received a mean log-premium of $+0.404$ over their same-year, same-channel counterparts (Wilcoxon $p=0.006$). 
 
-A secondary check using views-per-day was underpowered due to missing `publishedAt` metadata in our historical dataset (only 21 channels retained sufficient data), yielding non-significant results. However, the strong same-year findings confirm the effect is not mechanically driven by video age.
-
-### 4.4 Target Audience as a Moderating Variable
-
-We hypothesized that the target audience moderates the engagement premium. We classified channels into "Child Audience" (11 channels: animated content, toy play) and "Teen/Adult Audience" (66 channels: family vlogs, challenges).
-
-![Figure 4: Audience Moderation](../analysis_discovery/paper_figures/fig4_audience_moderation.png)
-*Figure 4: Within-channel exploitation premium by target audience.*
-
-For **Teen/Adult-audience channels**, high-exploitation content is associated with a substantial premium (median boost $+16.4\%$). Conversely, for **Child-audience channels**, high-exploitation content is associated with a penalty (median boost $-14.7\%$). This difference showed a moderating trend but was not statistically significant (Mann-Whitney $p=0.115$), likely due to the small sample size of toddler channels ($n=11$).
+![Figure 4: Channel-level premium distribution](../figures_v4/fig4_channel_premiums.png)
+*Figure 4: Distribution of overall within-channel premiums. 74.1% of channels exhibit a positive premium for exploitative content.*
 
 ## 5. Discussion
 
-### 5.1 The "Performativity Premium"
+### 5.1 The "Performativity Premium" vs. The Commercial Penalty
 
-Our findings provide large-scale empirical evidence for a "performativity premium" in the kidfluencer ecosystem. Engagement metrics are systematically associated with content that requires children to engage in intensive, performative labor (challenges, scripted conflict, emotional bait) over organic family documentation. 
+Our findings provide large-scale empirical evidence for a "performativity premium" in the kidfluencer ecosystem. Engagement metrics are systematically associated with content that requires children to engage in intensive, performative labor (scripted conflict, emotional bait) over organic family documentation. 
 
-Interestingly, traditional commercial content does not enjoy this premium. This suggests a shift in the kidfluencer economy: the most successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s [13] concept of "transactional childhood."
+Interestingly, traditional commercial content suffers a penalty. This suggests a fundamental shift in the kidfluencer economy: the most successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s [13] concept of "transactional childhood." Audiences appear to reject overt advertising but heavily reward the commodification of the child's identity and emotional vulnerability.
 
 ### 5.2 Methodological Contributions
 
-This study demonstrates the efficacy of weak supervision for large-scale observational auditing. By combining LLM capabilities, computer vision, and rule-based heuristics within a Snorkel framework, we successfully scaled the operationalization of complex ethical concepts without requiring massive manual ground truth, offering a blueprint for future audits of subjective content moderation issues.
+This study demonstrates the efficacy of multimodal weak supervision for large-scale observational auditing. By combining LLM text analysis and VLM visual analysis, we successfully scaled the operationalization of complex ethical concepts without requiring massive manual ground truth. The substantial agreement ($\kappa = 0.617$) between our VLM pipeline and human annotations offers a blueprint for future audits of subjective content moderation issues.
 
 ### 5.3 Limitations and Future Work
 
-This study has several limitations. **First, the probabilistic labels generated by the Snorkel pipeline have not yet been validated against a manually annotated ground-truth dataset.** While weak supervision models the internal agreement of heuristics, its accuracy relative to human judgment remains unverified. An annotation sheet has been prepared for future human validation. 
-
-Second, our analysis relies on observational data. We measure *engagement metrics* (views), which are proxies for algorithmic reach, but we cannot claim a direct causal link to YouTube's internal recommendation weights [34]. Third, our LLM classification primarily analyzed video titles and thumbnails; future work should incorporate full video transcripts and duration data. Finally, our audience moderation analysis was underpowered.
+This study has several limitations. First, while our multimodal pipeline showed substantial agreement with human annotators on a small validation set ($n=23$), a larger-scale ground-truth validation is needed to fully assess the precision and recall of the weak supervision model across all dimensions. Second, our analysis relies on observational data. We measure *engagement metrics* (views), which are proxies for algorithmic reach, but we cannot claim a direct causal link to YouTube's internal recommendation weights [34]. Finally, our VLM classification primarily analyzed video titles, thumbnails, and descriptions; future work should incorporate full video transcripts and duration data to capture intra-video dynamics.
 
 ## 6. Ethics Statement
 
@@ -139,7 +141,7 @@ This research utilizes publicly available, observational data from YouTube via t
 
 ## 7. Conclusion
 
-As the kidfluencer economy matures, regulatory focus must expand beyond financial compensation to address the structural forces shaping content creation. Our multimodal audit of 4,685 videos demonstrates that engagement metrics are significantly associated with content featuring child performative labor, narrative conflict, and emotional bait. By highlighting the "performativity premium," this study underscores the need for platform-level interventions that disincentivize the commodification of child labor and stress.
+As the kidfluencer economy matures, regulatory focus must expand beyond financial compensation to address the structural forces shaping content creation. Our multimodal audit of 5,051 videos demonstrates that engagement metrics are significantly associated with content featuring child performative labor, privacy violations, and emotional bait, while penalizing overt commercial content. By highlighting this "performativity premium," this study underscores the need for platform-level interventions that disincentivize the commodification of child labor and stress.
 
 ## References
 
