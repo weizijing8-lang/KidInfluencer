@@ -55,8 +55,8 @@ OUTPUT_DIR = DATA_DIR / "vision_results"
 CHECKPOINT_FILE = OUTPUT_DIR / "checkpoint.json"
 
 # API settings
-MAX_WORKERS = 10          # Concurrent API calls
-RATE_LIMIT_RPM = 500      # Requests per minute limit
+MAX_WORKERS = 5           # Concurrent API calls (reduced to avoid TPM limits)
+RATE_LIMIT_RPM = 120      # Requests per minute limit (conservative for Tier 1)
 CHECKPOINT_EVERY = 50     # Save progress every N videos
 MAX_RETRIES = 3           # Max retries per video
 RETRY_BACKOFF = 2.0       # Exponential backoff base
@@ -247,7 +247,7 @@ def main():
         logger.error("OPENAI_API_KEY environment variable not set!")
         sys.exit(1)
     
-    client = OpenAI(api_key=api_key)
+    client = OpenAI(api_key=api_key, base_url='https://api.openai.com/v1')
     
     # Load video data
     if args.input_csv:
