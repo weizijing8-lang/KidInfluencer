@@ -1,0 +1,70 @@
+{
+  "n_annotations": 49,
+  "overall": {
+    "accuracy": 0.7755102040816326,
+    "f1": 0.7755102040816326,
+    "precision": 0.6785714285714286,
+    "recall": 0.9047619047619048,
+    "kappa": 0.56,
+    "human_exploit": 21,
+    "human_clean": 28,
+    "vision_only_kappa": 0.1923076923076923,
+    "vision_only_f1": 0.4
+  },
+  "per_dimension": {
+    "performative_labor": {
+      "accuracy": 0.7959183673469388,
+      "f1": 0.8,
+      "precision": 0.8695652173913043,
+      "recall": 0.7407407407407407,
+      "kappa": 0.5943708609271523,
+      "human_pos": 27,
+      "pred_pos": 23
+    },
+    "emotional_bait": {
+      "accuracy": 0.5714285714285714,
+      "f1": 0.4,
+      "precision": 0.6363636363636364,
+      "recall": 0.2916666666666667,
+      "kappa": 0.1331086773378264,
+      "human_pos": 24,
+      "pred_pos": 11
+    },
+    "narrative_conflict": {
+      "accuracy": 0.7551020408163265,
+      "f1": 0.3333333333333333,
+      "precision": 0.3,
+      "recall": 0.375,
+      "kappa": 0.18559556786703602,
+      "human_pos": 8,
+      "pred_pos": 10
+    },
+    "challenge_format": {
+      "accuracy": 0.8571428571428571,
+      "f1": 0.2222222222222222,
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "kappa": 0.1694915254237288,
+      "human_pos": 2,
+      "pred_pos": 7
+    },
+    "commercial_content": {
+      "accuracy": 0.9183673469387755,
+      "f1": 0.3333333333333333,
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "kappa": 0.28985507246376807,
+      "human_pos": 3,
+      "pred_pos": 3
+    },
+    "privacy_violation": {
+      "accuracy": 0.8979591836734694,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "kappa": -0.03375527426160341,
+      "human_pos": 4,
+      "pred_pos": 1
+    }
+  }
+}
