@@ -1,32 +1,19 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.env
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Logs
-*.log
-data/collection_log.txt
-
-# Large intermediate files (keep raw data in repo for reproducibility)
-# data/raw/ files are <10MB each, safe for GitHub
-data/results/title_embeddings.npy
-data/results_v4/full_results_v4.csv
-data/results_v4/embeddings_v4.npy
-data/results_v4/direction_vector_v4.npy
-
-# Thumbnails (too many files for git)
+# Large data files - not needed for paper
 data/thumbnails/
 data/thumbnails_sample/
+data/video_chunks/
+data/durations/
+data/comments/
+data/descriptions/
+data/raw/
+data/tiktok/
+thumbnails_test/
+*.jpg
 
-# Large embedding files
-*.npy
-literature/*.pdf
+# LaTeX build artifacts
+overleaf/*.aux
+overleaf/*.log
+overleaf/*.blg
+
+# OS files
+.DS_Store

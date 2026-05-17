@@ -1,0 +1,199 @@
+[2026-05-05 03:13:39.369461] Starting expanded channel collection
+Target: 47 new channels, up to 500 videos each
+
+[1/47] Processing @NinjaKidzTV (ninjakidztv)...
+  Found 308 videos
+  Parsed 308 valid videos (total so far: 308)
+[2/47] Processing @TheLaBrantFam (labrantfam)...
+  Found 3 videos
+  Parsed 3 valid videos (total so far: 311)
+[3/47] Processing @FGTeeV (fgteev)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 811)
+[4/47] Processing @SISvssBRO (sisvsbro)...
+  SKIP: Could not resolve channel ID for @SISvssBRO
+[5/47] Processing @TrinityandBeyond (trinityandbeyond)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 1311)
+  [CHECKPOINT] Saved 1311 videos
+[6/47] Processing @SalishMatter (salishmatter)...
+  Found 11 videos
+  Parsed 11 valid videos (total so far: 1322)
+[7/47] Processing @JacyandKacy (jacyandkacy)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 1822)
+[8/47] Processing @TicTacToy (tictactoy)...
+  Found 273 videos
+  Parsed 273 valid videos (total so far: 2095)
+[9/47] Processing @KidCityFamily (kidcity)...
+  Found 0 videos
+  Parsed 0 valid videos (total so far: 2095)
+[10/47] Processing @FamousTubeFamily (famoustubefamily)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 2595)
+  [CHECKPOINT] Saved 2595 videos
+[11/47] Processing @TheSkory (theskorys)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 3095)
+[12/47] Processing @HayleyLeBlanc (hayleyleblanc)...
+  Found 166 videos
+  Parsed 166 valid videos (total so far: 3261)
+[13/47] Processing @Txunamy (txunamy)...
+  Found 129 videos
+  Parsed 129 valid videos (total so far: 3390)
+[14/47] Processing @CocoQuinnB (cocoquinn)...
+  Found 0 videos
+  Parsed 0 valid videos (total so far: 3390)
+[15/47] Processing @TheHoldernessFam (holderness)...
+  SKIP: Could not resolve channel ID for @TheHoldernessFam
+[16/47] Processing @OurFamilyNest (ourfamilynest)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 3890)
+[17/47] Processing @FamilyFunEveryDay (familyfuneveryday)...
+  Found 239 videos
+  Parsed 239 valid videos (total so far: 4129)
+[18/47] Processing @TheBeeFam (thebeefamily)...
+  Found 0 videos
+  Parsed 0 valid videos (total so far: 4129)
+[19/47] Processing @KarinaKurzawa (karinakurzawa)...
+  Found 54 videos
+  Parsed 54 valid videos (total so far: 4183)
+[20/47] Processing @RonaldOMG (ronaldomg)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 4683)
+  [CHECKPOINT] Saved 4683 videos
+[21/47] Processing @TheGemSisters (gemsisters)...
+  Found 0 videos
+  Parsed 0 valid videos (total so far: 4683)
+[22/47] Processing @LifeWithBrothers (lifewithbrothers)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 5183)
+[23/47] Processing @BrockandBoston (brockandboston)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 5683)
+[24/47] Processing @YawiVlogs (yawivlogs)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 6183)
+[25/47] Processing @TheAdventurers (theadventurers)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 6683)
+  [CHECKPOINT] Saved 6683 videos
+[26/47] Processing @OhanaBoys (ohanaboys)...
+  Found 267 videos
+  Parsed 267 valid videos (total so far: 6950)
+[27/47] Processing @TheCrosbyFamily (thecrosbys)...
+  Found 0 videos
+  Parsed 0 valid videos (total so far: 6950)
+[28/47] Processing @MeetTheMillers (meetthemillers)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 7450)
+[29/47] Processing @TheDashleys (thedashleys)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 7950)
+[30/47] Processing @ConfusedMillers (confusedmillers)...
+  SKIP: Could not resolve channel ID for @ConfusedMillers
+[31/47] Processing @CrazyGorilla (crazygorilla)...
+  Found 402 videos
+  Parsed 402 valid videos (total so far: 8352)
+[32/47] Processing @FamilyFiveVlogs (family5vlogs)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 8852)
+[33/47] Processing @TheBramfam (thebramfam)...
+  Found 91 videos
+  Parsed 91 valid videos (total so far: 8943)
+[34/47] Processing @itsRucka (itsrucka)...
+  Found 317 videos
+  Parsed 317 valid videos (total so far: 9260)
+[35/47] Processing @PantonsSquad (pantonssquad)...
+  Found 0 videos
+  Parsed 0 valid videos (total so far: 9260)
+  [CHECKPOINT] Saved 9260 videos
+[36/47] Processing @KidsBabyBus (babybus)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 9760)
+[37/47] Processing @Blippi (blippi)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 10260)
+[38/47] Processing @DianaRoma (dianaandroma)...
+  Found 0 videos
+  Parsed 0 valid videos (total so far: 10260)
+[39/47] Processing @JasonVlogs (jasonvlogs)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 10760)
+[40/47] Processing @SmileFamilyOfficial (smilefamily)...
+  Found 1 videos
+  Parsed 1 valid videos (total so far: 10761)
+  [CHECKPOINT] Saved 10761 videos
+[41/47] Processing @KidsSongs (kidssongs)...
+  Found 87 videos
+  Parsed 87 valid videos (total so far: 10848)
+[42/47] Processing @VladNikiEN (vladnikien)...
+  SKIP: Could not resolve channel ID for @VladNikiEN
+[43/47] Processing @SawyerSharbino (sawyersharbino)...
+  Found 258 videos
+  Parsed 258 valid videos (total so far: 11106)
+[44/47] Processing @PiperRockelleSquad (piperrockellesquad)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 11606)
+[45/47] Processing @JordynJones (jordynjones)...
+  Found 343 videos
+  Parsed 343 valid videos (total so far: 11949)
+  [CHECKPOINT] Saved 11949 videos
+[46/47] Processing @AnnieRose (annierose)...
+  Found 500 videos
+  Parsed 500 valid videos (total so far: 12449)
+[47/47] Processing @RhythmicGymnast (rhythmicgymnast)...
+  SKIP: Could not resolve channel ID for @RhythmicGymnast
+
+============================================================
+COLLECTION COMPLETE
+============================================================
+Total channels processed: 42
+Total videos collected: 12449
+Failed channels: 5
+  Failed: ['@SISvssBRO', '@TheHoldernessFam', '@ConfusedMillers', '@VladNikiEN', '@RhythmicGymnast']
+
+Channel                     Videos
+-----------------------------------
+ninjakidztv                    308
+labrantfam                       3
+fgteev                         500
+trinityandbeyond               500
+salishmatter                    11
+jacyandkacy                    500
+tictactoy                      273
+kidcity                          0
+famoustubefamily               500
+theskorys                      500
+hayleyleblanc                  166
+txunamy                        129
+cocoquinn                        0
+ourfamilynest                  500
+familyfuneveryday              239
+thebeefamily                     0
+karinakurzawa                   54
+ronaldomg                      500
+gemsisters                       0
+lifewithbrothers               500
+brockandboston                 500
+yawivlogs                      500
+theadventurers                 500
+ohanaboys                      267
+thecrosbys                       0
+meetthemillers                 500
+thedashleys                    500
+crazygorilla                   402
+family5vlogs                   500
+thebramfam                      91
+itsrucka                       317
+pantonssquad                     0
+babybus                        500
+blippi                         500
+dianaandroma                     0
+jasonvlogs                     500
+smilefamily                      1
+kidssongs                       87
+sawyersharbino                 258
+piperrockellesquad             500
+jordynjones                    343
+annierose                      500
