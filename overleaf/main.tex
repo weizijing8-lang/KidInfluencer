@@ -16,6 +16,8 @@
 
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
 
 \pdfinfo{
 /TemplateVersion (2026.1)
@@ -100,9 +102,32 @@ Based on Clark and Jno-Charles \citep{clark2025child} and Divon et al.\ \citep{d
 
 \subsection{Multimodal Weak Supervision Pipeline}
 
-\begin{figure}[h!]
+\begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{pipeline_diagram.png}
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[node distance=0.6cm, >=stealth,
+  box/.style={rectangle, draw=black!70, fill=blue!5, thick, minimum width=2.8cm, minimum height=0.55cm, align=center, font=\scriptsize},
+  databox/.style={rectangle, draw=black!70, fill=green!5, thick, minimum width=2.8cm, minimum height=0.55cm, align=center, font=\scriptsize},
+  resultbox/.style={rectangle, draw=black!70, fill=orange!8, thick, minimum width=2.8cm, minimum height=0.55cm, align=center, font=\scriptsize},
+  arrow/.style={->, thick, black!70}]
+  % Data source
+  \node[databox] (data) {YouTube Data API\\58,965 videos, 79 channels};
+  \node[box, below=of data] (sample) {Stratified Sampling\\5,051 videos};
+  \node[box, below=0.8cm of sample] (llm) [xshift=-1.6cm] {LLM Classification\\GPT-4.1-mini (text)\\$w = 0.33$};
+  \node[box, below=0.8cm of sample] (vlm) [xshift=1.6cm] {VLM Classification\\GPT-4.1-mini Vision\\$w = 0.67$};
+  \node[resultbox, below=0.8cm of sample, yshift=-1.2cm] (agg) {Weighted Aggregation\\$\rightarrow$ Exploitation Score $\in [0,1]$};
+  \node[resultbox, below=of agg, xshift=-1.4cm] (val) {Human Validation\\$n{=}50$, AUC{=}0.795};
+  \node[resultbox, below=of agg, xshift=1.4cm] (analysis) {Engagement Analysis\\Mixed Effects + FDR};
+  % Arrows
+  \draw[arrow] (data) -- (sample);
+  \draw[arrow] (sample) -- (llm);
+  \draw[arrow] (sample) -- (vlm);
+  \draw[arrow] (llm) -- (agg);
+  \draw[arrow] (vlm) -- (agg);
+  \draw[arrow] (agg) -- (val);
+  \draw[arrow] (agg) -- (analysis);
+\end{tikzpicture}%
+}
 \caption{The multimodal weak supervision pipeline. LLM text and VLM multimodal scores are aggregated into a probabilistic exploitation score, validated against human annotations.}
 \label{fig:pipeline}
 \end{figure}
