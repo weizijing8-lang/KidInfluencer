@@ -1,11 +1,6 @@
 \begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 
-\bibitem[{ill(2024)}]{illinois2024}
- 2024.
-\newblock Illinois Child Influencer Act.
-\newblock 820 ILCS 152.
-
 \bibitem[{Abidin(2015)}]{abidin2015micromicrocelebrity}
 Abidin, C. 2015.
 \newblock Micromicrocelebrity: Branding babies on the internet.
@@ -15,6 +10,7 @@ Abidin, C. 2015.
 Anderson, J. 2025.
 \newblock Growing up online: Children, family vlogs, and the monetization of
   childhood.
+\newblock \emph{Working Paper}.
 
 \bibitem[{Bach et~al.(2019)}]{bach2019snorkel}
 Bach, S.~H.; et~al. 2019.
@@ -82,6 +78,11 @@ Husz{\'a}r, F.; Ktena, S.~I.; O'Brien, C.; Belli, L.; Schlaikjer, A.; and Ber,
   M. 2022.
 \newblock Algorithmic amplification of politics on {Twitter}.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 119(1).
+
+\bibitem[{Illinois()}]{illinois2024}
+Illinois. 2024.
+\newblock Illinois Child Influencer Act.
+\newblock 820 ILCS 152.
 
 \bibitem[{Johnson and Khoshgoftaar(2022)}]{johnson2022survey}
 Johnson, J.~M.; and Khoshgoftaar, T.~M. 2022.

@@ -1,0 +1,41 @@
+% Table 1: Main results summary
+\begin{table*}[t]
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Exploitation Dimension} & \textbf{Prevalence} & \textbf{Mean Log-Premium} & \textbf{Cohen's $d$} & \textbf{FDR $p$-value} & \textbf{Mixed-Effects $\beta$} \\
+\midrule
+Performative Labor & 60.5\% & $+0.354$ & $0.613$ & $<0.001^{***}$ & $0.291^{***}$ \\
+Emotional Bait & 45.0\% & $+0.281$ & $0.425$ & $0.001^{**}$ & $0.205^{***}$ \\
+Narrative Conflict & 26.8\% & $+0.153$ & $0.280$ & $0.012^{*}$ & $0.042$ (n.s.) \\
+Challenge Format & 19.2\% & $+0.208$ & $0.315$ & $0.023^{*}$ & $0.065$ (n.s.) \\
+Commercial Content & 18.5\% & $-0.325$ & $-0.443$ & $0.012^{*}$ & $-0.088$ (n.s.) \\
+Privacy Violation & 4.2\% & $+0.401$ & $0.551$ & $0.012^{*}$ & $0.316^{***}$ \\
+\midrule
+\textbf{Overall Exploitation} & 19.7\% & $+0.404$ & $0.582$ & $<0.001^{***}$ & $0.681^{***}$ \\
+\bottomrule
+\end{tabular}
+\caption{Summary of engagement premiums by exploitation dimension. Mean log-premium represents the within-channel difference in $\log_{10}(\text{views})$. Mixed-effects $\beta$ represents the coefficient in the joint model controlling for all dimensions simultaneously.}
+\label{tab:main_results}
+\end{table*}
+
+% Table 2: Validation metrics
+\begin{table}[t]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Dimension} & \textbf{AUC-ROC} & \textbf{F1-Score} & \textbf{Cohen's $\kappa$} \\
+\midrule
+Performative Labor & $0.915$ & $0.800$ & $0.594$ \\
+Commercial Content & $0.927$ & $0.667$ & $0.443$ \\
+Privacy Violation & $0.806$ & $0.000$ & $-0.034$ \\
+Emotional Bait & $0.773$ & $0.421$ & $0.133$ \\
+Narrative Conflict & $0.693$ & $0.429$ & $0.225$ \\
+Challenge Format & $0.655$ & $0.400$ & $0.236$ \\
+\midrule
+\textbf{Overall} & \textbf{0.795} & \textbf{0.776} & \textbf{0.560} \\
+\bottomrule
+\end{tabular}
+\caption{Validation metrics of the multimodal pipeline against human annotations ($n=50$). The pipeline demonstrates strong discriminative ability (AUC-ROC) across most dimensions, though threshold-dependent metrics (F1, $\kappa$) vary based on prevalence.}
+\label{tab:validation}
+\end{table}

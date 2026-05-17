@@ -1,0 +1,10 @@
+graph TD
+    A[YouTube Data API<br/>58,965 videos from 79 channels] --> B[Stratified Sampling<br/>5,051 videos]
+    B --> C[Data Collection<br/>Title + Thumbnail + Description]
+    C --> D[LLM Text Classification<br/>GPT-4.1-mini<br/>Title → 6 binary dimensions]
+    C --> E[VLM Multimodal Classification<br/>GPT-4.1-mini Vision<br/>Title + Thumbnail + Description<br/>→ 6 continuous scores]
+    D --> F[Weighted Aggregation<br/>LLM weight = 0.33<br/>VLM weight = 0.67]
+    E --> F
+    F --> G[Exploitation Score<br/>per dimension + overall<br/>score ∈ 0,1]
+    G --> H[Within-Channel<br/>Engagement Analysis<br/>Wilcoxon + Mixed Effects]
+    G --> I[Human Validation<br/>n=50, AUC-ROC=0.795]

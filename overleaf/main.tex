@@ -70,7 +70,9 @@ Other literature highlights the privacy risks of ``sharenting'' \citep{steinberg
 
 \subsection{Algorithmic Auditing and Engagement Metrics}
 
-Algorithmic auditing investigates platform behavior without direct access to proprietary code \citep{sandvig2014auditing,metaxa2021auditing}. Studies have audited YouTube and Twitter for political radicalization and amplification \citep{ribeiro2020auditing,huszar2022algorithmic,haroon2023auditing,hussein2020measuring}, often using sock puppets \citep{habib2025auditing} or observational engagement data \citep{bouchaud2024auditing}. Since direct recommendation rates are hidden, researchers often use engagement metrics (views, likes) as proxies for algorithmic reach \citep{covington2016deep,zhou2010impact,rieder2018ranking}. We adopt this observational approach, focusing on the ``engagement premium'' associated with specific content types.
+Algorithmic auditing investigates platform behavior without direct access to proprietary code, aiming to uncover systemic biases or perverse incentives \citep{sandvig2014auditing,metaxa2021auditing}. Previous studies have successfully audited YouTube and Twitter for political radicalization, algorithmic amplification of extreme content, and gender bias \citep{ribeiro2020auditing,huszar2022algorithmic,haroon2023auditing,hussein2020measuring}. These audits typically employ either active experimental designs, such as using sock puppet accounts to simulate user journeys \citep{habib2025auditing}, or large-scale observational analyses of engagement data \citep{bouchaud2024auditing}. 
+
+However, the application of algorithmic auditing to child safety and the kidfluencer ecosystem remains limited. While platforms have implemented mechanisms like YouTube Kids to filter inappropriate content \citep{papadamou2020disturbed}, the incentive structures driving the creation of borderline exploitative content on the main platform are less understood. Because direct recommendation rates and internal algorithmic weights are hidden from external researchers, we must rely on observational proxies. Following established methodologies \citep{covington2016deep,zhou2010impact,rieder2018ranking}, we use engagement metrics (specifically, view counts) as a proxy for algorithmic reach and audience demand. By measuring the ``engagement premium'' associated with specific content types, we can infer the economic incentives shaping creator behavior.
 
 \subsection{Weak Supervision and LLM Content Analysis}
 
@@ -98,7 +100,14 @@ Based on Clark and Jno-Charles \citep{clark2025child} and Divon et al.\ \citep{d
 
 \subsection{Multimodal Weak Supervision Pipeline}
 
-We implemented a multimodal weak supervision pipeline utilizing two primary signal sources, aggregated using a weighted combination:
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.65\textwidth]{pipeline_diagram.png}
+\caption{The multimodal weak supervision pipeline. We aggregate LLM text classifications and VLM multimodal scores to generate a probabilistic exploitation score, which is then validated against human annotations and used for engagement premium analysis.}
+\label{fig:pipeline}
+\end{figure*}
+
+We implemented a multimodal weak supervision pipeline (Figure~\ref{fig:pipeline}) utilizing two primary signal sources, aggregated using a weighted combination:
 
 \textbf{LLM Text Classification (Weight = 0.33):} We deployed GPT-4.1-mini to classify video titles along the six dimensions. This provided a binary classification ($0$ or $1$) for each dimension based solely on textual metadata.
 
@@ -106,7 +115,32 @@ We implemented a multimodal weak supervision pipeline utilizing two primary sign
 
 The VLM and LLM signals were aggregated using a weighted average. We assigned a weight of 0.67 to the VLM and 0.33 to the LLM, reflecting the structural prior that the VLM analyzes a richer multimodal context (title, thumbnail, and description) compared to the LLM's text-only analysis (title). Sensitivity analyses confirmed that the highly significant correlation between the resulting exploitation score and view counts ($p < 10^{-6}$) is robust across all possible weighting schemes, including relying solely on the VLM or the LLM (see Section~\ref{sec:robustness}).
 
-Validation on a subset of 50 human-annotated videos demonstrated that the combined multimodal pipeline achieved strong discriminative ability, with an AUC-ROC of $0.795$ and a significant rank correlation with human judgments (Spearman $\rho = 0.455$, $p=0.002$). For the most prevalent dimension, performative labor, the pipeline performed exceptionally well (AUC-ROC $= 0.915$, $\kappa = 0.650$). Validation was conducted by a single trained annotator using the definitions in Section~3.2; future work should employ multiple independent annotators to establish inter-rater reliability.
+\subsubsection{Human Validation and Annotation Protocol.}
+
+To validate the multimodal pipeline, a subset of 50 videos was manually coded by a trained annotator. The annotation protocol required the coder to review the video's title, thumbnail, and the first 30 seconds of content, and assign binary labels ($0$ or $1$) for each of the six exploitation dimensions. The annotator was instructed to identify performative labor when the child was clearly engaging in scripted or planned activities solely for the camera (e.g., skits, structured games), as opposed to organic documentation of daily life (e.g., vlogs of shopping or moving). Emotional bait was coded when the title or thumbnail explicitly manufactured exaggerated emotional states (e.g., shock, fear, guilt) to attract clicks.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Dimension} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{Cohen's $\kappa$} \\
+\midrule
+Performative Labor & $0.915$ & $0.800$ & $0.594$ \\
+Commercial Content & $0.927$ & $0.667$ & $0.443$ \\
+Privacy Violation & $0.806$ & $0.000$ & $-0.034$ \\
+Emotional Bait & $0.773$ & $0.421$ & $0.133$ \\
+Narrative Conflict & $0.693$ & $0.429$ & $0.225$ \\
+Challenge Format & $0.655$ & $0.400$ & $0.236$ \\
+\midrule
+\textbf{Overall} & \textbf{0.795} & \textbf{0.776} & \textbf{0.560} \\
+\bottomrule
+\end{tabular}
+\caption{Validation metrics of the multimodal pipeline against human annotations ($n=50$). The pipeline demonstrates strong discriminative ability (AUC-ROC) across most dimensions, though threshold-dependent metrics (F1, $\kappa$) vary based on prevalence.}
+\label{tab:validation}
+\end{table}
+
+Validation results (Table~\ref{tab:validation}) demonstrated that the combined multimodal pipeline achieved strong discriminative ability, with an overall AUC-ROC of $0.795$ and a significant rank correlation with human judgments (Spearman $\rho = 0.455$, $p=0.002$). For the most prevalent dimension, performative labor, the pipeline performed exceptionally well (AUC-ROC $= 0.915$, $\kappa = 0.594$). While threshold-dependent metrics like Cohen's $\kappa$ varied across dimensions due to class imbalance and differing subjective thresholds, the high AUC-ROC scores indicate that the pipeline effectively ranks videos by their degree of exploitation. Future work should employ multiple independent annotators to establish inter-rater reliability.
 
 The pipeline computed a combined score for each dimension, and an \textbf{Overall Exploitation Score} $\in [0, 1]$ for each video.
 
@@ -116,6 +150,26 @@ The pipeline computed a combined score for each dimension, and an \textbf{Overal
 
 The multimodal pipeline successfully processed 4,673 videos (92.5\% coverage for vision analysis). Overall, 19.7\% of the sampled videos ($n=997$) were classified as exploitative (score $\ge 0.5$).
 
+\begin{table*}[t]
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Exploitation Dimension} & \textbf{Prevalence} & \textbf{Mean Log-Premium} & \textbf{Cohen's $d$} & \textbf{FDR $p$-value} & \textbf{Mixed-Effects $\beta$} \\
+\midrule
+Performative Labor & 60.5\% & $+0.354$ & $0.613$ & $<0.001^{***}$ & $0.291^{***}$ \\
+Emotional Bait & 45.0\% & $+0.281$ & $0.425$ & $0.001^{**}$ & $0.205^{***}$ \\
+Narrative Conflict & 26.8\% & $+0.153$ & $0.280$ & $0.012^{*}$ & $0.042$ (n.s.) \\
+Challenge Format & 19.2\% & $+0.208$ & $0.315$ & $0.023^{*}$ & $0.065$ (n.s.) \\
+Commercial Content & 18.5\% & $-0.325$ & $-0.443$ & $0.012^{*}$ & $-0.088$ (n.s.) \\
+Privacy Violation & 4.2\% & $+0.401$ & $0.551$ & $0.012^{*}$ & $0.316^{***}$ \\
+\midrule
+\textbf{Overall Exploitation} & 19.7\% & $+0.404$ & $0.582$ & $<0.001^{***}$ & $0.681^{***}$ \\
+\bottomrule
+\end{tabular}
+\caption{Summary of engagement premiums by exploitation dimension. Mean log-premium represents the within-channel difference in $\log_{10}(\text{views})$. Mixed-effects $\beta$ represents the coefficient in the joint model controlling for all dimensions simultaneously.}
+\label{tab:main_results}
+\end{table*}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig1_score_distribution.png}
@@ -124,6 +178,7 @@ The multimodal pipeline successfully processed 4,673 videos (92.5\% coverage for
 \end{figure}
 
 Performative labor was the most prevalent dimension (detected in 60.5\% of videos by the VLM), followed by emotional bait (45.0\%), narrative conflict (26.8\%), challenge formats (19.2\%), commercial content (18.5\%), and privacy violations (4.2\%).
+
 
 \subsection{The Engagement Premium (RQ2 \& RQ3)}
 
@@ -185,9 +240,13 @@ Additionally, we conducted a weight sensitivity analysis. The Spearman correlati
 
 \subsection{The ``Performativity Premium'' vs.\ The Commercial Penalty}
 
-Our findings provide large-scale empirical evidence for a ``performativity premium'' in the kidfluencer ecosystem. Engagement metrics are systematically associated with content that requires children to engage in intensive, performative labor (scripted conflict, emotional bait) over organic family documentation.
+Our findings provide large-scale empirical evidence for a ``performativity premium'' in the kidfluencer ecosystem. Engagement metrics are systematically associated with content that requires children to engage in intensive, performative labor (scripted conflict, emotional bait) over organic family documentation. This premium incentivizes creators to push boundaries, manufacturing drama and exploiting children's emotional vulnerabilities to capture attention in a highly competitive market.
 
-Interestingly, traditional commercial content suffers a penalty. This suggests a fundamental shift in the kidfluencer economy: the most successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s \citep{divon2025children} concept of ``transactional childhood.'' Audiences appear to reject overt advertising but heavily reward the commodification of the child's identity and emotional vulnerability.
+Interestingly, traditional commercial content (e.g., explicit toy unboxing or product placement) suffers a significant penalty ($-32.5\%$). This suggests a fundamental shift in the kidfluencer economy: the most successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s \citep{divon2025children} concept of ``transactional childhood.'' Audiences appear to reject overt advertising but heavily reward the commodification of the child's identity. Furthermore, this commercial penalty may partially reflect platform-level interventions; following the FTC's COPPA settlement, YouTube implemented stricter policies on ``made for kids'' content, potentially reducing the algorithmic reach or monetization potential of explicit advertising aimed at minors. 
+
+\subsection{Qualitative Nuances: Vlog vs.\ Staged Drama}
+
+During our human validation process, we observed that distinguishing between organic documentation (vlogging) and performative labor (staged drama) is highly nuanced. Some channels operate with a fundamentally exploitative premise (e.g., daily scripted pranks), while others primarily document family life but occasionally use exaggerated thumbnails (emotional bait) to drive clicks. Our multimodal pipeline's ability to output a continuous probability score ($\in [0, 1]$) rather than a binary label effectively captures this spectrum of exploitation. Videos with clickbait thumbnails but organic content received moderate scores, while highly scripted, high-conflict videos received the highest scores. This continuous measurement highlights that exploitation in the kidfluencer space is rarely binary; it exists on a spectrum driven by the constant pressure to optimize for engagement.
 
 \subsection{Methodological Contributions}
 
@@ -201,15 +260,18 @@ Second, our analysis relies on observational data. We measure \emph{engagement m
 
 Third, our VLM classification primarily analyzed video titles, thumbnails, and descriptions; future work should incorporate full video transcripts and duration data to capture intra-video dynamics. Finally, our sample is limited to English-language channels; cross-cultural analyses may reveal different exploitation patterns and engagement dynamics.
 
-\section{Ethics Statement}
+\section{Ethics and Positionality Statement}
 
-This research utilizes publicly available, observational data from YouTube via the official API. The study was deemed IRB-exempt as it involves no direct interaction with human subjects or minors, and analyzes public figures in the digital economy. We report aggregate statistics to protect the privacy of specific children featured in the channels.
+\subsection{Ethical Considerations}
+This research utilizes publicly available, observational data from YouTube via the official API. The study was deemed IRB-exempt by our institutional review board as it involves no direct interaction with human subjects or minors, and analyzes public figures participating in the digital economy. However, we recognize that the subjects of these videos are children who cannot legally consent to their digital footprint. To minimize potential harm, we adhered to strict data minimization principles. We did not download or store video files; we only retrieved metadata, thumbnails, and descriptions necessary for the analysis. Furthermore, we report all findings as aggregate statistics or anonymized trends. When discussing specific examples or qualitative findings, we intentionally obscure identifying details to prevent further amplification or privacy violations of the children involved. Our goal is to audit the systemic incentives of the platform ecosystem, not to target or shame individual families.
+
+\subsection{Positionality Statement}
+The authors approach this research from the perspective of computational social scientists and algorithmic auditors based in North America. We acknowledge that our operationalization of ``exploitation'' is grounded in Western frameworks of child rights (e.g., the UNCRC) and North American legislative contexts (e.g., the Illinois PA 103-0556). The kidfluencer economy operates globally, and cultural norms regarding child labor, family documentation, and privacy vary significantly. Our analysis of English-language channels may not capture the nuances of exploitation in other cultural contexts. We also recognize the inherent subjectivity in labeling content as ``exploitative.'' By employing a weak supervision approach and providing transparent validation metrics, we aim to make our assumptions explicit and open to critique, rather than presenting our pipeline's outputs as absolute ground truth.
 
 \section{Conclusion}
 
 As the kidfluencer economy matures, regulatory focus must expand beyond financial compensation to address the structural forces shaping content creation. Our multimodal audit of 5,051 videos demonstrates that engagement metrics are significantly associated with content featuring child performative labor, privacy violations, and emotional bait, while penalizing overt commercial content. By highlighting this ``performativity premium,'' this study underscores the need for platform-level interventions that disincentivize the commodification of child labor and stress.
 
 \bibliography{references}
-\bibliographystyle{aaai2026}
 
 \end{document}
