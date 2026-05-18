@@ -51,7 +51,7 @@ Recent legislative efforts, such as the Illinois PA 103-0556 (2024) \citep{illin
 
 Previous research on the kidfluencer ecosystem has largely relied on qualitative content analysis or small-scale manual coding \citep{divon2025children,anderson2025growing}. While valuable, these approaches cannot scale to audit the massive volume of content generated. Conversely, purely computational approaches often struggle to operationalize complex, nuanced concepts like ``exploitation'' or ``performativity'' without expensive, large-scale human annotation. Furthermore, prior audits of platform algorithms \citep{huszar2022algorithmic,haroon2023auditing} have often focused on political content rather than child safety \citep{papadamou2020disturbed}.
 
-This study bridges this gap by deploying a \textbf{multimodal weak supervision pipeline} to conduct a large-scale observational audit. We ground our definition of exploitation in the UN Convention on the Rights of the Child (UNCRC) and recent theoretical frameworks \citep{clark2025child,divon2025children}, operationalizing six specific dimensions: performative labor, emotional bait, narrative conflict, challenge formats, commercial content, and privacy violations.
+This study bridges this gap by deploying a \textbf{multimodal weak supervision pipeline} to conduct a large-scale observational audit. We ground our conceptualization of exploitation risk in the UN Convention on the Rights of the Child (UNCRC), specifically drawing on Clark and Jno-Charles's \citep{clark2025child} five fundamental threats framework for kidfluencing. We operationalize these theoretical threats into six measurable content dimensions: performative labor, emotional bait, narrative conflict, challenge formats, commercial content, and privacy violations.
 
 Crucially, because we rely on observational data via the YouTube API, we cannot directly observe the recommendation algorithm's internal scoring \citep{bouchaud2024auditing,rieder2018ranking}. Instead, we measure the \textbf{engagement premium}---the association between exploitative content dimensions and view counts---which serves as a proxy for the incentive structures shaping creator behavior.
 
@@ -66,7 +66,7 @@ Our core research questions are:
 
 \subsection{The Kidfluencer Economy and Exploitation Frameworks}
 
-The kidfluencer economy relies on the continuous documentation of children's private lives and their participation in scripted entertainment. Clark and Jno-Charles \citep{clark2025child} propose analyzing this phenomenon through the lens of the UNCRC, identifying fundamental threats to children's rights: economic exploitation, exposure to harm, and restriction of authentic expression. Divon et al.\ \citep{divon2025children} further describe how children are transformed into ``concealed commodities'' through practices like transactional play.
+The kidfluencer economy relies on the continuous documentation of children's private lives and their participation in scripted entertainment. Clark and Jno-Charles \citep{clark2025child} propose analyzing this phenomenon through the lens of the UNCRC, identifying five fundamental threats to children's rights in the kidfluencing context: (1) violation of consent, (2) violation of privacy, (3) economic exploitation (e.g., blurring work/leisure, making the child the product), (4) exposure to physical or psychological harm, and (5) suppression of authentic expression. Divon et al.\ \citep{divon2025children} further describe how children are transformed into ``concealed commodities'' through practices like transactional play. Because direct observation of rights violations (e.g., a child's true consent or compensation) is impossible via public metadata, computational audits must rely on proxy indicators of labor intensity and risk.
 
 Other literature highlights the privacy risks of ``sharenting'' \citep{steinberg2017sharenting,kopecky2020sharenting}, where parents overshare children's lives online, potentially leading to emotional neglect \citep{keskin2023sharenting}. In extreme cases, such as the ``Elsagate'' phenomenon, platforms have struggled to moderate inappropriate content targeting toddlers \citep{papadamou2020disturbed,bridle2017something,tahir2019bringing}. Building on these frameworks, we operationalize exploitation not merely as overt abuse, but as the intensive, performative labor required to maintain engagement.
 
@@ -88,17 +88,28 @@ We collected metadata for 58,965 videos from 79 family and kidfluencer YouTube c
 
 To manage computational costs while maintaining representativeness, we employed a stratified sampling strategy. For each of the 79 channels, we stratified videos into terciles based on view counts (high, medium, low) and randomly sampled up to 20 videos per tercile, resulting in a final stratified sample of 5,051 videos with valid view counts. We retrieved the title, description, thumbnail image, and publication date for each sampled video.
 
-\subsection{Exploitation Dimensions}
+\subsection{Exploitation Risk Dimensions}
 
-Based on Clark and Jno-Charles \citep{clark2025child} and Divon et al.\ \citep{divon2025children}, we defined six exploitation dimensions:
-\begin{enumerate}
-    \item \textbf{Performative Labor:} Child performing scripted/planned content for the camera.
-    \item \textbf{Emotional Bait:} Using the child's exaggerated emotions for clickbait.
-    \item \textbf{Narrative Conflict:} Manufactured drama or conflict involving the child.
-    \item \textbf{Challenge Format:} High-effort competition formats requiring extended labor.
-    \item \textbf{Commercial Content:} Child used explicitly for product placement/unboxing.
-    \item \textbf{Privacy Violation:} Exposure of the child's private, vulnerable, or medical moments.
-\end{enumerate}
+Because actual exploitation (e.g., lack of consent, uncompensated labor) occurs off-camera, we cannot measure it directly. Instead, we operationalize Clark and Jno-Charles's \citep{clark2025child} five fundamental threats into six observable content dimensions that serve as proxy indicators of exploitation risk and labor intensity (Table~\ref{tab:mapping}).
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{p{2.5cm} p{5cm}}
+\toprule
+\textbf{UNCRC Threat \citep{clark2025child}} & \textbf{Our Observable Dimension} \\
+\midrule
+Consent Violation & \textbf{Performative Labor:} Scripted/planned content suggesting directed labor rather than organic play. \\
+Privacy Violation & \textbf{Privacy Violation:} Exposure of private, vulnerable, or medical moments. \\
+Economic Exploitation & \textbf{Commercial Content:} Child used explicitly for product placement, making the child the product. \\
+Exposure to Harm & \textbf{Challenge Format:} High-effort physical competitions.\\
+& \textbf{Emotional Bait:} Exaggerated distress or emotional extremes used for clickbait. \\
+Expression Suppression & \textbf{Narrative Conflict:} Manufactured drama replacing the child's authentic voice. \\
+\bottomrule
+\end{tabular}
+\caption{Mapping theoretical UNCRC threats to our observable content dimensions.}
+\label{tab:mapping}
+\end{table}
 
 \subsection{Multimodal Weak Supervision Pipeline}
 
@@ -219,7 +230,7 @@ We fit a mixed-effects linear regression model predicting $\log_{10}(\text{views
 \]
 where $u_j \sim N(0, \sigma^2_u)$ represents the channel-level random intercept for channel $j$, and $\epsilon_{ij}$ is the residual error. This formulation ensures that the estimated effect of exploitation score reflects \emph{within-channel} variation rather than between-channel differences in baseline popularity.
 
-The model revealed a massive, highly significant effect: a one-unit increase in the exploitation score is associated with a $0.681$ increase in $\log_{10}(\text{views})$ ($\beta = 0.681$, $SE = 0.054$, $z = 12.61$, $p < 0.001$). This translates to approximately a \textbf{4.8$\times$ increase in raw view counts} ($10^{0.681} \approx 4.8$). The random intercept variance was substantial ($\sigma^2_u = 0.89$), confirming that channels vary considerably in baseline popularity and justifying the multilevel approach. The intraclass correlation coefficient (ICC $= 0.62$) indicates that 62\% of the variance in $\log_{10}(\text{views})$ is attributable to between-channel differences, underscoring the importance of controlling for channel identity.
+The model revealed a massive, highly significant effect: a one-unit increase in the exploitation risk score is associated with a $0.681$ increase in $\log_{10}(\text{views})$ ($\beta = 0.681$, $SE = 0.054$, $z = 12.61$, $p < 0.001$). This translates to approximately a \textbf{4.8$\times$ increase in raw view counts} ($10^{0.681} \approx 4.8$). The random intercept variance was substantial ($\sigma^2_u = 0.89$), confirming that channels vary considerably in baseline popularity and justifying the multilevel approach. The intraclass correlation coefficient (ICC $= 0.62$) indicates that 62\% of the variance in $\log_{10}(\text{views})$ is attributable to between-channel differences, underscoring the importance of controlling for channel identity.
 
 We then fit a second mixed-effects model using the six individual dimensions as fixed effects. When controlling for all dimensions simultaneously, \textbf{performative labor} ($\beta = 0.291$, $p < 0.001$), \textbf{privacy violations} ($\beta = 0.316$, $p < 0.001$), and \textbf{emotional bait} ($\beta = 0.205$, $p < 0.001$) remained highly significant predictors of increased viewership. Narrative conflict, challenge formats, and commercial content lost statistical significance in the joint model, suggesting their effects may be partially mediated by correlation with the primary three dimensions. Notably, commercial content exhibited a negative but non-significant coefficient ($\beta = -0.088$, $p = 0.14$) in the joint model, consistent with the negative within-channel premium observed in the pairwise analysis.
 
@@ -263,13 +274,13 @@ To ensure our findings were not merely artifacts of video age (older videos accu
 \label{fig:channel_dist}
 \end{figure}
 
-Additionally, we conducted a weight sensitivity analysis. The Spearman correlation between exploitation score and view counts remained highly significant ($p < 10^{-6}$) across all possible VLM/LLM weight combinations tested (from 100\% VLM to 100\% LLM), confirming that our findings are not an artifact of the specific weighting scheme chosen.
+Additionally, we conducted a weight sensitivity analysis. The Spearman correlation between the exploitation risk score and view counts remained highly significant ($p < 10^{-6}$) across all possible VLM/LLM weight combinations tested (from 100\% VLM to 100\% LLM), confirming that our findings are not an artifact of the specific weighting scheme chosen.
 
 \section{Discussion}
 
 \subsection{The ``Performativity Premium'' vs.\ The Commercial Penalty}
 
-Our findings provide large-scale empirical evidence for a ``performativity premium'' in the kidfluencer ecosystem. Engagement metrics are systematically associated with content that requires children to engage in intensive, performative labor (scripted conflict, emotional bait) over organic family documentation. This premium incentivizes creators to push boundaries, manufacturing drama and exploiting children's emotional vulnerabilities to capture attention in a highly competitive market.
+Our findings provide large-scale empirical evidence for a ``performativity premium'' in the kidfluencer ecosystem. Engagement metrics are systematically associated with content features that proxy for intensive, performative labor (scripted conflict, emotional bait) over organic family documentation. This premium incentivizes creators to push boundaries, manufacturing drama and exposing children's emotional vulnerabilities to capture attention in a highly competitive market. Crucially, while our metrics capture content features rather than direct UNCRC violations, the high prevalence of these features (e.g., 60.5\% performative labor) suggests that the labor intensity required to succeed on the platform is structurally high.
 
 Interestingly, traditional commercial content (e.g., explicit toy unboxing or product placement) suffers a significant penalty ($-32.5\%$). This suggests a fundamental shift in the kidfluencer economy: the most successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s \citep{divon2025children} concept of ``transactional childhood.'' Audiences appear to reject overt advertising but heavily reward the commodification of the child's identity. Furthermore, this commercial penalty may partially reflect platform-level interventions; following the FTC's COPPA settlement, YouTube implemented stricter policies on ``made for kids'' content, potentially reducing the algorithmic reach or monetization potential of explicit advertising aimed at minors. 
 
@@ -289,7 +300,7 @@ This study demonstrates the efficacy of multimodal weak supervision for large-sc
 
 \subsection{Limitations and Future Work}
 
-This study has several limitations. First, our validation relied on a single trained annotator ($n=50$). While our pipeline achieved strong discriminative ability against this baseline, future research must employ multiple independent annotators to establish rigorous inter-rater reliability, particularly given the subjective nature of dimensions like ``emotional bait.'' As noted during annotation, distinguishing between genuine family vlogs and manufactured ``staged drama'' often requires contextual understanding beyond what thumbnails and descriptions provide.
+This study has several limitations. First, our validation relied on a single trained annotator ($n=50$). While our pipeline achieved strong discriminative ability against this baseline, future research must employ multiple independent annotators to establish rigorous inter-rater reliability, particularly given the subjective nature of dimensions like ``emotional bait.'' As noted during annotation, distinguishing between genuine family vlogs and manufactured ``staged drama'' often requires contextual understanding beyond what thumbnails and descriptions provide. Furthermore, our dimensions are proxy indicators of exploitation risk, not definitive proof of UNCRC violations. A child may happily participate in a challenge video without being exploited, but the systemic prevalence of such content indicates a high baseline of labor intensity.
 
 Second, our analysis relies on observational data. We measure \emph{engagement metrics} (views), which are proxies for algorithmic reach, but we cannot claim a direct causal link to YouTube's internal recommendation weights \citep{rieder2018ranking}. The engagement premium we observe may reflect audience preferences, algorithmic amplification, or both.
 

@@ -1,0 +1,10 @@
+Reframing Review Notes:
+- Page 3: New Table 1 (mapping UNCRC threats to dimensions) looks good and professional
+- Page 3: Pipeline diagram still clean
+- Page 4: Validation table and results intact
+- Page 5: Main results table, figures all in place
+- Page 6: Discussion now includes the key disclaimer about proxy indicators
+- Page 6: Limitations section now explicitly states dimensions are proxy indicators
+- Pages 7-8: Ethics, Conclusion, References all intact
+- Total: 8 pages, clean compile, no errors
+- The "exploitation risk score" terminology is now used in the mixed-effects section
