@@ -211,26 +211,26 @@ Privacy Violation & 4.2\% & $+0.401$ & $0.551$ & $0.012^{*}$ & $0.316^{***}$ \\
 \label{fig:score_dist}
 \end{figure}
 
-Performative labor was the most prevalent dimension (detected in 60.5\% of videos by the VLM), followed by emotional bait (45.0\%), narrative conflict (26.8\%), challenge formats (19.2\%), commercial content (18.5\%), and privacy violations (4.2\%).
+Performative labor was the most prevalent dimension (detected in 69.5\% of videos), followed by emotional bait (56.2\%), commercial content (41.4\%), narrative conflict (34.9\%), challenge formats (32.4\%), and privacy violations (22.9\%). Overall, using an aggregated probability threshold of 0.7, 26.5\% of videos in the kid-centric dataset were classified as high exploitation risk.
 
 
 \subsection{The Engagement Premium (RQ2 \& RQ3)}
 
-We found a highly significant positive correlation between a video's overall Exploitation Score and its view count (Spearman $\rho = 0.328$, $p < 10^{-126}$).
+We found a highly significant positive correlation between a video's continuous exploitation risk score and its view count (Spearman $\rho = 0.229$, $p < 10^{-50}$).
 
 To determine if this association is a structural platform correlation rather than merely an artifact of highly exploitative channels being more popular overall, we conducted two primary analyses: mixed-effects regression and within-channel pairwise comparisons.
 
 \subsubsection{Mixed-Effects Regression.}
 
-We fit a mixed-effects linear regression model predicting $\log_{10}(\text{views})$ from the overall exploitation score, including random intercepts for each of the 79 channels to control for baseline channel popularity. The model specification is:
+We fit a mixed-effects linear regression model predicting $\log_{10}(\text{views})$ from the overall exploitation score, including random intercepts for each of the 56 kid-centric channels to control for baseline channel popularity. The model specification is:
 \[
 \log_{10}(\text{views}_{ij}) = \beta_0 + \beta_1 \cdot \text{ExploitScore}_{ij} + u_j + \epsilon_{ij}
 \]
 where $u_j \sim N(0, \sigma^2_u)$ represents the channel-level random intercept for channel $j$, and $\epsilon_{ij}$ is the residual error. This formulation ensures that the estimated effect of exploitation score reflects \emph{within-channel} variation rather than between-channel differences in baseline popularity.
 
-The model revealed a massive, highly significant effect: a one-unit increase in the exploitation risk score is associated with a $0.681$ increase in $\log_{10}(\text{views})$ ($\beta = 0.681$, $SE = 0.054$, $z = 12.61$, $p < 0.001$). This translates to approximately a \textbf{4.8$\times$ increase in raw view counts} ($10^{0.681} \approx 4.8$). The random intercept variance was substantial ($\sigma^2_u = 0.89$), confirming that channels vary considerably in baseline popularity and justifying the multilevel approach. The intraclass correlation coefficient (ICC $= 0.62$) indicates that 62\% of the variance in $\log_{10}(\text{views})$ is attributable to between-channel differences, underscoring the importance of controlling for channel identity.
+The model revealed a massive, highly significant effect: a one-unit increase in the exploitation risk score is associated with a $0.647$ increase in $\log_{10}(\text{views})$ ($\beta = 0.647$, $SE = 0.059$, $z = 10.91$, $p < 0.001$). This translates to approximately a \textbf{4.4$\times$ increase in raw view counts} ($10^{0.647} \approx 4.4$). The random intercept variance was substantial ($\sigma^2_u = 0.741$), confirming that channels vary considerably in baseline popularity and justifying the multilevel approach. The intraclass correlation coefficient (ICC $= 0.738$) indicates that 73.8\% of the variance in $\log_{10}(\text{views})$ is attributable to between-channel differences, underscoring the importance of controlling for channel identity.
 
-We then fit a second mixed-effects model using the six individual dimensions as fixed effects. When controlling for all dimensions simultaneously, \textbf{performative labor} ($\beta = 0.291$, $p < 0.001$), \textbf{privacy violations} ($\beta = 0.316$, $p < 0.001$), and \textbf{emotional bait} ($\beta = 0.205$, $p < 0.001$) remained highly significant predictors of increased viewership. Narrative conflict, challenge formats, and commercial content lost statistical significance in the joint model, suggesting their effects may be partially mediated by correlation with the primary three dimensions. Notably, commercial content exhibited a negative but non-significant coefficient ($\beta = -0.088$, $p = 0.14$) in the joint model, consistent with the negative within-channel premium observed in the pairwise analysis.
+We then fit a second mixed-effects model using the continuous probabilities of the six individual dimensions as fixed effects. When controlling for all dimensions simultaneously, \textbf{emotional bait} ($\beta = 0.264$, $p < 0.001$), \textbf{privacy violations} ($\beta = 0.226$, $p < 0.001$), \textbf{narrative conflict} ($\beta = 0.153$, $p < 0.001$), and \textbf{performative labor} ($\beta = 0.091$, $p < 0.001$) remained highly significant predictors of increased viewership. Challenge formats ($\beta = 0.003$, $p = 0.91$) and commercial content ($\beta = 0.042$, $p = 0.24$) were not statistically significant in the joint model, suggesting their effects may be mediated by correlation with the primary dimensions.
 
 \subsubsection{Within-Channel Pairwise Comparisons.}
 
@@ -243,15 +243,15 @@ For each dimension, we compared the median views of videos exhibiting that dimen
 \label{fig:premiums}
 \end{figure}
 
-The results reveal a clear engagement premium structure across 54 channels with sufficient data:
+The results reveal a clear engagement premium structure across channels with sufficient data:
 \begin{itemize}
-    \item \textbf{Performative Labor} is associated with a mean within-channel log-premium of $+0.354$ (Cohen's $d = 0.613$, FDR $p<0.001$).
-    \item \textbf{Privacy Violations} are associated with a mean log-premium of $+0.401$ (FDR $p=0.012$).
-    \item \textbf{Emotional Bait} is associated with a mean log-premium of $+0.281$ (FDR $p=0.001$).
-    \item \textbf{Challenge Formats} and \textbf{Narrative Conflict} also showed significant positive premiums (FDR $p < 0.05$).
+    \item \textbf{Emotional Bait} is associated with the largest premium, generating $+65.6\%$ more views than non-emotional videos on the same channel (Cohen's $d = 0.751$, FDR $p<0.001$).
+    \item \textbf{Performative Labor} is associated with a $+56.0\%$ view premium ($d = 0.524$, FDR $p<0.001$).
+    \item \textbf{Privacy Violations} and \textbf{Narrative Conflict} are associated with $+40.3\%$ ($d = 0.650$, FDR $p<0.001$) and $+39.7\%$ ($d = 0.511$, FDR $p<0.001$) premiums respectively.
+    \item \textbf{Challenge Formats} showed a smaller, non-significant positive premium ($+20.9\%$, FDR $p=0.081$).
 \end{itemize}
 
-Crucially, \textbf{Commercial Content} exhibited a significant \textbf{negative} premium (mean log-premium $-0.325$, FDR $p=0.012$). Videos featuring explicit product placements or unboxing received systematically \emph{fewer} views than non-commercial videos on the same channel.
+Crucially, \textbf{Commercial Content} exhibited a slight \textbf{negative} premium ($-3.8\%$, FDR $p=0.516$). While not statistically significant after FDR correction, the directionality suggests that videos featuring explicit product placements do not benefit from the massive engagement boosts seen in emotional and performative exploitation dimensions.
 
 \begin{figure}[h!]
 \centering
@@ -263,16 +263,16 @@ Crucially, \textbf{Commercial Content} exhibited a significant \textbf{negative}
 \subsection{Robustness Checks}
 \label{sec:robustness}
 
-To ensure our findings were not merely artifacts of video age (older videos accumulating more views), we conducted a \textbf{same-year within-channel comparison}. By matching exploitative and non-exploitative videos published by the same channel in the same year (37 channel-year groups), we found the engagement premium holds robustly: high-exploitation videos received a mean log-premium of $+0.404$ over their same-year, same-channel counterparts (Wilcoxon $p=0.006$).
+To ensure our findings were not merely artifacts of video age (older videos accumulating more views), we conducted a \textbf{same-year within-channel comparison} on the subset of videos with valid ISO-8601 publication dates ($N=907$). By matching exploitative and non-exploitative videos published by the same channel in the same year (23 channel-year groups), we found the engagement premium holds robustly: high-exploitation videos received $+44.4\%$ more views than their same-year, same-channel counterparts (Wilcoxon $p=0.030$).
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\columnwidth]{fig4_channel_premiums.png}
-\caption{Distribution of overall within-channel premiums. 74.1\% of channels exhibit a positive premium for exploitative content.}
+\caption{Distribution of overall within-channel premiums. 76.6\% of channels exhibit a positive premium for exploitative content.}
 \label{fig:channel_dist}
 \end{figure}
 
-Additionally, we conducted a weight sensitivity analysis. The Spearman correlation between the exploitation risk score and view counts remained highly significant ($p < 10^{-6}$) across all possible VLM/LLM weight combinations tested (from 100\% VLM to 100\% LLM), confirming that our findings are not an artifact of the specific weighting scheme chosen.
+Additionally, we verified the robustness of our results by analyzing the overall exploitation flag at the channel level. Across 47 channels with sufficient variance, 36 channels (76.6\%) exhibited a positive engagement premium for high-exploitation videos, yielding an average within-channel boost of $+32.8\%$ (Wilcoxon $p=0.001$). This confirms that the performativity premium is a widespread structural phenomenon, not driven by a few outlier channels.
 
 \section{Discussion}
 
