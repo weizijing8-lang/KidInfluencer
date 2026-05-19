@@ -1,0 +1,104 @@
+{
+  "performative_labor": {
+    "n_lfs": 8,
+    "prevalence_label_model": 0.6521032677378589,
+    "prevalence_majority_vote": 0.6152735150749232,
+    "abstain_rate": 0.0,
+    "learned_weights": {
+      "lf_llm_performative": 0.6571345627307892,
+      "lf_vlm_performative_high": 0.9618435841034761,
+      "lf_vlm_performative_med": 0.9117305910511088,
+      "lf_scripted_keywords": 0.8325535140501856,
+      "lf_organic_keywords": 0.9766269066119224,
+      "lf_roleplay_title": 0.667060373580549,
+      "lf_desc_scripted": 0.6899320841666616,
+      "lf_duration_long": 0.7212326138955065
+    },
+    "spearman_rho": 0.2036443286208541,
+    "spearman_pval": 6.219493154351966e-53
+  },
+  "emotional_bait": {
+    "n_lfs": 6,
+    "prevalence_label_model": 0.5616537281097671,
+    "prevalence_majority_vote": 0.5363784076548114,
+    "abstain_rate": 0.29156887524823977,
+    "learned_weights": {
+      "lf_llm_emotional": 1.0,
+      "lf_vlm_emotional": 0.7218991925887192,
+      "lf_emotional_caps": 0.7708117107010743,
+      "lf_emotional_punct": 0.7665052922315654,
+      "lf_emotional_keywords": 1.0,
+      "lf_emotional_emojis": 1.0
+    },
+    "spearman_rho": 0.23982797599997813,
+    "spearman_pval": 2.6593688452891473e-73
+  },
+  "narrative_conflict": {
+    "n_lfs": 5,
+    "prevalence_label_model": 0.33218992597941865,
+    "prevalence_majority_vote": 0.3283986279111753,
+    "abstain_rate": 0.23126918216284528,
+    "learned_weights": {
+      "lf_llm_narrative": 1.0,
+      "lf_vlm_narrative": 0.7669885971400915,
+      "lf_conflict_keywords": 1.0,
+      "lf_prank_gone_wrong": 1.0,
+      "lf_clickbait_patterns": 0.5441047562769951
+    },
+    "spearman_rho": 0.15826399230257934,
+    "spearman_pval": 2.1311457505678938e-32
+  },
+  "challenge_format": {
+    "n_lfs": 5,
+    "prevalence_label_model": 0.28254197508575557,
+    "prevalence_majority_vote": 0.2648492507672865,
+    "abstain_rate": 0.08683877956309803,
+    "learned_weights": {
+      "lf_llm_challenge": 1.0,
+      "lf_vlm_challenge": 0.8497620405184656,
+      "lf_challenge_keywords": 1.0,
+      "lf_competition_format": 0.9951519316929074,
+      "lf_duration_challenge": 1.0
+    },
+    "spearman_rho": 0.0033740095203590556,
+    "spearman_pval": 0.8017732324332257
+  },
+  "commercial_content": {
+    "n_lfs": 5,
+    "prevalence_label_model": 0.5320454955768189,
+    "prevalence_majority_vote": 0.3699223686586026,
+    "abstain_rate": 0.14677739664199313,
+    "learned_weights": {
+      "lf_llm_commercial": 1.0,
+      "lf_vlm_commercial": 0.7222629933081793,
+      "lf_commercial_title": 0.9592960845220756,
+      "lf_commercial_desc": 1.0,
+      "lf_commercial_tags": 0.6914302401780527
+    },
+    "spearman_rho": 0.11538416320238858,
+    "spearman_pval": 7.040108355968652e-18
+  },
+  "privacy_violation": {
+    "n_lfs": 4,
+    "prevalence_label_model": 0.09424083769633508,
+    "prevalence_majority_vote": 0.07510380935186857,
+    "abstain_rate": 0.16230366492146597,
+    "learned_weights": {
+      "lf_llm_privacy": 1.0,
+      "lf_vlm_privacy": 0.6622533242220252,
+      "lf_privacy_keywords": 1.0,
+      "lf_privacy_medical_desc": 1.0
+    },
+    "spearman_rho": 0.07952544823263369,
+    "spearman_pval": 3.0910053629460257e-09
+  },
+  "overall": {
+    "n_videos": 5539,
+    "n_channels": 79,
+    "total_lfs": 33,
+    "mean_exploitation_score": 0.5629415738683378,
+    "exploitative_count": 3604,
+    "spearman_rho": 0.27081890964848604,
+    "spearman_pval": 1.0281436356661132e-93
+  }
+}
