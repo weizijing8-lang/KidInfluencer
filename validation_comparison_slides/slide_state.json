@@ -1,0 +1,132 @@
+{
+  "project_info": {
+    "title": "Paper Validation Upgrade",
+    "created": 1779171473.1165547,
+    "last_updated": 1779171488.6624165,
+    "total_slides": 10
+  },
+  "slides": [
+    {
+      "id": "title",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "reviewer_criticism",
+      "state": "edit_pending",
+      "pageNum": 2
+    },
+    {
+      "id": "old_validation",
+      "state": "edit_pending",
+      "pageNum": 3
+    },
+    {
+      "id": "new_validation_design",
+      "state": "edit_pending",
+      "pageNum": 4
+    },
+    {
+      "id": "new_results",
+      "state": "edit_pending",
+      "pageNum": 5
+    },
+    {
+      "id": "head_to_head",
+      "state": "edit_pending",
+      "pageNum": 6
+    },
+    {
+      "id": "methodology_changes",
+      "state": "edit_pending",
+      "pageNum": 7
+    },
+    {
+      "id": "error_analysis",
+      "state": "edit_pending",
+      "pageNum": 8
+    },
+    {
+      "id": "paper_impact",
+      "state": "edit_pending",
+      "pageNum": 9
+    },
+    {
+      "id": "remaining_work",
+      "state": "edit_pending",
+      "pageNum": 10
+    }
+  ],
+  "outline": [
+    {
+      "id": "title",
+      "title": "Paper Validation Upgrade",
+      "summary": "Title slide introducing the comparison between old and new validation protocols for the AIES 2026 kidfluencer exploitation audit paper.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "reviewer_criticism",
+      "title": "Reviewer W2: The Core Criticism",
+      "summary": "Present the reviewer's major weakness W2 about the validation protocol being the paper's most critical weakness.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "old_validation",
+      "title": "OLD: Single-Annotator Validation",
+      "summary": "Show the original validation design with 1 annotator, 50 videos, per-dimension metrics including Privacy Violation F1=0.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "new_validation_design",
+      "title": "NEW: Multi-Annotator Validation Design",
+      "summary": "Present the new validation protocol: 3 annotators, 107 unique videos, 200 annotations, Clark framework training, stratified sampling.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "new_results",
+      "title": "NEW: Per-Annotator Performance",
+      "summary": "Show the per-annotator results table with F1 scores ranging from 0.868 to 1.000, and consensus F1=0.884.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "head_to_head",
+      "title": "Before vs. After: Key Metrics",
+      "summary": "Side-by-side comparison table showing all key metrics improved: annotators 1→3, videos 50→107, F1 0.776→0.884, IRR N/A→1.0.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "methodology_changes",
+      "title": "Key Methodological Improvements",
+      "summary": "List the 5 major methodological changes: scope refinement, evaluation shift, multi-annotator protocol, stratified sampling, disagreement analysis.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "error_analysis",
+      "title": "Model Error Patterns",
+      "summary": "Analyze the model's error patterns: FP from clickbait family game titles, near-zero FN, conservative bias.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "paper_impact",
+      "title": "Impact on Paper Narrative",
+      "summary": "How the new validation strengthens the paper: addresses W2, strengthens methodology, honest limitation framing.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "remaining_work",
+      "title": "Remaining Work",
+      "summary": "What's still needed: expand overlap set, implement true Snorkel WS, soften causal language, add sensitivity analysis.",
+      "image_plan": "",
+      "slide_template_key": ""
+    }
+  ]
+}
