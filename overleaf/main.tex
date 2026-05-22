@@ -40,7 +40,7 @@
 \begin{abstract}
 The rapid rise of ``kidfluencers'' on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and engagement metrics remains scarce due to the challenge of operationalizing and scaling exploitation measurements. This study presents a multimodal AI audit of 5,051 videos across 79 kidfluencer channels, utilizing a weak supervision approach to detect exploitation signals without requiring large-scale manually labeled ground truth. We aggregate noisy labeling functions---including LLM-based classification of titles and GPT-4 Vision analysis of thumbnails and descriptions across six literature-grounded dimensions---to assign a probabilistic exploitation score to each video. A multi-annotator validation study ($N=107$ videos) combining independent human annotations demonstrates strong agreement with human judgment across six exploitation dimensions (macro-average F1 $= 0.911$) and high sensitivity for overall exploitation risk (recall $= 0.960$, overall F1 $= 0.793$).
 
-Our findings reveal a highly significant \textbf{engagement premium associated with performative labor, emotional bait, and privacy violations}. Overall exploitation scores correlate significantly with view counts (Spearman $\rho = 0.328$, $p < 10^{-126}$). Mixed-effects regression, controlling for channel-level variation, demonstrates that a one-unit increase in exploitation score is associated with a 4.8$\times$ increase in views ($p < 0.001$). Within-channel analyses show that performative content is associated with a median view boost of $+42.0\%$ (FDR-corrected $p<0.001$). These effects hold in robustness checks comparing videos published within the same year ($p=0.006$). Conversely, we find that explicit commercial content (product placement) exhibits a significant \emph{negative} premium ($-32.5\%$, $p=0.012$), suggesting that the platform ecosystem rewards the commodification of the child's identity and labor rather than traditional advertising. These findings challenge policy frameworks focused solely on financial trusts, demonstrating that engagement metrics are systematically associated with the intensive, performative labor of children.
+Our findings reveal a highly significant \textbf{engagement premium associated with performative labor, emotional bait, and privacy violations}. Overall exploitation scores correlate significantly with view counts (Spearman $\rho = 0.229$, $p < 10^{-50}$). Mixed-effects regression, controlling for channel-level variation, demonstrates that a one-unit increase in exploitation score is associated with a 4.4$\times$ increase in views ($p < 0.001$). Within-channel analyses show that emotional bait and performative content are associated with median view boosts of $+65.6\%$ and $+56.0\%$ respectively (FDR-corrected $p<0.001$). These effects hold in robustness checks comparing videos published within the same year ($p=0.030$). Conversely, we find that explicit commercial content (product placement) does not benefit from this engagement premium ($-3.8\%$, n.s.), suggesting that the platform ecosystem rewards the commodification of the child's identity and labor rather than traditional advertising. These findings challenge policy frameworks focused solely on financial trusts, demonstrating that engagement metrics are systematically associated with the intensive, performative labor of children.
 \end{abstract}
 
 \section{Introduction}
@@ -88,6 +88,8 @@ We collected metadata for 58,965 videos from 79 family and kidfluencer YouTube c
 
 To manage computational costs while maintaining representativeness, we employed a stratified sampling strategy. For each of the 79 channels, we stratified videos into terciles based on view counts (high, medium, low) and randomly sampled up to 20 videos per tercile, resulting in a final stratified sample of 5,051 videos with valid view counts. We retrieved the title, description, thumbnail image, and publication date for each sampled video.
 
+For the engagement analysis, we restricted the sample to 56 \textbf{kid-centric} channels ($n=4{,}208$ videos) by excluding 23 channels where the primary content creator is an adult (e.g., adult family vloggers who occasionally feature children). This ensures that the engagement premium analysis specifically captures incentives related to child-centered content. Within-channel pairwise comparisons further required sufficient within-channel variance in exploitation scores, yielding 47 channels with both exploitative and non-exploitative videos for the within-channel analysis.
+
 \subsection{Exploitation Risk Dimensions}
 
 Because actual exploitation (e.g., lack of consent, uncompensated labor) occurs off-camera, we cannot measure it directly. Instead, we operationalize Clark and Jno-Charles's \citep{clark2025child} five fundamental threats into six observable content dimensions that serve as proxy indicators of exploitation risk and labor intensity (Table~\ref{tab:mapping}).
@@ -127,7 +129,7 @@ Expression Suppression & \textbf{Narrative Conflict:} Manufactured drama replaci
   \node[box, below=0.8cm of sample] (llm) [xshift=-1.6cm] {33 Labeling Functions\\(LLM, VLM, Keywords,\\Metadata Heuristics)};
   \node[box, below=0.8cm of sample] (vlm) [xshift=1.6cm] {Snorkel Label Model\\(Learns LF accuracies\\and correlations)};
   \node[resultbox, below=0.8cm of sample, yshift=-1.2cm] (agg) {Probabilistic Aggregation\\$\rightarrow$ Exploitation Score $\in [0,1]$};
-  \node[resultbox, below=of agg, xshift=-1.4cm] (val) {Human Validation\\$N{=}107$, F1{=}0.884};
+  \node[resultbox, below=of agg, xshift=-1.4cm] (val) {Human Validation\\$N{=}107$, Macro-F1{=}0.911};
   \node[resultbox, below=of agg, xshift=1.4cm] (analysis) {Engagement Analysis\\Mixed Effects + FDR};
   % Arrows
   \draw[arrow] (data) -- (sample);
@@ -187,7 +189,7 @@ The pipeline computed a combined probability score for each dimension, and an \t
 
 \subsection{Pipeline Performance and Dimension Prevalence}
 
-The multimodal pipeline successfully processed 4,673 videos (92.5\% coverage for vision analysis). Overall, 19.7\% of the sampled videos ($n=997$) were classified as exploitative (score $\ge 0.5$).
+The multimodal pipeline successfully processed 4,208 videos from 56 kid-centric channels. Overall, 26.5\% of the sampled videos ($n=1,114$) were classified as exploitative (score $\ge 0.7$).
 
 \begin{table*}[t]
 \centering
@@ -195,14 +197,14 @@ The multimodal pipeline successfully processed 4,673 videos (92.5\% coverage for
 \toprule
 \textbf{Exploitation Dimension} & \textbf{Prevalence} & \textbf{Mean Log-Premium} & \textbf{Cohen's $d$} & \textbf{FDR $p$-value} & \textbf{Mixed-Effects $\beta$} \\
 \midrule
-Performative Labor & 60.5\% & $+0.354$ & $0.613$ & $<0.001^{***}$ & $0.291^{***}$ \\
-Emotional Bait & 45.0\% & $+0.281$ & $0.425$ & $0.001^{**}$ & $0.205^{***}$ \\
-Narrative Conflict & 26.8\% & $+0.153$ & $0.280$ & $0.012^{*}$ & $0.042$ (n.s.) \\
-Challenge Format & 19.2\% & $+0.208$ & $0.315$ & $0.023^{*}$ & $0.065$ (n.s.) \\
-Commercial Content & 18.5\% & $-0.325$ & $-0.443$ & $0.012^{*}$ & $-0.088$ (n.s.) \\
-Privacy Violation & 4.2\% & $+0.401$ & $0.551$ & $0.012^{*}$ & $0.316^{***}$ \\
+Performative Labor & 69.5\% & $+0.193$ & $+0.524$ & $<0.001^{***}$ & $0.091^{***}$ \\
+Emotional Bait & 56.2\% & $+0.219$ & $+0.751$ & $<0.001^{***}$ & $0.264^{***}$ \\
+Narrative Conflict & 34.9\% & $+0.145$ & $+0.511$ & $<0.001^{***}$ & $0.153^{***}$ \\
+Challenge Format & 32.4\% & $+0.082$ & $+0.320$ & $0.081$ (n.s.) & $0.003$ (n.s.) \\
+Commercial Content & 41.4\% & $-0.017$ & $-0.073$ & $0.516$ (n.s.) & $0.042$ (n.s.) \\
+Privacy Violation & 22.9\% & $+0.147$ & $+0.650$ & $<0.001^{***}$ & $0.226^{***}$ \\
 \midrule
-\textbf{Overall Exploitation} & 19.7\% & $+0.404$ & $0.582$ & $<0.001^{***}$ & $0.681^{***}$ \\
+\textbf{Overall Exploitation} & 26.5\% & $+0.123$ & $+0.582$ & $<0.001^{***}$ & $0.647^{***}$ \\
 \bottomrule
 \end{tabular}
 \caption{Summary of engagement premiums by exploitation dimension. Mean log-premium represents the within-channel difference in $\log_{10}(\text{views})$. Mixed-effects $\beta$ represents the coefficient in the joint model controlling for all dimensions simultaneously.}
@@ -281,11 +283,11 @@ Additionally, we verified the robustness of our results by analyzing the overall
 
 \section{Discussion}
 
-\subsection{The ``Performativity Premium'' vs.\ The Commercial Penalty}
+\subsection{The ``Performativity Premium'' vs.\ The Commercial Non-Effect}
 
-Our findings provide large-scale empirical evidence for a ``performativity premium'' in the kidfluencer ecosystem. Engagement metrics are systematically associated with content features that proxy for intensive, performative labor (scripted conflict, emotional bait) over organic family documentation. This premium incentivizes creators to push boundaries, manufacturing drama and exposing children's emotional vulnerabilities to capture attention in a highly competitive market. Crucially, while our metrics capture content features rather than direct UNCRC violations, the high prevalence of these features (e.g., 60.5\% performative labor) suggests that the labor intensity required to succeed on the platform is structurally high.
+Our findings provide large-scale empirical evidence for a ``performativity premium'' in the kidfluencer ecosystem. Engagement metrics are systematically associated with content features that proxy for intensive, performative labor (scripted conflict, emotional bait) over organic family documentation. This premium creates a structural incentive gradient where creators who push boundaries, manufacture drama, and expose children's emotional vulnerabilities are systematically rewarded with higher attention in a highly competitive market. Crucially, while our metrics capture content features rather than direct UNCRC violations, the high prevalence of these features (e.g., 69.5\% performative labor) suggests that the labor intensity required to succeed on the platform is structurally high.
 
-Interestingly, traditional commercial content (e.g., explicit toy unboxing or product placement) suffers a significant penalty ($-32.5\%$). This suggests a fundamental shift in the kidfluencer economy: the most successful strategy is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s \citep{divon2025children} concept of ``transactional childhood.'' Audiences appear to reject overt advertising but are heavily drawn to the commodification of the child's identity. Furthermore, this commercial penalty may partially reflect platform-level interventions; following the FTC's COPPA settlement, YouTube implemented stricter policies on ``made for kids'' content, potentially reducing the algorithmic reach or monetization potential of explicit advertising aimed at minors. 
+Interestingly, traditional commercial content (e.g., explicit toy unboxing or product placement) does not benefit from this engagement premium ($-3.8\%$, n.s.). This suggests a fundamental shift in the kidfluencer economy: the most successful strategy for driving massive viewership is not to use the child to sell a physical toy, but to make the child's labor, emotions, and manufactured drama the product itself. This aligns with Divon et al.'s \citep{divon2025children} concept of ``transactional childhood.'' Audiences appear less responsive to overt advertising but are heavily drawn to the commodification of the child's identity. Furthermore, the lack of an engagement premium for commercial content may partially reflect platform-level interventions; following the FTC's COPPA settlement, YouTube implemented stricter policies on ``made for kids'' content, potentially reducing the algorithmic reach or monetization potential of explicit advertising aimed at minors. 
 
 \subsection{Qualitative Nuances: Vlog vs.\ Staged Drama}
 
@@ -307,7 +309,7 @@ We therefore frame our findings not as evidence that specific children are being
 
 Our findings have direct implications for the ongoing policy debate surrounding child digital labor. Current legislative frameworks, such as the Illinois PA 103-0556 and the proposed federal KIDS Act (S. 1409), focus primarily on financial compensation---mandating trust funds and limiting working hours. While these protections are necessary, our results suggest they are insufficient. The engagement premium we document operates independently of direct monetary compensation: a child's performative labor is strongly associated with views (and thus advertising revenue) regardless of whether the child receives a share of that income.
 
-Platform-level interventions may be more effective than purely legislative approaches. Our finding that commercial content receives a \emph{negative} premium suggests that YouTube's existing policies on ``made for kids'' content may already be partially effective at reducing the incentive for overt commercialization. Similar mechanisms could be extended to address the performativity premium: for instance, platforms could reduce algorithmic amplification of content flagged as involving intensive child labor, or implement friction mechanisms (e.g., mandatory cooling-off periods) for channels that consistently produce high-exploitation content. However, such interventions must be carefully designed to avoid penalizing legitimate family documentation or cultural expression.
+Platform-level interventions may be more effective than purely legislative approaches. Our finding that commercial content does not benefit from the engagement premium suggests that YouTube's existing policies on ``made for kids'' content may already be partially effective at reducing the incentive for overt commercialization. Similar mechanisms could be extended to address the performativity premium: for instance, platforms could reduce algorithmic amplification of content flagged as involving intensive child labor, or implement friction mechanisms (e.g., mandatory cooling-off periods) for channels that consistently produce high-exploitation content. However, such interventions must be carefully designed to avoid penalizing legitimate family documentation or cultural expression.
 
 \subsection{Methodological Contributions}
 
@@ -335,7 +337,7 @@ The authors approach this research from the perspective of computational social 
 
 \section{Conclusion}
 
-As the kidfluencer economy matures, regulatory focus must expand beyond financial compensation to address the structural forces shaping content creation. Our multimodal audit of 5,051 videos demonstrates that engagement metrics are significantly associated with content featuring child performative labor, privacy violations, and emotional bait, while penalizing overt commercial content. By highlighting this ``performativity premium,'' this study underscores the need for platform-level interventions that disincentivize the commodification of child labor and stress.
+As the kidfluencer economy matures, regulatory focus must expand beyond financial compensation to address the structural forces shaping content creation. Our multimodal audit of 4,208 videos across 56 kid-centric channels demonstrates that engagement metrics are significantly associated with content featuring child performative labor, privacy violations, and emotional bait, while overt commercial content does not benefit from this premium. By highlighting this ``performativity premium,'' this study underscores the need for platform-level interventions that disincentivize the commodification of child labor and stress.
 
 \bibliography{references}
 
