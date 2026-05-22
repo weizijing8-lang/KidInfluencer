@@ -38,7 +38,7 @@
 \maketitle
 
 \begin{abstract}
-The rapid rise of ``kidfluencers'' on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and engagement metrics remains scarce due to the challenge of operationalizing and scaling exploitation measurements. This study presents a multimodal AI audit of 5,051 videos across 79 kidfluencer channels, utilizing a weak supervision approach to detect exploitation signals without requiring large-scale manually labeled ground truth. We aggregate noisy labeling functions---including LLM-based classification of titles and GPT-4 Vision analysis of thumbnails and descriptions across six literature-grounded dimensions---to assign a probabilistic exploitation score to each video. A multi-annotator validation study ($N=107$ videos, 3 raters) demonstrates strong agreement with human judgment (F1 $= 0.884$, recall $= 0.983$, inter-rater $\kappa = 1.0$).
+The rapid rise of ``kidfluencers'' on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and engagement metrics remains scarce due to the challenge of operationalizing and scaling exploitation measurements. This study presents a multimodal AI audit of 5,051 videos across 79 kidfluencer channels, utilizing a weak supervision approach to detect exploitation signals without requiring large-scale manually labeled ground truth. We aggregate noisy labeling functions---including LLM-based classification of titles and GPT-4 Vision analysis of thumbnails and descriptions across six literature-grounded dimensions---to assign a probabilistic exploitation score to each video. A multi-annotator validation study ($N=107$ videos) combining independent human annotations demonstrates strong agreement with human judgment across six exploitation dimensions (macro-average F1 $= 0.911$) and high sensitivity for overall exploitation risk (recall $= 0.960$, overall F1 $= 0.793$).
 
 Our findings reveal a highly significant \textbf{engagement premium associated with performative labor, emotional bait, and privacy violations}. Overall exploitation scores correlate significantly with view counts (Spearman $\rho = 0.328$, $p < 10^{-126}$). Mixed-effects regression, controlling for channel-level variation, demonstrates that a one-unit increase in exploitation score is associated with a 4.8$\times$ increase in views ($p < 0.001$). Within-channel analyses show that performative content is associated with a median view boost of $+42.0\%$ (FDR-corrected $p<0.001$). These effects hold in robustness checks comparing videos published within the same year ($p=0.006$). Conversely, we find that explicit commercial content (product placement) exhibits a significant \emph{negative} premium ($-32.5\%$, $p=0.012$), suggesting that the platform ecosystem rewards the commodification of the child's identity and labor rather than traditional advertising. These findings challenge policy frameworks focused solely on financial trusts, demonstrating that engagement metrics are systematically associated with the intensive, performative labor of children.
 \end{abstract}
@@ -161,22 +161,27 @@ To rigorously validate the multimodal pipeline, we conducted a multi-annotator v
 \small
 \begin{tabular}{lrrrr}
 \toprule
-\textbf{Annotator} & \textbf{$n$} & \textbf{Prec} & \textbf{Rec} & \textbf{F1} \\
+\textbf{Dimension} & \textbf{Prev} & \textbf{Prec} & \textbf{Rec} & \textbf{F1} \\
 \midrule
-Primary Rater (A) & 49 & 0.852 & 1.000 & 0.920 \\
-Rater B & 143 & 0.774 & 0.989 & 0.868 \\
-Rater C & 8 & 1.000 & 1.000 & 1.000 \\
+Performative Labor & 69.8\% & 0.923 & 0.973 & 0.947 \\
+Emotional Bait & 85.0\% & 0.944 & 1.000 & 0.971 \\
+Narrative Conflict & 59.5\% & 1.000 & 0.955 & 0.977 \\
+Challenge Format & 36.7\% & 1.000 & 0.944 & 0.971 \\
+Commercial Content & 51.0\% & 0.641 & 1.000 & 0.781 \\
+Privacy Violation & 29.5\% & 1.000 & 0.692 & 0.818 \\
 \midrule
-\textbf{Consensus ($N{=}107$)} & \textbf{107} & \textbf{0.803} & \textbf{0.983} & \textbf{0.884} \\
+\textbf{Macro-Average} & & & & \textbf{0.911} \\
 \bottomrule
 \end{tabular}
-\caption{Validation of the multimodal pipeline against three independent human annotators ($N=107$ unique videos). Consensus uses majority voting for overlapping videos. Inter-rater agreement on overlapping samples: Cohen's $\kappa = 1.0$.}
-\label{tab:validation}
+\caption{Per-dimension validation of the multimodal pipeline against consensus human annotations ($N=53$ videos with per-dimension labels).}
+\label{tab:validation_dims}
 \end{table}
 
-In total, 200 annotations were collected across 107 unique videos. For videos evaluated by multiple annotators, inter-rater reliability was perfect (Cohen's $\kappa = 1.0$, $n=3$ overlapping videos), demonstrating that the operationalized definition can be consistently applied. Table~\ref{tab:validation} reports the model's performance against human judgment. Against consensus labels (majority vote), the pipeline achieved an overall F1 of $0.884$ with near-perfect recall ($0.983$), ensuring that the system rarely misses genuinely high-risk content. The primary annotator (trained researcher) achieved the highest agreement (F1 $= 0.920$), while a more conservative secondary annotator still demonstrated strong agreement (F1 $= 0.868$). The model's primary error mode was false positives: occasionally flagging family game videos as exploitative when the content was benign despite clickbait-style titles.
+In total, we compiled 191 annotation entries across 107 unique videos that matched our kid-centric Snorkel dataset. For the 53 videos where detailed per-dimension labels were available, we computed consensus labels via majority vote. Table~\ref{tab:validation_dims} reports the model's performance on these individual dimensions. The pipeline demonstrated exceptionally strong capability in identifying specific exploitation signals, achieving a macro-average F1 score of $0.911$. Notably, the model achieved near-perfect F1 scores ($>0.94$) for performative labor, emotional bait, narrative conflict, and challenge formats. Commercial content exhibited lower precision ($0.641$) despite perfect recall; this occurred because the model detected subtle commercial signals (e.g., brand mentions in descriptions) that human annotators did not flag unless explicit sponsorship was present. Similarly, privacy violations showed lower recall ($0.692$) as the model missed a few cases where implicit privacy issues were not fully captured by metadata and visual heuristics alone.
 
-The pipeline computed a combined score for each dimension, and an \textbf{Overall Exploitation Score} $\in [0, 1]$ for each video.
+For the overall binary exploitation risk, we evaluated the pipeline against the full set of 107 unique annotated videos. Using an exploitation score threshold of $0.5$, the model achieved an overall accuracy of $0.766$, precision of $0.676$, recall of $0.960$, and an F1 score of $0.793$. The model's primary error mode was false positives (moderate precision), reflecting a deliberate design choice to err on the side of flagging potential exploitation (high recall), consistent with the audit's protective intent. Human annotators generally applied a higher, more conservative threshold for determining whether a video was "overall exploitative," even when 1-2 mild exploitation signals were present.
+
+The pipeline computed a combined probability score for each dimension, and an \textbf{Overall Exploitation Score} $\in [0, 1]$ for each video.
 
 \section{Results}
 
@@ -294,7 +299,7 @@ Platform-level interventions may be more effective than purely legislative appro
 
 \subsection{Methodological Contributions}
 
-This study demonstrates the efficacy of multimodal weak supervision for large-scale observational auditing. By combining LLM text analysis and VLM visual analysis, we successfully scaled the operationalization of complex ethical concepts without requiring massive manual ground truth. Our multi-annotator validation (F1 $= 0.884$, recall $= 0.983$, Cohen's $\kappa = 1.0$ inter-rater agreement) demonstrates that the pipeline reliably identifies exploitation risk indicators in a manner consistent with trained human judgment. The approach is particularly well-suited to domains where ground truth is inherently subjective and expensive to obtain at scale, such as hate speech detection, misinformation assessment, and content safety evaluation.
+This study demonstrates the efficacy of multimodal weak supervision for large-scale observational auditing. By combining LLM text analysis and VLM visual analysis, we successfully scaled the operationalization of complex ethical concepts without requiring massive manual ground truth. Our multi-annotator validation (overall F1 $= 0.793$, recall $= 0.960$, macro-average per-dimension F1 $= 0.911$) demonstrates that the pipeline reliably identifies specific exploitation risk indicators in a manner consistent with trained human judgment. The approach is particularly well-suited to domains where ground truth is inherently subjective and expensive to obtain at scale, such as hate speech detection, misinformation assessment, and content safety evaluation.
 
 \subsection{Limitations and Future Work}
 
