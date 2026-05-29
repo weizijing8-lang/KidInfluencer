@@ -29,8 +29,8 @@
 \usepackage[unicode=true]{hyperref}
 % 
 \hypersetup{
-            pdftitle={RMarkdown Template for IEEE Access Articles},
-            pdfkeywords={key, words},
+            pdftitle={Auditing Engagement Incentives in the Kidfluencer Ecosystem},
+            pdfkeywords={child exploitation, kidfluencer, weak supervision, YouTube, engagement metrics},
             pdfborder={0 0 0},
             breaklinks=true}
 % \urlstyle{same}  % don't use monospace font for urls
@@ -81,12 +81,16 @@
 \setcounter{counter1}{1}
 \author{
 \begin{itemize*}[label={}, afterlabel={}, itemjoin={,~}, itemjoin*={, AND~}]
-\item{\uppercase{Anonymous Submission}\authorrefmark{1}}%
+\item{\uppercase{Zijing Wei}\authorrefmark{1}}
+\item{\uppercase{Chao Peter Yang}\authorrefmark{2}}
+\item{\uppercase{Xuanjie Chen}\authorrefmark{3}}
 \end{itemize*}
 }
 
-\address[1]{Anonymous Affiliation}
-\corresp{Corresponding author: Anonymous Submission.}
+\address[1]{College of Liberal Arts \& Sciences, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+\address[2]{Duke University, Durham, NC, USA}
+\address[3]{Department of Applied Mathematics, University of Washington, Seattle, WA, USA}
+\corresp{Corresponding author: Zijing Wei (e-mail: zijingw2@illinois.edu).}
 
 \begin{abstract}
 The rapid rise of ``kidfluencers'' on YouTube has raised profound ethical concerns regarding child digital labor and exploitation. While emerging legislation attempts to regulate this ecosystem, empirical evidence on the relationship between child exploitation and engagement metrics remains scarce due to the challenge of operationalizing and scaling exploitation measurements. This study presents a multimodal AI audit of 5,051 videos across 79 kidfluencer channels, utilizing a weak supervision approach to detect exploitation signals without requiring large-scale manually labeled ground truth. We aggregate noisy labeling functions---including LLM-based classification of titles and GPT-4 Vision analysis of thumbnails and descriptions across six literature-grounded dimensions---to assign a probabilistic exploitation score to each video. A multi-annotator validation study ($N=107$ videos) combining independent human annotations demonstrates strong agreement with human judgment across six exploitation dimensions (macro-average F1 $= 0.911$) and high sensitivity for overall exploitation risk (recall $= 0.960$, overall F1 $= 0.793$).
@@ -96,7 +100,7 @@ Our findings reveal a highly significant \textbf{engagement premium associated w
 
 % keywords
 \begin{keywords}
-key; words
+Child exploitation, kidfluencer, weak supervision, YouTube, engagement metrics, algorithmic auditing, child digital labor
 \end{keywords}
 
 \titlepgskip=-15pt
