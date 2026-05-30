@@ -341,4 +341,143 @@ As the kidfluencer economy matures, regulatory focus must expand beyond financia
 
 \bibliography{references}
 
+\appendix
+
+\section{Labeling Function Inventory}
+\label{app:lfs}
+
+Table~\ref{tab:lf_inventory} provides the complete list of 33 labeling functions (LFs) used in our weak supervision pipeline. Each LF is trained independently per dimension using Snorkel's label model, which learns the accuracy and correlation structure of the LFs without requiring ground truth labels.
+
+\begin{table*}[h!]
+\centering
+\small
+\begin{tabular}{p{1.2cm} p{3.5cm} p{1.0cm} p{1.2cm} p{5.5cm}}
+\toprule
+\textbf{Dim.} & \textbf{LF Name} & \textbf{Type} & \textbf{Coverage} & \textbf{Description} \\
+\midrule
+\multirow{8}{*}{\rotatebox{90}{Perf. Labor}}
+& lf\_llm\_performative & LLM & 1.000 & GPT-4.1-nano classifies title as performative (scripted/staged) vs.\ organic \\
+& lf\_vlm\_performative\_high & VLM & 0.780 & GPT-4.1-mini Vision scores $\ge 0.7$ for performative labor \\
+& lf\_vlm\_performative\_med & VLM & 0.932 & GPT-4.1-mini Vision scores $\ge 0.4$ for performative labor \\
+& lf\_scripted\_keywords & Rule & 0.253 & Title contains scripted content keywords (skit, challenge, prank, etc.) \\
+& lf\_organic\_keywords & Rule & 0.076 & Title contains organic family keywords (birthday, vacation) $\rightarrow$ NOT exploit \\
+& lf\_roleplay\_title & Rule & 0.031 & Title contains roleplay/acting keywords \\
+& lf\_desc\_scripted & Rule & 0.408 & Description contains scripted production indicators \\
+& lf\_duration\_long & Meta & 0.035 & Video duration $>$ 30 minutes (long-form scripted content) \\
+\midrule
+\multirow{6}{*}{\rotatebox{90}{Emot. Bait}}
+& lf\_llm\_emotional & LLM & 0.100 & GPT-4.1-nano classifies title as emotional bait \\
+& lf\_vlm\_emotional & VLM & 0.625 & GPT-4.1-mini Vision scores emotional bait from thumbnail+title \\
+& lf\_emotional\_caps & Rule & 0.179 & Title has $>60\%$ uppercase characters (ALL CAPS clickbait) \\
+& lf\_emotional\_punct & Rule & 0.063 & Title contains $\ge 3$ exclamation marks \\
+& lf\_emotional\_keywords & Rule & 0.018 & Title contains emotional distress words (crying, meltdown, etc.) \\
+& lf\_emotional\_emojis & Rule & 0.001 & Title contains emotional emojis (crying face, etc.) \\
+\midrule
+\multirow{5}{*}{\rotatebox{90}{Narr. Confl.}}
+& lf\_llm\_narrative & LLM & 0.091 & GPT-4.1-nano classifies title as narrative conflict \\
+& lf\_vlm\_narrative & VLM & 0.753 & GPT-4.1-mini Vision scores narrative conflict \\
+& lf\_conflict\_keywords & Rule & 0.056 & Title contains conflict keywords (fight, stolen, arrested, etc.) \\
+& lf\_prank\_gone\_wrong & Rule & 0.016 & Title contains ``prank'' or ``gone wrong'' patterns \\
+& lf\_clickbait\_patterns & Rule & 0.004 & Title matches clickbait structural patterns \\
+\midrule
+\multirow{5}{*}{\rotatebox{90}{Challenge}}
+& lf\_llm\_challenge & LLM & 0.175 & GPT-4.1-nano classifies title as challenge format \\
+& lf\_vlm\_challenge & VLM & 0.903 & GPT-4.1-mini Vision scores challenge format \\
+& lf\_challenge\_keywords & Rule & 0.136 & Title contains challenge keywords (24 hours, last to, vs, etc.) \\
+& lf\_competition\_format & Rule & 0.051 & Title matches competition format patterns \\
+& lf\_duration\_challenge & Meta & 0.003 & Video duration matches typical challenge length \\
+\midrule
+\multirow{5}{*}{\rotatebox{90}{Commercial}}
+& lf\_llm\_commercial & LLM & 0.032 & GPT-4.1-nano classifies title as commercial content \\
+& lf\_vlm\_commercial & VLM & 0.715 & GPT-4.1-mini Vision scores commercial signals from thumbnail \\
+& lf\_commercial\_title & Rule & 0.136 & Title contains brand names or product references \\
+& lf\_commercial\_desc & Rule & 0.129 & Description contains affiliate links, discount codes, or \#ad \\
+& lf\_commercial\_tags & Rule & 0.345 & Video tags contain commercial/brand indicators \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{Privacy}}
+& lf\_llm\_privacy & LLM & 0.027 & GPT-4.1-nano classifies title as privacy violation \\
+& lf\_vlm\_privacy & VLM & 0.818 & GPT-4.1-mini Vision scores privacy concern from thumbnail \\
+& lf\_privacy\_keywords & Rule & 0.034 & Title contains privacy-sensitive keywords (bath, potty, etc.) \\
+& lf\_privacy\_medical\_desc & Rule & 0.013 & Description mentions medical/health details of child \\
+\bottomrule
+\end{tabular}
+\caption{Complete inventory of 33 labeling functions. Type: LLM = GPT-4.1-nano text classification; VLM = GPT-4.1-mini Vision multimodal analysis; Rule = keyword/regex heuristic; Meta = metadata-based (duration, tags). Coverage = proportion of videos receiving a non-abstain vote.}
+\label{tab:lf_inventory}
+\end{table*}
+
+\section{Snorkel Label Model Diagnostics}
+\label{app:diagnostics}
+
+Table~\ref{tab:diagnostics} reports the standard diagnostic metrics for our Snorkel label model, computed per dimension.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Dimension} & \textbf{\# LFs} & \textbf{Abstain \%} & \textbf{Mean Cov.} & \textbf{Mean Conf.} \\
+\midrule
+Performative Labor & 8 & 0.0\% & 0.439 & 0.243 \\
+Emotional Bait & 6 & 29.2\% & 0.164 & 0.009 \\
+Narrative Conflict & 5 & 23.1\% & 0.184 & 0.002 \\
+Challenge Format & 5 & 8.7\% & 0.253 & 0.008 \\
+Commercial Content & 5 & 14.7\% & 0.271 & 0.096 \\
+Privacy Violation & 4 & 16.2\% & 0.223 & 0.012 \\
+\midrule
+\textbf{Aggregate (33 LFs)} & 33 & --- & 0.271 & 0.078 \\
+\bottomrule
+\end{tabular}
+\caption{Snorkel label model diagnostics per dimension. Abstain \% = proportion of videos where no LF votes (label model uses prior). Mean Cov.\ = average LF coverage. Mean Conf.\ = average pairwise conflict rate among LFs.}
+\label{tab:diagnostics}
+\end{table}
+
+\section{LLM and VLM Prompts}
+\label{app:prompts}
+
+\subsection{LLM Title Classification Prompt (GPT-4.1-nano)}
+
+The following system prompt is used for text-only classification of video titles:
+
+\begin{quote}
+\small
+\texttt{You are an expert in children's media and child exploitation research. You will classify YouTube video titles from kidfluencer/family vlog channels along 5 dimensions. For each title, output a JSON object with these fields:}
+
+\texttt{- ``performative'': 1 if the child is clearly performing/working FOR the video (challenges, roleplay, scripted skits, dance routines, unboxing, reviews, pranks, games designed for content). 0 if organic/natural (birthday, vacation, daily life that would happen without a camera). -1 if ambiguous.}
+
+\texttt{- ``emotional\_bait'': 1 if the title uses exaggerated emotional language or manufactured drama to attract clicks. This includes: ALL CAPS shouting, excessive punctuation, fake emergencies, exaggerated reactions, manufactured urgency. 0 if calm/descriptive.}
+
+\texttt{- ``narrative\_conflict'': 1 if the title implies interpersonal conflict, mystery, or dramatic tension (theft, confrontation, betrayal, punishment, secrets revealed). 0 if no narrative tension.}
+
+\texttt{- ``challenge\_format'': 1 if the title indicates a challenge, competition, or game format (``24 HOURS'', ``LAST TO LEAVE'', ``VS'', dares, contests). 0 if not.}
+
+\texttt{- ``commercial\_content'': 1 if the title references specific brands, products, stores, or commercial activities. 0 if no brand/product reference.}
+\end{quote}
+
+\subsection{VLM Multimodal Prompt (GPT-4.1-mini Vision)}
+
+The following prompt is sent with the video thumbnail (low-detail mode), title, and first 300 characters of the description:
+
+\begin{quote}
+\small
+\texttt{You are analyzing a YouTube video thumbnail and title to assess potential child exploitation signals. The video is from a family/kid YouTube channel.}
+
+\texttt{Analyze the thumbnail image and title together. For each dimension below, provide a score from 0.0 to 1.0:}
+
+\texttt{1. performative\_labor (0.0--1.0): Is the child performing scripted/staged content? Score HIGH if the activity would NOT happen without the camera.}
+
+\texttt{2. emotional\_bait (0.0--1.0): Does the thumbnail/title use exaggerated emotions to attract clicks? Look for: children with mouths wide open in shock, crying faces, ALL CAPS.}
+
+\texttt{3. narrative\_conflict (0.0--1.0): Does the content manufacture drama or conflict?}
+
+\texttt{4. challenge\_format (0.0--1.0): Is this a challenge/dare/competition format?}
+
+\texttt{5. commercial\_content (0.0--1.0): Is there visible product placement, brand logos, or sponsored content signals?}
+
+\texttt{6. privacy\_violation (0.0--1.0): Does the content expose the child's private moments, body, or medical situations?}
+
+\texttt{7. overall\_exploitative (0.0--1.0): Considering ALL dimensions, is this video likely exploitative?}
+
+\texttt{Return ONLY valid JSON.}
+\end{quote}
+
 \end{document}
