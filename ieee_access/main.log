@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.29)  30 MAY 2026 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.29)  30 MAY 2026 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,7 +1139,7 @@ madi,
 
 File: images/notaglineLogo.png Graphic file (type png)
 <use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 87.
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 88.
 (pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1159,7 +1159,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [8]
 File: images/notaglineLogo.png Graphic file (type png)
 <use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 127.
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 124.
 (pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1212,11 +1212,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  12126 strings out of 480171
  192262 string characters out of 5894489
- 521452 words of memory out of 5000000
+ 521551 words of memory out of 5000000
  29772 multiletter control sequences out of 15000+600000
  569084 words of font info for 157 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 70i,13n,76p,1234b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,13n,76p,1234b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{section*.1} has been referenced but does not exis
 t, replaced by a fixed one
 
@@ -1237,7 +1237,7 @@ rw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 274047 bytes).
+Output written on main.pdf (10 pages, 274246 bytes).
 PDF statistics:
  389 PDF objects out of 1000 (max. 8388607)
  334 compressed objects within 4 object streams
