@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.29)  31 MAY 2026 01:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.29)  31 MAY 2026 01:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -857,19 +857,9 @@ Overfull \hbox (18.64494pt too wide) in paragraph at lines 402--416
  [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
-[]|\T1/ptm/m/n/7 GPT-4.1-nano clas-si-fies ti-tle as per-for-ma-tive
- []
-
-
-Underfull \hbox (badness 3312) in paragraph at lines 476--477
-[]|\T1/ptm/m/n/7 GPT-4.1-mini Vi-sion scores pri-vacy con-cern from
- []
-
 File: images/notaglineLogo.png Graphic file (type png)
 <use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 492.
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 427.
 (pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -887,9 +877,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[]|\T1/ptm/m/n/7 GPT-4.1-nano clas-si-fies ti-tle as per-for-ma-tive
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 476--477
+[]|\T1/ptm/m/n/7 GPT-4.1-mini Vi-sion scores pri-vacy con-cern from
+ []
+
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 49
 3.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
@@ -962,28 +961,6 @@ Overfull \hbox (13.32645pt too wide) in paragraph at lines 495--496
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: images/notaglineLogo.png Graphic file (type png)
-<use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 496.
-(pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[9]
 Overfull \hbox (1.32645pt too wide) in paragraph at lines 497--498
 []\T1/pcr/n/n/10 - ``emotional_bait'': 1 if the title
  []
@@ -1198,7 +1175,29 @@ Overfull \hbox (7.32645pt too wide) in paragraph at lines 527--528
 \T1/pcr/n/n/10 Considering ALL dimensions, is this
  []
 
-(./main.bbl
+File: images/notaglineLogo.png Graphic file (type png)
+<use images/notaglineLogo.png>
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 532.
+(pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[9] (./main.bbl
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+
 Underfull \hbox (badness 2012) in paragraph at lines 53--57
 []\T1/ptm/n/it/7.61 M. Ha-roon, M. Wo-j-cieszak, A. Chhabra, X. Liu, P. Mo-ham-
 madi,
@@ -1206,7 +1205,7 @@ madi,
 
 File: images/notaglineLogo.png Graphic file (type png)
 <use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 139.
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 64.
 (pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1259,11 +1258,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  12198 strings out of 480171
  194174 string characters out of 5894489
- 517706 words of memory out of 5000000
+ 517952 words of memory out of 5000000
  29829 multiletter control sequences out of 15000+600000
  569084 words of font info for 157 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 70i,13n,76p,1234b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,13n,76p,1579b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{section*.1} has been referenced but does not exis
 t, replaced by a fixed one
 
@@ -1285,10 +1284,10 @@ etic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (11 pages, 690833 bytes).
+Output written on main.pdf (11 pages, 691147 bytes).
 PDF statistics:
- 422 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
+ 425 PDF objects out of 1000 (max. 8388607)
+ 359 compressed objects within 4 object streams
  89 named destinations out of 1000 (max. 500000)
  316 words of extra memory for PDF output out of 10000 (max. 10000000)
 
