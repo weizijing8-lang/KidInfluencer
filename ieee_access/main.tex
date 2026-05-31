@@ -231,7 +231,14 @@ The pipeline computed a combined probability score for each dimension, and an \t
 
 \subsection{Pipeline Performance and Dimension Prevalence}
 
-The multimodal pipeline successfully processed 4,208 videos from 56 kid-centric channels. Overall, 26.5\% of the sampled videos ($n=1,114$) were classified as exploitative (score $\ge 0.7$).
+The multimodal pipeline successfully processed 4,208 videos from 56 kid-centric channels. Overall, 26.5\% of the sampled videos ($n=1,114$) were classified as exploitative (score $\ge 0.7$). Fig.~\ref{fig:score_dist} shows the distribution of exploitation risk scores across the dataset.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig1_score_distribution.png}
+\caption{Distribution of overall exploitation risk scores across 4,208 videos from 56 kid-centric channels. The dashed red line indicates the classification threshold ($\ge 0.7$); 26.5\% of videos exceed this threshold.}
+\label{fig:score_dist}
+\end{figure}
 
 \begin{table*}[t]
 \centering
@@ -282,7 +289,14 @@ For each dimension, we compared the median views of videos exhibiting that dimen
 
 
 
-The results reveal a clear engagement premium structure across channels with sufficient data:
+Fig.~\ref{fig:dimension_premiums} visualizes the engagement premium structure. The results reveal a clear engagement premium across channels with sufficient data:
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig2_dimension_premiums.png}
+\caption{Within-channel engagement premium by exploitation dimension. Bars show the percentage difference in median views between videos exhibiting each dimension and videos from the same channel lacking it. Significance: $^{***}p<0.001$ (FDR-corrected); n.s.~= not significant.}
+\label{fig:dimension_premiums}
+\end{figure}
 \begin{itemize}
     \item \textbf{Emotional Bait} is associated with the largest premium, generating $+65.6\%$ more views than non-emotional videos on the same channel (Cohen's $d = 0.751$, FDR $p<0.001$).
     \item \textbf{Performative Labor} is associated with a $+56.0\%$ view premium ($d = 0.524$, FDR $p<0.001$).
@@ -290,7 +304,14 @@ The results reveal a clear engagement premium structure across channels with suf
     \item \textbf{Challenge Formats} showed a smaller, non-significant positive premium ($+20.9\%$, FDR $p=0.081$).
 \end{itemize}
 
-Crucially, \textbf{Commercial Content} exhibited a slight \textbf{negative} premium ($-3.8\%$, FDR $p=0.516$). While not statistically significant after FDR correction, the directionality suggests that videos featuring explicit product placements do not benefit from the massive engagement boosts seen in emotional and performative exploitation dimensions.
+Crucially, \textbf{Commercial Content} exhibited a slight \textbf{negative} premium ($-3.8\%$, FDR $p=0.516$). While not statistically significant after FDR correction, the directionality suggests that videos featuring explicit product placements do not benefit from the massive engagement boosts seen in emotional and performative exploitation dimensions. Fig.~\ref{fig:emotional_vs_commercial} contrasts the channel-level patterns for emotional bait (consistent premium) versus commercial content (no premium).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig5_emotional_vs_commercial.png}
+\caption{Channel-level pairwise comparison of mean $\log_{10}(\text{views})$ for emotional bait (left, blue) and commercial content (right, red). Each point represents one channel. Points above the diagonal indicate a positive engagement premium. Emotional bait shows a consistent premium across nearly all channels, while commercial content clusters around the diagonal (no premium).}
+\label{fig:emotional_vs_commercial}
+\end{figure}
 
 
 
@@ -301,7 +322,14 @@ To ensure our findings were not merely artifacts of video age (older videos accu
 
 
 
-Additionally, we verified the robustness of our results by analyzing the overall exploitation flag at the channel level. Across 47 channels with sufficient variance, 36 channels (76.6\%) exhibited a positive engagement premium for high-exploitation videos, yielding an average within-channel boost of $+32.8\%$ (Wilcoxon $p=0.001$). This confirms that the performativity premium is a widespread structural phenomenon, not driven by a few outlier channels.
+Additionally, we verified the robustness of our results by analyzing the overall exploitation flag at the channel level. Across 47 channels with sufficient variance, 36 channels (76.6\%) exhibited a positive engagement premium for high-exploitation videos, yielding an average within-channel boost of $+32.8\%$ (Wilcoxon $p=0.001$). Fig.~\ref{fig:channel_premiums} shows the per-channel distribution of this premium. This confirms that the performativity premium is a widespread structural phenomenon, not driven by a few outlier channels.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig4_channel_premiums.png}
+\caption{Within-channel exploitation premium for each of 47 channels with sufficient variance. Blue bars indicate channels where exploitative videos receive more views; red bars indicate the opposite. 76.6\% of channels exhibit a positive premium.}
+\label{fig:channel_premiums}
+\end{figure}
 
 We note that these results are correlational. A plausible confounder is \textbf{production quality}: channels that invest heavily in scripted content (triggering our performative labor and narrative conflict dimensions) may also invest in higher-quality editing, lighting, and thumbnails, which independently attract views. Our within-channel design partially addresses this concern---comparing videos from the same channel holds production resources approximately constant---but we cannot fully rule out within-channel variation in production effort. Future work incorporating direct measures of production quality (e.g., video resolution, cut frequency, thumbnail A/B testing) could help disentangle these effects.
 
