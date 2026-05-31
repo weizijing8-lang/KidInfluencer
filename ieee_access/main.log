@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.29)  31 MAY 2026 01:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.29)  31 MAY 2026 02:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -853,13 +853,23 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [7]
-Overfull \hbox (18.64494pt too wide) in paragraph at lines 402--416
+Overfull \hbox (18.64494pt too wide) in paragraph at lines 405--419
  [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+[]|\T1/ptm/m/n/7 GPT-4.1-nano clas-si-fies ti-tle as per-for-ma-tive
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 479--480
+[]|\T1/ptm/m/n/7 GPT-4.1-mini Vi-sion scores pri-vacy con-cern from
  []
 
 File: images/notaglineLogo.png Graphic file (type png)
 <use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 427.
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 495.
 (pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -877,307 +887,298 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
-[]|\T1/ptm/m/n/7 GPT-4.1-nano clas-si-fies ti-tle as per-for-ma-tive
- []
-
-
-Underfull \hbox (badness 3312) in paragraph at lines 476--477
-[]|\T1/ptm/m/n/7 GPT-4.1-mini Vi-sion scores pri-vacy con-cern from
- []
-
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 49
-3.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+6.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
 LaTeX Font Warning: Font shape `T1/pcr/n/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 493.
+(Font)              using `T1/pcr/m/n' instead on input line 496.
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 493--494
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 496--497
 []\T1/pcr/m/n/10 You are an expert in children's media
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 493--494
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 496--497
 \T1/pcr/m/n/10 and child exploitation research. You
  []
 
 
-Overfull \hbox (1.32645pt too wide) in paragraph at lines 493--494
+Overfull \hbox (1.32645pt too wide) in paragraph at lines 496--497
 \T1/pcr/m/n/10 will classify YouTube video titles
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 493--494
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 496--497
 \T1/pcr/m/n/10 from kidfluencer/family vlog channels
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 493--494
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 496--497
 \T1/pcr/m/n/10 along 5 dimensions. For each title,
  []
 
 
-Overfull \hbox (31.32645pt too wide) in paragraph at lines 493--494
+Overfull \hbox (31.32645pt too wide) in paragraph at lines 496--497
 \T1/pcr/m/n/10 output a JSON object with these fields: 
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 495--496
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 498--499
 []\T1/pcr/n/n/10 - ``performative'': 1 if the child is
  []
 
 
-Overfull \hbox (1.32645pt too wide) in paragraph at lines 495--496
+Overfull \hbox (1.32645pt too wide) in paragraph at lines 498--499
 \T1/pcr/n/n/10 clearly performing/working FOR the
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 495--496
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 498--499
 \T1/pcr/n/n/10 video (challenges, roleplay, scripted
  []
 
 
-Overfull \hbox (43.32645pt too wide) in paragraph at lines 495--496
+Overfull \hbox (43.32645pt too wide) in paragraph at lines 498--499
 \T1/pcr/n/n/10 skits, dance routines, unboxing, reviews,
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 495--496
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 498--499
 \T1/pcr/n/n/10 pranks, games designed for content).
  []
 
 
-Overfull \hbox (43.32645pt too wide) in paragraph at lines 495--496
+Overfull \hbox (43.32645pt too wide) in paragraph at lines 498--499
 \T1/pcr/n/n/10 0 if organic/natural (birthday, vacation,
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 495--496
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 498--499
 \T1/pcr/n/n/10 daily life that would happen without
  []
 
 
-Overfull \hbox (1.32645pt too wide) in paragraph at lines 497--498
+Overfull \hbox (1.32645pt too wide) in paragraph at lines 500--501
 []\T1/pcr/n/n/10 - ``emotional_bait'': 1 if the title
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 497--498
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 500--501
 \T1/pcr/n/n/10 uses exaggerated emotional language
  []
 
 
-Overfull \hbox (37.32645pt too wide) in paragraph at lines 497--498
+Overfull \hbox (37.32645pt too wide) in paragraph at lines 500--501
 \T1/pcr/n/n/10 or manufactured drama to attract clicks.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 \T1/pcr/n/n/10 This includes: ALL CAPS shouting,
  []
 
 
-Overfull \hbox (37.32645pt too wide) in paragraph at lines 497--498
+Overfull \hbox (37.32645pt too wide) in paragraph at lines 500--501
 \T1/pcr/n/n/10 excessive punctuation, fake emergencies,
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 497--498
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 500--501
 \T1/pcr/n/n/10 exaggerated reactions, manufactured
  []
 
 
-Overfull \hbox (25.32645pt too wide) in paragraph at lines 499--500
+Overfull \hbox (25.32645pt too wide) in paragraph at lines 502--503
 []\T1/pcr/n/n/10 - ``narrative_conflict'': 1 if the title
  []
 
 
-Overfull \hbox (37.32645pt too wide) in paragraph at lines 499--500
+Overfull \hbox (37.32645pt too wide) in paragraph at lines 502--503
 \T1/pcr/n/n/10 implies interpersonal conflict, mystery,
  []
 
 
-Overfull \hbox (49.32645pt too wide) in paragraph at lines 499--500
+Overfull \hbox (49.32645pt too wide) in paragraph at lines 502--503
 \T1/pcr/n/n/10 or dramatic tension (theft, confrontation,
  []
 
 
-Overfull \hbox (37.32645pt too wide) in paragraph at lines 499--500
+Overfull \hbox (37.32645pt too wide) in paragraph at lines 502--503
 \T1/pcr/n/n/10 betrayal, punishment, secrets revealed).
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 501--502
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 504--505
 []\T1/pcr/n/n/10 - ``challenge_format'': 1 if the title
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 501--502
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 504--505
 \T1/pcr/n/n/10 indicates a challenge, competition,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
 \T1/pcr/n/n/10 or game format (``24 HOURS'', ``LAST
  []
 
 
-Overfull \hbox (1.32645pt too wide) in paragraph at lines 501--502
+Overfull \hbox (1.32645pt too wide) in paragraph at lines 504--505
 \T1/pcr/n/n/10 TO LEAVE'', ``VS'', dares, contests).
  []
 
 
-Overfull \hbox (25.32645pt too wide) in paragraph at lines 503--504
+Overfull \hbox (25.32645pt too wide) in paragraph at lines 506--507
 []\T1/pcr/n/n/10 - ``commercial_content'': 1 if the title
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 503--504
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 506--507
 \T1/pcr/n/n/10 references specific brands, products,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--504
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
 \T1/pcr/n/n/10 stores, or commercial activities.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 511--512
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 []\T1/pcr/n/n/10 You are analyzing a YouTube video
  []
 
 
-Overfull \hbox (31.32645pt too wide) in paragraph at lines 511--512
+Overfull \hbox (31.32645pt too wide) in paragraph at lines 514--515
 \T1/pcr/n/n/10 thumbnail and title to assess potential
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 511--512
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 514--515
 \T1/pcr/n/n/10 child exploitation signals. The video
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 511--512
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 514--515
 \T1/pcr/n/n/10 is from a family/kid YouTube channel. 
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 513--514
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 516--517
 []\T1/pcr/n/n/10 Analyze the thumbnail image and title
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 513--514
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 516--517
 \T1/pcr/n/n/10 together. For each dimension below,
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 515--516
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 518--519
 []\T1/pcr/n/n/10 1. performative_labor (0.0--1.0): Is
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 515--516
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 518--519
 \T1/pcr/n/n/10 the child performing scripted/staged
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 515--516
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 518--519
 \T1/pcr/n/n/10 content? Score HIGH if the activity
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 515--516
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 518--519
 \T1/pcr/n/n/10 would NOT happen without the camera. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--518
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
 []\T1/pcr/n/n/10 2. emotional_bait (0.0--1.0): Does
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 517--518
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 520--521
 \T1/pcr/n/n/10 the thumbnail/title use exaggerated
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 517--518
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 520--521
 \T1/pcr/n/n/10 emotions to attract clicks? Look for:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--518
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
 \T1/pcr/n/n/10 children with mouths wide open in
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 519--520
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 522--523
 []\T1/pcr/n/n/10 3. narrative_conflict (0.0--1.0): Does
  []
 
 
-Overfull \hbox (49.32645pt too wide) in paragraph at lines 519--520
+Overfull \hbox (49.32645pt too wide) in paragraph at lines 522--523
 \T1/pcr/n/n/10 the content manufacture drama or conflict? 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 []\T1/pcr/n/n/10 4. challenge_format (0.0--1.0): Is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 \T1/pcr/n/n/10 this a challenge/dare/competition
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 523--524
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 526--527
 []\T1/pcr/n/n/10 5. commercial_content (0.0--1.0): Is
  []
 
 
-Overfull \hbox (25.32645pt too wide) in paragraph at lines 523--524
+Overfull \hbox (25.32645pt too wide) in paragraph at lines 526--527
 \T1/pcr/n/n/10 there visible product placement, brand
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 523--524
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 526--527
 \T1/pcr/n/n/10 logos, or sponsored content signals? 
  []
 
 
-Overfull \hbox (13.32645pt too wide) in paragraph at lines 525--526
+Overfull \hbox (13.32645pt too wide) in paragraph at lines 528--529
 []\T1/pcr/n/n/10 6. privacy_violation (0.0--1.0): Does
  []
 
 
-Overfull \hbox (25.32645pt too wide) in paragraph at lines 525--526
+Overfull \hbox (25.32645pt too wide) in paragraph at lines 528--529
 \T1/pcr/n/n/10 the content expose the child's private
  []
 
 
-Overfull \hbox (19.32645pt too wide) in paragraph at lines 525--526
+Overfull \hbox (19.32645pt too wide) in paragraph at lines 528--529
 \T1/pcr/n/n/10 moments, body, or medical situations? 
  []
 
 
-Overfull \hbox (1.32645pt too wide) in paragraph at lines 527--528
+Overfull \hbox (1.32645pt too wide) in paragraph at lines 530--531
 []\T1/pcr/n/n/10 7. overall_exploitative (0.0--1.0):
  []
 
 
-Overfull \hbox (7.32645pt too wide) in paragraph at lines 527--528
+Overfull \hbox (7.32645pt too wide) in paragraph at lines 530--531
 \T1/pcr/n/n/10 Considering ALL dimensions, is this
  []
 
 File: images/notaglineLogo.png Graphic file (type png)
 <use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 532.
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 535.
 (pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1225,11 +1226,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [10])
 File: images/bullet.png Graphic file (type png)
 <use images/bullet.png>
-Package pdftex.def Info: images/bullet.png  used on input line 536.
+Package pdftex.def Info: images/bullet.png  used on input line 539.
 (pdftex.def)             Requested size: 4.99985pt x 14.6871pt.
 File: images/notaglineLogo.png Graphic file (type png)
 <use images/notaglineLogo.png>
-Package pdftex.def Info: images/notaglineLogo.png  used on input line 537.
+Package pdftex.def Info: images/notaglineLogo.png  used on input line 540.
 (pdftex.def)             Requested size: 91.3232pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1253,17 +1254,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 16454E69FF9E02E1A2E79F90861809F2;7336.
+(rerunfilecheck)             Checksum: 7C5E0FD85BA6F92F9A1A419D5F2466A8;7336.
  ) 
 Here is how much of TeX's memory you used:
- 12198 strings out of 480171
- 194174 string characters out of 5894489
- 517952 words of memory out of 5000000
+ 12199 strings out of 480171
+ 194184 string characters out of 5894489
+ 523136 words of memory out of 5000000
  29829 multiletter control sequences out of 15000+600000
  569084 words of font info for 157 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  70i,13n,76p,1579b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.1} has been referenced but does not exis
+pdfTeX warning (dest): name{section*.2} has been referenced but does not exis
 t, replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
@@ -1284,10 +1285,10 @@ etic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (11 pages, 691147 bytes).
+Output written on main.pdf (11 pages, 691574 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
+ 428 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
+ 90 named destinations out of 1000 (max. 500000)
  316 words of extra memory for PDF output out of 10000 (max. 10000000)
 
