@@ -165,4 +165,15 @@ P.~T{\"o}rnberg, ``{ChatGPT-4} outperforms experts and crowd workers in
   annotating political {Twitter} messages with zero-shot learning,''
   \emph{arXiv preprint}, 2024.
 
+\bibitem{tian2025empirical}
+Y.~Tian, S.~Xu, Y.~Cao, Z.~Wang, and Z.~Wei, ``An empirical comparison of
+  machine learning and deep learning models for automated fake news
+  detection,'' \emph{Mathematics}, vol.~13, no.~13, p. 2086, 2025.
+
+\bibitem{ding2026feature}
+Z.~Ding, Z.~Wei, C.~P. Yang, H.~Wang, S.~Xu, Y.~Li, and X.~Chen, ``Feature
+  engineering in the transformer era: A controlled study on toxic comment
+  classification,'' in \emph{Proceedings of the 2026 International Conference
+  on Human-Computer Interaction}, 2026.
+
 \end{thebibliography}
